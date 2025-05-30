@@ -1,0 +1,49 @@
+# Drupal core and contrib directories managed by Composer
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/vendor/
+
+# Ignore configuration sync directory if outside the web root
+/config/
+
+# Site-specific sensitive files
+/web/sites/*/settings.php
+/web/sites/*/services.yml
+/web/sites/*/files
+/web/sites/*/private
+/web/sites/simpletest
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*~
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Composer artifacts (keep composer.lock)
+/composer.phar
+
+# Drush files
+/drush/backups/
+/drush/sites/
+/.drush/
+/.drushrc.php
+
+# Temporary files
+/web/sites/default/files/php/twig/*
+
+# DDEV files
+/.ddev/.global_commands/
+/.ddev/.dbinfo
+/.ddev/import-db/
+/.ddev/sequelpro.spf
+/.ddev/nfs-mount/*
+
+# Logs
+/logs/
+*.log
