@@ -5,9 +5,6 @@
 /web/profiles/contrib/
 /vendor/
 
-# Ignore configuration sync directory if outside the web root
-/config/
-
 # Site-specific sensitive files
 /web/sites/*/settings.php
 /web/sites/*/services.yml
