@@ -1,0 +1,21 @@
+uuid: 48252042-b464-48f7-b206-e10653c8e78f
+langcode: en
+status: true
+dependencies:
+  module:
+    - type_tray
+  enforced:
+    module:
+      - forum
+third_party_settings:
+  type_tray:
+    existing_nodes_link_text: 'View existing <em class="placeholder">Forum topic</em> content'
+_core:
+  default_config_hash: Jy_D2Nfllzh1aAdW2D4HIK4SgiSDoEU72fpN89lmUro
+name: 'Forum topic'
+type: forum
+description: 'A <em>forum topic</em> starts a new discussion thread within a forum.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true
