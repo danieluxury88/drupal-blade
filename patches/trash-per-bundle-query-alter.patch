@@ -1,0 +1,109 @@
+From 8c2a28750118c925dc01341ea25ecd614866fa10 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Daniel=20Proa=C3=B1o=20Chac=C3=B3n?= <danieluxury@gmail.com>
+Date: Mon, 9 Jun 2025 14:51:00 -0500
+Subject: [PATCH] Honor per-bundle trash settings in query alters
+
+---
+ src/ViewsQueryAlter.php | 44 +++++++++++++++++++++++++++++++++++++++++
+ trash.module            | 23 +++++++++++++++++++++
+ 2 files changed, 67 insertions(+)
+
+diff --git a/src/ViewsQueryAlter.php b/src/ViewsQueryAlter.php
+index bc1a2b0..a9ff3e0 100644
+--- a/src/ViewsQueryAlter.php
++++ b/src/ViewsQueryAlter.php
+@@ -102,6 +102,25 @@ class ViewsQueryAlter implements ContainerInjectionInterface {
+         $deleted_table_name = $query->addTable($data_table, NULL, $join);
+       }
+ 
++      $entity_type = $entity_type_definitions[$entity_type_id];
++      if ($bundle_key = $entity_type->getKey('bundle')) {
++        $storage = $this->entityTypeManager->getStorage($entity_type_id);
++        assert($storage instanceof SqlEntityStorageInterface);
++        $table_mapping = $storage->getTableMapping();
++        assert($table_mapping instanceof DefaultTableMapping);
++        $field_storage_definitions = $this->entityFieldManager->getFieldStorageDefinitions($entity_type_id);
++        $bundle_column = $table_mapping->getFieldColumnName($field_storage_definitions[$bundle_key], 'value');
++        $bundles = $this->getBundleConditions($query, $deleted_table_name, $bundle_column);
++        if ($bundles !== []) {
++          $enabled = array_filter($bundles, function (string $bundle) use ($entity_type_id) {
++            return $this->trashManager->isEntityTypeEnabled($entity_type_id, $bundle);
++          });
++          if ($enabled === []) {
++            continue;
++          }
++        }
++      }
++
+       $this->alterQueryForEntityType($query, $entity_type_id, $deleted_table_name);
+     }
+   }
+@@ -195,6 +214,31 @@ class ViewsQueryAlter implements ContainerInjectionInterface {
+     return FALSE;
+   }
+ 
++  /**
++   * Extracts bundle values from query conditions.
++   */
++  protected function getBundleConditions(Sql $query, string $table_alias, string $bundle_column): array {
++    $values = [];
++    foreach ($query->where as $group) {
++      foreach ($group['conditions'] as $condition) {
++        if (!isset($condition['field']) || !is_string($condition['field'])) {
++          continue;
++        }
++        if (strpos($condition['field'], "{$table_alias}.{$bundle_column}") !== FALSE) {
++          $value = $condition['value'];
++          if (is_array($value)) {
++            $values = array_merge($values, $value);
++          }
++          else {
++            $values[] = $value;
++          }
++        }
++      }
++    }
++
++    return array_unique($values);
++  }
++
+   /**
+    * Implements a hook bridge for hook_views_post_render().
+    *
+diff --git a/trash.module b/trash.module
+index 612e99a..e62757f 100644
+--- a/trash.module
++++ b/trash.module
+@@ -142,6 +142,29 @@ function trash_entity_query_alter(QueryInterface $query): void {
+   $property = new \ReflectionProperty($query::class, 'condition');
+   $conditions = $property->getValue($query);
+ 
++  $bundle_key = \Drupal::entityTypeManager()->getDefinition($entity_type_id)->getKey('bundle');
++  if ($bundle_key) {
++    $bundles = [];
++    foreach ($conditions->conditions() as $condition) {
++      if ($condition['field'] === $bundle_key) {
++        if (is_array($condition['value'])) {
++          $bundles = array_merge($bundles, $condition['value']);
++        }
++        else {
++          $bundles[] = $condition['value'];
++        }
++      }
++    }
++    if ($bundles !== []) {
++      $enabled = array_filter($bundles, static function (string $bundle) use ($trash_manager, $entity_type_id) {
++        return $trash_manager->isEntityTypeEnabled($entity_type_id, $bundle);
++      });
++      if ($enabled === []) {
++        return;
++      }
++    }
++  }
++
+   // Skip altering queries with an explicit filter on the 'deleted' field, so
+   // you can still list deleted content, if needed.
+   $deleted_key = 'deleted';
+-- 
+2.39.5 (Apple Git-154)
+
