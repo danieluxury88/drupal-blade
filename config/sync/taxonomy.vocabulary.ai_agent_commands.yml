@@ -1,0 +1,9 @@
+uuid: 8021350d-cf75-4592-8aa8-d84d6af44390
+langcode: en
+status: true
+dependencies: {  }
+name: 'AI Edit Commands'
+vid: ai_agent_commands
+description: 'Commands for the CKEditor AI Agent editing tools'
+weight: 0
+new_revision: false

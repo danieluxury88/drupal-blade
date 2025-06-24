@@ -1,0 +1,9 @@
+uuid: d01abc2d-b25a-47c6-a67d-6649260fa0ba
+langcode: en
+status: true
+dependencies: {  }
+name: 'AI Tone of Voice'
+vid: ai_tone_of_voice
+description: 'Tones of voice for the CKEditor AI Agent'
+weight: 0
+new_revision: false

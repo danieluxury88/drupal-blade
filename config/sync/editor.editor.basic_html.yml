@@ -13,6 +13,9 @@ editor: ckeditor5
 settings:
   toolbar:
     items:
+      - aiAgentButton
+      - aiAgentToneButton
+      - '|'
       - bold
       - italic
       - '|'
