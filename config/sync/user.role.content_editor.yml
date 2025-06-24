@@ -27,6 +27,7 @@ permissions:
   - 'access contextual links'
   - 'access files overview'
   - 'access toolbar'
+  - 'administer menu'
   - 'administer url aliases'
   - 'create article content'
   - 'create page content'

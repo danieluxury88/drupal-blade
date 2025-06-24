@@ -55,6 +55,7 @@ module:
   path: 0
   path_alias: 0
   poll: 0
+  project_overview: 0
   scheduler: 0
   search: 0
   settings_tray: 0
@@ -70,6 +71,7 @@ module:
   token: 0
   toolbar: 0
   tracer: 0
+  trash: 0
   twig_tweak: 0
   type_tray: 0
   update: 0
