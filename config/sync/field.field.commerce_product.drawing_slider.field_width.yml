@@ -1,0 +1,21 @@
+uuid: 3d78f9e4-6799-426b-812a-7f8671d9db00
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.drawing_slider
+    - field.storage.commerce_product.field_width
+  module:
+    - physical
+id: commerce_product.drawing_slider.field_width
+field_name: field_width
+entity_type: commerce_product
+bundle: drawing_slider
+label: Width
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: physical_measurement

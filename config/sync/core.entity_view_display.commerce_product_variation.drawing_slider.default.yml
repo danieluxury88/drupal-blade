@@ -1,0 +1,101 @@
+uuid: e660f66d-8042-4243-b4be-84585df19444
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.drawing_slider
+    - field.field.commerce_product_variation.drawing_slider.field_drillings
+    - field.field.commerce_product_variation.drawing_slider.field_extension_length
+    - field.field.commerce_product_variation.drawing_slider.field_length
+    - field.field.commerce_product_variation.drawing_slider.field_load_capacity
+    - field.field.commerce_product_variation.drawing_slider.field_load_capacity_x
+    - field.field.commerce_product_variation.drawing_slider.field_load_capacity_y
+    - field.field.commerce_product_variation.drawing_slider.field_weight
+  module:
+    - commerce_price
+    - physical
+id: commerce_product_variation.drawing_slider.default
+targetEntityType: commerce_product_variation
+bundle: drawing_slider
+mode: default
+content:
+  field_drillings:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_extension_length:
+    type: physical_measurement_default
+    label: above
+    settings:
+      output_unit: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_length:
+    type: physical_measurement_default
+    label: above
+    settings:
+      output_unit: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_load_capacity:
+    type: physical_measurement_default
+    label: above
+    settings:
+      output_unit: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_load_capacity_x:
+    type: physical_measurement_default
+    label: above
+    settings:
+      output_unit: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_load_capacity_y:
+    type: physical_measurement_default
+    label: above
+    settings:
+      output_unit: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_weight:
+    type: physical_measurement_default
+    label: above
+    settings:
+      output_unit: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  list_price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  price:
+    type: commerce_price_default
+    label: above
+    settings:
+      strip_trailing_zeroes: false
+      currency_display: symbol
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  product_id: true
+  sku: true
+  title: true

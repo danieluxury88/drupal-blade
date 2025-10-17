@@ -1,0 +1,11 @@
+uuid: 08108dfc-2b7d-4f6e-bc0e-e76ef092c809
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.drawing_slider
+id: commerce_product.drawing_slider
+target_entity_type_id: commerce_product
+target_bundle: drawing_slider
+default_langcode: site_default
+language_alterable: false

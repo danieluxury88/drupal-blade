@@ -1,0 +1,21 @@
+uuid: c9b7a042-a8a0-4f5d-9aa6-1b2f073931e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.drawing_slider
+    - field.storage.commerce_product_variation.field_extension_length
+  module:
+    - physical
+id: commerce_product_variation.drawing_slider.field_extension_length
+field_name: field_extension_length
+entity_type: commerce_product_variation
+bundle: drawing_slider
+label: 'Extension Length'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: physical_measurement

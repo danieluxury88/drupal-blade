@@ -1,0 +1,22 @@
+uuid: 1e6e6d8c-a442-427e-8df3-36dc78844138
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_abbreviation
+    - taxonomy.vocabulary.material
+  module:
+    - text
+id: taxonomy_term.material.field_abbreviation
+field_name: field_abbreviation
+entity_type: taxonomy_term
+bundle: material
+label: Abbreviation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

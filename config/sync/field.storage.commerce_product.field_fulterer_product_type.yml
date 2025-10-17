@@ -1,0 +1,30 @@
+uuid: 399eff84-7181-4e4f-b26a-195d0be99fdc
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - options
+id: commerce_product.field_fulterer_product_type
+field_name: field_fulterer_product_type
+entity_type: commerce_product
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: fk
+      label: FK
+    -
+      value: fz
+      label: FZ
+    -
+      value: fl
+      label: FL
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,29 @@
+uuid: 0203739f-e37f-4bde-a9c4-3e4606f90e19
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.drawing_slider
+    - field.storage.commerce_product.field_material
+    - taxonomy.vocabulary.material
+id: commerce_product.drawing_slider.field_material
+field_name: field_material
+entity_type: commerce_product
+bundle: drawing_slider
+label: Material
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      material: material
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

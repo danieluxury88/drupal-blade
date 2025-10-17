@@ -1,0 +1,57 @@
+uuid: 60e89b27-6860-4d10-bd6d-2800b5139fb3
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - options
+id: commerce_product.field_coding_feature
+field_name: field_coding_feature
+entity_type: commerce_product
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ec
+      label: EC
+    -
+      value: sc
+      label: SC
+    -
+      value: il
+      label: IL
+    -
+      value: li
+      label: LI
+    -
+      value: lo
+      label: LO
+    -
+      value: ld
+      label: LD
+    -
+      value: dt
+      label: DT
+    -
+      value: c
+      label: C
+    -
+      value: ps
+      label: PS
+    -
+      value: ms
+      label: MS
+    -
+      value: po
+      label: PO
+    -
+      value: pe
+      label: PE
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

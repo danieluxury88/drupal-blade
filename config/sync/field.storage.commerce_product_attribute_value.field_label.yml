@@ -1,0 +1,21 @@
+uuid: 3d14579d-bc8e-42bf-acbc-aea50fe2de3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_attribute_value.field_label
+field_name: field_label
+entity_type: commerce_product_attribute_value
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: ea345ba1-9496-400f-af2e-679d91471cbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.drawing_slider
+    - field.storage.commerce_product_variation.field_drillings
+id: commerce_product_variation.drawing_slider.field_drillings
+field_name: field_drillings
+entity_type: commerce_product_variation
+bundle: drawing_slider
+label: Drillings
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,30 @@
+uuid: a528c708-234c-49a9-8479-6dc442b3b07d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.material.field_abbreviation
+    - taxonomy.vocabulary.material
+  module:
+    - text
+id: taxonomy_term.material.default
+targetEntityType: taxonomy_term
+bundle: material
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_abbreviation:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

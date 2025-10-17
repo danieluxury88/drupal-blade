@@ -1,0 +1,20 @@
+uuid: 8e57d418-6384-47b7-a667-262cd17a02d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - physical
+id: commerce_product_variation.field_load_capacity_y
+field_name: field_load_capacity_y
+entity_type: commerce_product_variation
+type: physical_measurement
+settings:
+  measurement_type: weight
+module: physical
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

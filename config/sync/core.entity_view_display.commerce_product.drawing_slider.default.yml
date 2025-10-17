@@ -1,0 +1,87 @@
+uuid: 4e948b98-12da-4fae-8a94-b25401cfee27
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.drawing_slider
+    - field.field.commerce_product.drawing_slider.field_coding_feature
+    - field.field.commerce_product.drawing_slider.field_extension_type
+    - field.field.commerce_product.drawing_slider.field_fulterer_product_type
+    - field.field.commerce_product.drawing_slider.field_height
+    - field.field.commerce_product.drawing_slider.field_material
+    - field.field.commerce_product.drawing_slider.field_width
+  module:
+    - commerce_product
+    - options
+    - physical
+id: commerce_product.drawing_slider.default
+targetEntityType: commerce_product
+bundle: drawing_slider
+mode: default
+content:
+  field_coding_feature:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_extension_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_fulterer_product_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_height:
+    type: physical_measurement_default
+    label: above
+    settings:
+      output_unit: ''
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_material:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_width:
+    type: physical_measurement_default
+    label: above
+    settings:
+      output_unit: ''
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  created: true
+  langcode: true
+  stores: true
+  uid: true

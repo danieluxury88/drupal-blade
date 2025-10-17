@@ -1,0 +1,21 @@
+uuid: 668473e4-664a-4284-8a96-78307fea535c
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.drawing_slider
+    - field.storage.commerce_product_variation.field_load_capacity_x
+  module:
+    - physical
+id: commerce_product_variation.drawing_slider.field_load_capacity_x
+field_name: field_load_capacity_x
+entity_type: commerce_product_variation
+bundle: drawing_slider
+label: 'Load capacity X'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: physical_measurement

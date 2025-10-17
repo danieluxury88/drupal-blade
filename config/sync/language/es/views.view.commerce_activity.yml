@@ -1,0 +1,29 @@
+display:
+  default:
+    display_title: Máster
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Aplicar
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      fields:
+        created:
+          label: Fecha
+          separator: ', '
+        rendered_entity:
+          label: Mensaje
+        uid:
+          label: Usuario
+          separator: ', '
+      arguments:
+        source_entity_id:
+          exception:
+            title: Todo(s)
+        source_entity_type:
+          exception:
+            title: Todo(s)
+  block_1:
+    display_title: Bloque

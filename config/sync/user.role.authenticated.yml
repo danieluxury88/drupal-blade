@@ -7,6 +7,7 @@ dependencies:
     - filter.format.webform_default
   module:
     - comment
+    - commerce_product
     - contact
     - file
     - filter
@@ -33,4 +34,5 @@ permissions:
   - 'skip comment approval'
   - 'use text format basic_html'
   - 'use text format webform_default'
+  - 'view commerce_product'
   - 'view media'

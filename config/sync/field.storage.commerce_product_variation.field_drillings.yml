@@ -1,0 +1,20 @@
+uuid: edd8f9f9-95e6-44fa-b3f7-09c1325ab1ac
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.field_drillings
+field_name: field_drillings
+entity_type: commerce_product_variation
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

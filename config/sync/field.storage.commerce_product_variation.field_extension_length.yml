@@ -1,0 +1,20 @@
+uuid: c9b23271-6e80-4a37-b6de-c86247937bb5
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - physical
+id: commerce_product_variation.field_extension_length
+field_name: field_extension_length
+entity_type: commerce_product_variation
+type: physical_measurement
+settings:
+  measurement_type: length
+module: physical
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

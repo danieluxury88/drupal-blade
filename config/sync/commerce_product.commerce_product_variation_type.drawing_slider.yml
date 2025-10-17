@@ -1,0 +1,10 @@
+uuid: 1508eab9-e490-4a54-8a77-261d21f7067c
+langcode: en
+status: true
+dependencies: {  }
+id: drawing_slider
+label: 'Drawing Slider'
+traits: {  }
+locked: false
+orderItemType: null
+generateTitle: false

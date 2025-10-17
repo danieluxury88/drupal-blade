@@ -1,0 +1,60 @@
+uuid: 52271ec2-495f-4cfd-9e6a-7622dcebe8e7
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - options
+id: commerce_product.field_extension_type
+field_name: field_extension_type
+entity_type: commerce_product
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: sf
+      label: SF
+    -
+      value: so
+      label: SO
+    -
+      value: sx
+      label: SX
+    -
+      value: bf
+      label: BF
+    -
+      value: bp
+      label: BP
+    -
+      value: bo
+      label: BO
+    -
+      value: bx
+      label: BX
+    -
+      value: ff
+      label: FF
+    -
+      value: fx
+      label: FX
+    -
+      value: fo
+      label: FO
+    -
+      value: fp
+      label: FP
+    -
+      value: sl
+      label: SL
+    -
+      value: sd
+      label: SD
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

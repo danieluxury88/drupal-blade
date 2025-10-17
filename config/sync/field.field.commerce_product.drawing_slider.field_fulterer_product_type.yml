@@ -1,0 +1,21 @@
+uuid: 772b1b64-8937-45b8-9ca0-953980c3cfba
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.drawing_slider
+    - field.storage.commerce_product.field_fulterer_product_type
+  module:
+    - options
+id: commerce_product.drawing_slider.field_fulterer_product_type
+field_name: field_fulterer_product_type
+entity_type: commerce_product
+bundle: drawing_slider
+label: 'Fulterer Product Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
