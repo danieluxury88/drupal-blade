@@ -144,6 +144,7 @@ display:
               responsive: ''
           default: changed
           empty_table: true
+          class: ''
       row:
         type: fields
       fields:

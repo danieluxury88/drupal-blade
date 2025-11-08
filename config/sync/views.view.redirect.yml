@@ -131,6 +131,7 @@ display:
               responsive: ''
           default: created
           empty_table: false
+          class: ''
       row:
         type: fields
       fields:

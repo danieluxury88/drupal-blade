@@ -124,6 +124,7 @@ display:
               responsive: ''
           default: placed
           empty_table: false
+          class: ''
       row:
         type: fields
       fields:
