@@ -14,13 +14,6 @@
             "url": "https://packages.drupal.org/8"
         },
         {
-            "type": "path",
-            "url": "../Sites/agro-drupal/web/modules/serious_design/project_overview",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         }
@@ -82,11 +75,6 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
-            }
-        },
-        "patches": {
-            "drupal/trash": {
-                "Trash Per Bundle Query Alter": "patches/trash-per-bundle-query-alter.patch"
             }
         },
         "installer-paths": {
