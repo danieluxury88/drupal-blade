@@ -1,0 +1,51 @@
+label: Pagos
+display:
+  default:
+    display_title: 'Por defecto'
+    display_options:
+      title: Pagos
+      fields:
+        amount__number:
+          label: Pago
+          separator: ', '
+        refunded_amount__number:
+          label: 'Reembolsado:'
+          separator: ', '
+        avs_response_code_label:
+          separator: ', '
+        avs_response_code:
+          label: 'Código de respuesta AVS'
+          separator: ', '
+        state:
+          label: Estado
+          separator: ', '
+        payment_gateway:
+          label: 'Pasarela de pago'
+          separator: ', '
+        authorized:
+          label: Autorizado
+          separator: ', '
+        completed:
+          label: Completado
+          separator: ', '
+        remote_id:
+          label: 'ID remoto'
+          separator: ', '
+        operations:
+          label: Operaciones
+      exposed_form:
+        options:
+          submit_button: Aplicar
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      arguments:
+        order_id:
+          exception:
+            title: Todo(s)
+  page_1:
+    display_title: Página
+    display_options:
+      menu:
+        title: Pagos

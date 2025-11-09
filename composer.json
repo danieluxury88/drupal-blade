@@ -30,6 +30,7 @@
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.6",
         "drupal/ai": "^1.1",
+        "drupal/backup_migrate": "^5.1",
         "drupal/book": "^2.0",
         "drupal/ckeditor_ai_agent": "^1.0@beta",
         "drupal/commerce": "^3.0",
