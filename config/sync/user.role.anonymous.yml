@@ -11,6 +11,7 @@ dependencies:
     - contact
     - filter
     - media
+    - poll
     - search
     - system
 _core:
@@ -23,6 +24,7 @@ permissions:
   - 'access checkout'
   - 'access comments'
   - 'access content'
+  - 'access polls'
   - 'access site-wide contact form'
   - 'search content'
   - 'use text format restricted_html'

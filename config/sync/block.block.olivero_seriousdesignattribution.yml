@@ -1,0 +1,25 @@
+uuid: ba06c88e-0d66-4661-94a7-a1f13992ec4a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2f6a48d1-f557-4734-a266-26b437f44100'
+  module:
+    - block_content
+  theme:
+    - olivero
+id: olivero_seriousdesignattribution
+theme: olivero
+region: footer_top
+weight: 0
+provider: null
+plugin: 'block_content:2f6a48d1-f557-4734-a266-26b437f44100'
+settings:
+  id: 'block_content:2f6a48d1-f557-4734-a266-26b437f44100'
+  label: 'SeriousDesign attribution'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
