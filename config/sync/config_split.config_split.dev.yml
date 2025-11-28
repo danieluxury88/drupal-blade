@@ -1,0 +1,17 @@
+uuid: c13b0cee-9812-4f4a-a634-3280c4827560
+langcode: en
+status: true
+dependencies: {  }
+id: dev
+label: Dev
+description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: dev
+module:
+  webprofiler: 0
+theme: {  }
+complete_list: {  }
+partial_list: {  }
