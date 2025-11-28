@@ -20,9 +20,9 @@ mode: admin
 content:
   address:
     type: address_default
+    weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
     region: content
 hidden: {  }
