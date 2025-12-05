@@ -62,14 +62,14 @@ definitions:
     expanded: false
     enabled: true
   help__main:
+    enabled: false
     menu_name: admin
     parent: system.admin
-    weight: -91
     expanded: false
-    enabled: true
+    weight: -91
   announcements_feed__announcement:
+    enabled: false
     menu_name: admin
     parent: system.admin
     weight: -90
     expanded: false
-    enabled: true
