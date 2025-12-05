@@ -35,6 +35,7 @@ Thumbs.db
 /web/sites/default/files/php/twig/*
 
 # DDEV files
+/.ddev/
 /.ddev/.global_commands/
 /.ddev/.dbinfo
 /.ddev/import-db/

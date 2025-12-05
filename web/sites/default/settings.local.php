@@ -162,3 +162,5 @@ $databases['default']['default'] = [
   'prefix' => '',
   'collation' => 'utf8mb4_general_ci',
 ];
+
+$config["config_split.config_split.dev"]["status"] = FALSE;

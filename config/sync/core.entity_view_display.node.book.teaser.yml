@@ -26,8 +26,8 @@ content:
     region: content
   book_navigation:
     label: hidden
-    region: content
     weight: 101
+    region: content
   links:
     weight: 102
     region: content

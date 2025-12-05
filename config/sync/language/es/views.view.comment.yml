@@ -51,6 +51,9 @@ display:
         subject:
           expose:
             label: Asunto
+        combine:
+          expose:
+            label: 'Nombre del autor'
         langcode:
           expose:
             label: Idioma

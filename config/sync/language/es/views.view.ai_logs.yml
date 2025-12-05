@@ -20,6 +20,7 @@ display:
           label: Proveedor
           separator: ', '
         model:
+          label: Modelo
           separator: ', '
         tags_value:
           label: Etiquetas
@@ -54,11 +55,17 @@ display:
         bundle:
           expose:
             label: Tipo
+        created:
+          expose:
+            label: 'Fecha desde'
         created_1:
           expose:
             label: Para
         provider:
           expose:
             label: Proveedor
+        model:
+          expose:
+            label: Modelo
   page_1:
     display_title: Página
