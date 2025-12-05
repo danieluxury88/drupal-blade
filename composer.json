@@ -141,7 +141,9 @@
         }
     },
     "require-dev": {
+        "drupal/coder": "^8.3",
         "drupal/webprofiler": "^11.1",
-        "drush/drush": "^13.6"
+        "drush/drush": "^13.6",
+        "squizlabs/php_codesniffer": "^3.13"
     }
 }
