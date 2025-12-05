@@ -1,0 +1,3276 @@
+{
+    "paragraphs": {
+        "csm_accordion_image": {
+            "machine_name": "csm_accordion_image",
+            "label": "Akkordeon Bild",
+            "description": "",
+            "count": 52,
+            "fields_count": 3,
+            "fields": {
+                "csm_img_size_big": {
+                    "label": "Bild gr\u00f6\u00dfer ausgeben?",
+                    "type": "boolean",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "csm_show_img_caption": {
+                    "label": "Zeige Bildunterschrift",
+                    "type": "boolean",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_media": {
+                    "label": "Bild",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image",
+                        "csm_news_blog_images"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_accordion_image",
+            "fields_path": "/admin/structure/paragraphs_type/csm_accordion_image/fields"
+        },
+        "csm_accordion_video": {
+            "machine_name": "csm_accordion_video",
+            "label": "Akkordeon Video",
+            "description": "",
+            "count": 1,
+            "fields_count": 1,
+            "fields": {
+                "ocm_media": {
+                    "label": "Video",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "remote_video",
+                        "video"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_accordion_video",
+            "fields_path": "/admin/structure/paragraphs_type/csm_accordion_video/fields"
+        },
+        "csm_architecture_item": {
+            "machine_name": "csm_architecture_item",
+            "label": "Architektur Item",
+            "description": "",
+            "count": 34,
+            "fields_count": 2,
+            "fields": {
+                "ocm_link": {
+                    "label": "Link",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_media": {
+                    "label": "Bild",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_architecture_item",
+            "fields_path": "/admin/structure/paragraphs_type/csm_architecture_item/fields"
+        },
+        "csm_code": {
+            "machine_name": "csm_code",
+            "label": "Code",
+            "description": "TextEditor f\u00fcr Admins (Scripte/Iframes etc...)",
+            "count": 10,
+            "fields_count": 1,
+            "fields": {
+                "ocm_description": {
+                    "label": "Text",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_code",
+            "fields_path": "/admin/structure/paragraphs_type/csm_code/fields"
+        },
+        "csm_contact_slider_item_custom": {
+            "machine_name": "csm_contact_slider_item_custom",
+            "label": "Individueller Kontakt",
+            "description": "Hiermit k\u00f6nnen individuelle Kontaktdaten angelegt werden.",
+            "count": 172,
+            "fields_count": 7,
+            "fields": {
+                "csm_contact_links": {
+                    "label": "Links",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "csm_contact_slider_employee": {
+                    "label": "Mitarbeiter:in",
+                    "type": "entity_reference",
+                    "target_type": "node",
+                    "target_bundles": [
+                        "csm_mitarbeitende"
+                    ]
+                },
+                "csm_contact_slider_mail": {
+                    "label": "Email",
+                    "type": "email",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "csm_contact_slider_phone": {
+                    "label": "Telefon",
+                    "type": "telephone",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_description_plain": {
+                    "label": "Beschreibung",
+                    "type": "text",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_link": {
+                    "label": "Link",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_media": {
+                    "label": "Bild",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image",
+                        "csm_news_blog_images"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_contact_slider_item_custom",
+            "fields_path": "/admin/structure/paragraphs_type/csm_contact_slider_item_custom/fields"
+        },
+        "csm_contact_slider_item_user": {
+            "machine_name": "csm_contact_slider_item_user",
+            "label": "Referenzierter Kontakt",
+            "description": "Referenz zu einem im System vorhandenen Benutzer.",
+            "count": 282,
+            "fields_count": 2,
+            "fields": {
+                "csm_contact_links": {
+                    "label": "Links",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "csm_contact_slider_employee": {
+                    "label": "Mitarbeiter:in",
+                    "type": "entity_reference",
+                    "target_type": "node",
+                    "target_bundles": [
+                        "csm_mitarbeitende"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_contact_slider_item_user",
+            "fields_path": "/admin/structure/paragraphs_type/csm_contact_slider_item_user/fields"
+        },
+        "csm_course_catalogue_view": {
+            "machine_name": "csm_course_catalogue_view",
+            "label": "Vorlesungsverzeichnis",
+            "description": "View Name: Vorlesungsverzeichnis\r\nView Maschinenname: csm_course_catalogue_overview",
+            "count": 19,
+            "fields_count": 4,
+            "fields": {
+                "csm_event_structure_ref": {
+                    "label": "Veranstaltungsgliederung Referenz",
+                    "type": "entity_reference",
+                    "target_type": "node",
+                    "target_bundles": [
+                        "csm_vera_gliederung"
+                    ]
+                },
+                "csm_study_program_reference": {
+                    "label": "Studiengang",
+                    "type": "entity_reference",
+                    "target_type": "node",
+                    "target_bundles": [
+                        "ocm_studiengang"
+                    ]
+                },
+                "ocm_description": {
+                    "label": "Text",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_course_catalogue_view",
+            "fields_path": "/admin/structure/paragraphs_type/csm_course_catalogue_view/fields"
+        },
+        "csm_custom_views": {
+            "machine_name": "csm_custom_views",
+            "label": "Benutzerdefinierte Ansicht",
+            "description": "Nur f\u00fcr Admins. Nur f\u00fcr Ansichten vom Typ Block.",
+            "count": 1,
+            "fields_count": 1,
+            "fields": {
+                "csm_view_reference": {
+                    "label": "Ansicht",
+                    "type": "entity_reference",
+                    "target_type": "view",
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_custom_views",
+            "fields_path": "/admin/structure/paragraphs_type/csm_custom_views/fields"
+        },
+        "csm_employee_directory": {
+            "machine_name": "csm_employee_directory",
+            "label": "Personenverzeichnis ",
+            "description": "View Name: Personenverzeichnis\r\nView Maschinenname: csm_employee_directory",
+            "count": 13,
+            "fields_count": 1,
+            "fields": {
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_employee_directory",
+            "fields_path": "/admin/structure/paragraphs_type/csm_employee_directory/fields"
+        },
+        "csm_event_category_view": {
+            "machine_name": "csm_event_category_view",
+            "label": "Event Kategorie Ansicht",
+            "description": "Diese Ansicht zeigt Veranstaltungen, gefiltert nach Veranstaltungsart. W\u00e4hle eine Veranstaltungsart aus der Liste, um die Ergebnisse anzuzeigen.\r\n\r\nView Name: Event Kategorie Ansicht\r\nView Maschinenname: csm_event_category_view",
+            "count": 4,
+            "fields_count": 4,
+            "fields": {
+                "csm_category_filter": {
+                    "label": "Veranstaltungsart Filter",
+                    "type": "entity_reference",
+                    "target_type": "node",
+                    "target_bundles": [
+                        "csm_event_gattung"
+                    ]
+                },
+                "ocm_description": {
+                    "label": "Text",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_event_category_view",
+            "fields_path": "/admin/structure/paragraphs_type/csm_event_category_view/fields"
+        },
+        "csm_event_slider_view": {
+            "machine_name": "csm_event_slider_view",
+            "label": "Event Slider Ansicht",
+            "description": "View Name: Event Slider Ansicht\r\nView Maschinenname: csm_event_slider_view",
+            "count": 32,
+            "fields_count": 2,
+            "fields": {
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_event_slider_view",
+            "fields_path": "/admin/structure/paragraphs_type/csm_event_slider_view/fields"
+        },
+        "csm_event_taxonomy_view": {
+            "machine_name": "csm_event_taxonomy_view",
+            "label": "Event Ansicht",
+            "description": "Zeigt Event-Eintr\u00e4ge basierend auf den optionalen Filterwerten: Taxonomie, Organisation und Event-Gattung.\r\n\r\nView Name: Event Ansicht\r\nView Maschinenname: csm_event_taxonomy_view",
+            "count": 103,
+            "fields_count": 12,
+            "fields": {
+                "csm_display_endless_scroll": {
+                    "label": "Zeige die Events als \u00dcbersicht",
+                    "type": "boolean",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "csm_event_type": {
+                    "label": "Event Gattung",
+                    "type": "entity_reference",
+                    "target_type": "node",
+                    "target_bundles": [
+                        "csm_event_gattung"
+                    ]
+                },
+                "csm_no_results_text": {
+                    "label": "Placeholder Text",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "csm_organisation_reference": {
+                    "label": "Organisation",
+                    "type": "entity_reference",
+                    "target_type": "container",
+                    "target_bundles": []
+                },
+                "csm_show_past_events": {
+                    "label": "Zeige nur vergangene Veranstaltungen",
+                    "type": "boolean",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "csm_text_full_width": {
+                    "label": "Placeholder volle Breite",
+                    "type": "boolean",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "csm_topic_reference": {
+                    "label": "Themen (ODER - Bedingung)",
+                    "type": "entity_reference",
+                    "target_type": "container",
+                    "target_bundles": []
+                },
+                "csm_topic_reference_and": {
+                    "label": "Themen (UND - Bedingung)",
+                    "type": "entity_reference",
+                    "target_type": "container",
+                    "target_bundles": []
+                },
+                "ocm_description": {
+                    "label": "Text",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_link": {
+                    "label": "Eyebrow Link",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_event_taxonomy_view",
+            "fields_path": "/admin/structure/paragraphs_type/csm_event_taxonomy_view/fields"
+        },
+        "csm_firmenmitglieder": {
+            "machine_name": "csm_firmenmitglieder",
+            "label": "Firmenmitglieder",
+            "description": "",
+            "count": 0,
+            "fields_count": 3,
+            "fields": {
+                "csm_email": {
+                    "label": "E-Mail-Ad\u00adres\u00adse",
+                    "type": "email",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "csm_nachname": {
+                    "label": "Nachname",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "csm_vorname": {
+                    "label": "Vorname",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_firmenmitglieder",
+            "fields_path": "/admin/structure/paragraphs_type/csm_firmenmitglieder/fields"
+        },
+        "csm_image_link": {
+            "machine_name": "csm_image_link",
+            "label": "Vorschaubilder mit Link",
+            "description": "",
+            "count": 34,
+            "fields_count": 2,
+            "fields": {
+                "csm_image_link_collection": {
+                    "label": "Vorschaubild/Link Sammlung",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "csm_image_link_item"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_image_link",
+            "fields_path": "/admin/structure/paragraphs_type/csm_image_link/fields"
+        },
+        "csm_image_link_item": {
+            "machine_name": "csm_image_link_item",
+            "label": "Vorschaubild mit Link",
+            "description": "",
+            "count": 106,
+            "fields_count": 2,
+            "fields": {
+                "ocm_link": {
+                    "label": "Link",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_media": {
+                    "label": "Bild",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image",
+                        "csm_news_blog_images"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_image_link_item",
+            "fields_path": "/admin/structure/paragraphs_type/csm_image_link_item/fields"
+        },
+        "csm_job_overview": {
+            "machine_name": "csm_job_overview",
+            "label": "Jobs \u00dcbersicht",
+            "description": "View Name: Jobs Overview\r\nView Maschinenname: ocm_job_offers",
+            "count": 11,
+            "fields_count": 2,
+            "fields": {
+                "csm_job_is_uni_related": {
+                    "label": "Zeige nur Uni interne Jobs",
+                    "type": "boolean",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_job_overview",
+            "fields_path": "/admin/structure/paragraphs_type/csm_job_overview/fields"
+        },
+        "csm_link_list": {
+            "machine_name": "csm_link_list",
+            "label": "Link Liste",
+            "description": "",
+            "count": 47,
+            "fields_count": 2,
+            "fields": {
+                "ocm_links": {
+                    "label": "Links",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_link_list",
+            "fields_path": "/admin/structure/paragraphs_type/csm_link_list/fields"
+        },
+        "csm_media_releases_overview": {
+            "machine_name": "csm_media_releases_overview",
+            "label": "Medienmitteilungen \u00dcbersicht",
+            "description": "",
+            "count": 0,
+            "fields_count": 2,
+            "fields": {
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_media_releases_overview",
+            "fields_path": "/admin/structure/paragraphs_type/csm_media_releases_overview/fields"
+        },
+        "csm_modulsuche": {
+            "machine_name": "csm_modulsuche",
+            "label": "Modulsuche",
+            "description": "",
+            "count": 1,
+            "fields_count": 2,
+            "fields": {
+                "ocm_description": {
+                    "label": "Text",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_modulsuche",
+            "fields_path": "/admin/structure/paragraphs_type/csm_modulsuche/fields"
+        },
+        "csm_orga_unit_member_view": {
+            "machine_name": "csm_orga_unit_member_view",
+            "label": "Organisationseinheit Mitarbeiter",
+            "description": "View Name: Organisationseinheit Mitglieder\t\r\nView Maschinenname: csm_orga_unit_member_view",
+            "count": 16,
+            "fields_count": 2,
+            "fields": {
+                "csm_organisation_reference": {
+                    "label": "Organisations",
+                    "type": "entity_reference",
+                    "target_type": "container",
+                    "target_bundles": [
+                        "ocm_organisationseinheit"
+                    ]
+                },
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_orga_unit_member_view",
+            "fields_path": "/admin/structure/paragraphs_type/csm_orga_unit_member_view/fields"
+        },
+        "csm_partner_universities_view": {
+            "machine_name": "csm_partner_universities_view",
+            "label": "Partner Universit\u00e4ten",
+            "description": "View Name: Partner Universit\u00e4ten \u00dcbersicht\r\nView Maschinenname: csm_partner_universities_overview\r\n\r\nF\u00fcr die englische Ausgabe wird hier eine andere View im Paragraphen preprocess ausgew\u00e4hlt!\r\nView Name: Partner Universit\u00e4ten \u00dcbersicht (englische Ausgabe)\r\nView Maschinenname: csm_partner_universities_overview_en",
+            "count": 4,
+            "fields_count": 3,
+            "fields": {
+                "ocm_description": {
+                    "label": "Text",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_partner_universities_view",
+            "fields_path": "/admin/structure/paragraphs_type/csm_partner_universities_view/fields"
+        },
+        "csm_project_minimized": {
+            "machine_name": "csm_project_minimized",
+            "label": "Projekte Mini Ansicht",
+            "description": "View Name: Projekte Mini Ansicht\t\r\nView Maschinenname: csm_project_mini_view",
+            "count": 14,
+            "fields_count": 3,
+            "fields": {
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_link": {
+                    "label": "Eyebrow Link",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_project_minimized",
+            "fields_path": "/admin/structure/paragraphs_type/csm_project_minimized/fields"
+        },
+        "csm_project_overview": {
+            "machine_name": "csm_project_overview",
+            "label": "Projekte \u00dcbersicht",
+            "description": "View Name: Projekte \u00dcbersicht\r\nView Maschinenname: csm_project_overview",
+            "count": 15,
+            "fields_count": 0,
+            "fields": [],
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_project_overview",
+            "fields_path": "/admin/structure/paragraphs_type/csm_project_overview/fields"
+        },
+        "csm_project_topic_view": {
+            "machine_name": "csm_project_topic_view",
+            "label": "Projekt Ober Typ Tab",
+            "description": "",
+            "count": 64,
+            "fields_count": 1,
+            "fields": {
+                "csm_project_top_type": {
+                    "label": "Projekt Ober Typ Tab",
+                    "type": "entity_reference",
+                    "target_type": "node",
+                    "target_bundles": [
+                        "csm_projekt_ober_typ"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_project_topic_view",
+            "fields_path": "/admin/structure/paragraphs_type/csm_project_topic_view/fields"
+        },
+        "csm_project_view": {
+            "machine_name": "csm_project_view",
+            "label": "Projekt Ansicht",
+            "description": "Organisation und Kernthema als Basis Filter. Tabs mit Projekt Ober Typ als Filter.",
+            "count": 55,
+            "fields_count": 7,
+            "fields": {
+                "csm_organisation_reference": {
+                    "label": "Organisation",
+                    "type": "entity_reference",
+                    "target_type": "container",
+                    "target_bundles": []
+                },
+                "csm_project_top_type_items": {
+                    "label": "Projekt Ober Typ Tabs (optional)",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "csm_project_topic_view"
+                    ]
+                },
+                "csm_topic_reference": {
+                    "label": "Themen (ODER - Bedingung)",
+                    "type": "entity_reference",
+                    "target_type": "container",
+                    "target_bundles": []
+                },
+                "csm_topic_reference_and": {
+                    "label": "Themen (UND - Bedingung)",
+                    "type": "entity_reference",
+                    "target_type": "container",
+                    "target_bundles": []
+                },
+                "ocm_description": {
+                    "label": "Text",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_project_view",
+            "fields_path": "/admin/structure/paragraphs_type/csm_project_view/fields"
+        },
+        "csm_publication_overview": {
+            "machine_name": "csm_publication_overview",
+            "label": "Publikationen \u00dcbersicht",
+            "description": "View Name: Publikationen \u00dcbersicht\r\nView Maschinenname: csm_publication_overview",
+            "count": 15,
+            "fields_count": 3,
+            "fields": {
+                "csm_organisation_reference": {
+                    "label": "Organisation",
+                    "type": "entity_reference",
+                    "target_type": "container",
+                    "target_bundles": []
+                },
+                "csm_topic_reference": {
+                    "label": "Themen (ODER - Bedingung)",
+                    "type": "entity_reference",
+                    "target_type": "container",
+                    "target_bundles": []
+                },
+                "csm_topic_reference_and": {
+                    "label": "Themen (UND - Bedingung)",
+                    "type": "entity_reference",
+                    "target_type": "container",
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_publication_overview",
+            "fields_path": "/admin/structure/paragraphs_type/csm_publication_overview/fields"
+        },
+        "csm_publication_view": {
+            "machine_name": "csm_publication_view",
+            "label": "Publikationen Ansicht",
+            "description": "View Name: Publikationen Ansicht | View Maschinenname: csm_publication_view",
+            "count": 50,
+            "fields_count": 9,
+            "fields": {
+                "csm_additional_filters": {
+                    "label": "Jahres-Filter",
+                    "type": "list_integer",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "csm_filter_uni_affiliated": {
+                    "label": "Zeige nur Publikation mit Uni Zugeh\u00f6rigkeit",
+                    "type": "boolean",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "csm_organisation_reference": {
+                    "label": "Organisation",
+                    "type": "entity_reference",
+                    "target_type": "container",
+                    "target_bundles": []
+                },
+                "csm_publication_type_ref": {
+                    "label": "Publikationsart Referenz",
+                    "type": "entity_reference",
+                    "target_type": "node",
+                    "target_bundles": [
+                        "csm_publikations_typen"
+                    ]
+                },
+                "csm_topic_reference": {
+                    "label": "Themen (ODER - Bedingung)",
+                    "type": "entity_reference",
+                    "target_type": "container",
+                    "target_bundles": []
+                },
+                "csm_topic_reference_and": {
+                    "label": "Themen (UND - Bedingung)",
+                    "type": "entity_reference",
+                    "target_type": "container",
+                    "target_bundles": []
+                },
+                "ocm_description": {
+                    "label": "Text",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_publication_view",
+            "fields_path": "/admin/structure/paragraphs_type/csm_publication_view/fields"
+        },
+        "csm_quote_slider": {
+            "machine_name": "csm_quote_slider",
+            "label": "Zitate",
+            "description": "",
+            "count": 70,
+            "fields_count": 1,
+            "fields": {
+                "csm_quote_collection": {
+                    "label": "Zitate Sammlung",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_quote"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_quote_slider",
+            "fields_path": "/admin/structure/paragraphs_type/csm_quote_slider/fields"
+        },
+        "csm_special_architecture": {
+            "machine_name": "csm_special_architecture",
+            "label": "Link/Bild Liste (Architektur)",
+            "description": "Sollte nur auf der Seite Architektur verwendet werden.",
+            "count": 6,
+            "fields_count": 3,
+            "fields": {
+                "csm_special_list_items": {
+                    "label": "Links Sammlung",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "csm_architecture_item"
+                    ]
+                },
+                "ocm_media": {
+                    "label": "Deck-Bild",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_special_architecture",
+            "fields_path": "/admin/structure/paragraphs_type/csm_special_architecture/fields"
+        },
+        "csm_text_sidebar_contact": {
+            "machine_name": "csm_text_sidebar_contact",
+            "label": "Sidebar Kontakt",
+            "description": "",
+            "count": 8,
+            "fields_count": 2,
+            "fields": {
+                "csm_sidebar_contact_item": {
+                    "label": "Kontakt Person",
+                    "type": "entity_reference",
+                    "target_type": "node",
+                    "target_bundles": [
+                        "csm_mitarbeitende"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_text_sidebar_contact",
+            "fields_path": "/admin/structure/paragraphs_type/csm_text_sidebar_contact/fields"
+        },
+        "csm_text_sidebar_info": {
+            "machine_name": "csm_text_sidebar_info",
+            "label": "Sidebar Info",
+            "description": "",
+            "count": 20,
+            "fields_count": 4,
+            "fields": {
+                "csm_svg_entity": {
+                    "label": "Icon",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "csm_icon"
+                    ]
+                },
+                "ocm_description": {
+                    "label": "Text",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_slider_links_items": {
+                    "label": "Button Sammlung",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_link_styled"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/csm_text_sidebar_info",
+            "fields_path": "/admin/structure/paragraphs_type/csm_text_sidebar_info/fields"
+        },
+        "ocm_about": {
+            "machine_name": "ocm_about",
+            "label": "About",
+            "description": "",
+            "count": 20,
+            "fields_count": 3,
+            "fields": {
+                "ocm_content": {
+                    "label": "Content",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_image": {
+                    "label": "Image",
+                    "type": "image",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Title",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_about",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_about/fields"
+        },
+        "ocm_abschlusse": {
+            "machine_name": "ocm_abschlusse",
+            "label": "Degree",
+            "description": "",
+            "count": 14,
+            "fields_count": 11,
+            "fields": {
+                "csm_abschluesse_jahr": {
+                    "label": "Jahr des Abschlusses",
+                    "type": "integer",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "csm_abschluesse_ort": {
+                    "label": "Ort",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "csm_diplome_wb_zertifikate": {
+                    "label": "Abschlussdokument(e)",
+                    "type": "file",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "csm_land": {
+                    "label": "Land",
+                    "type": "entity_reference",
+                    "target_type": "node",
+                    "target_bundles": [
+                        "ocm_country"
+                    ]
+                },
+                "csm_masterthesis_diplomarbeit": {
+                    "label": "Abschlussarbeit/Thesis",
+                    "type": "file",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_abschlussart": {
+                    "label": "Art des Abschlusses",
+                    "type": "list_integer",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_datum_des_abschluss": {
+                    "label": "Datum des Abschlusses",
+                    "type": "datetime",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_ects": {
+                    "label": "Erworbene ECTS-Credits",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_hochschule": {
+                    "label": "Hochschule/Institution",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_studiengang_absch": {
+                    "label": "Studien-/Fachrichtung",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_zeugnis": {
+                    "label": "Zeugnis",
+                    "type": "file",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_abschlusse",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_abschlusse/fields"
+        },
+        "ocm_accordion": {
+            "machine_name": "ocm_accordion",
+            "label": "Akkordeon",
+            "description": "",
+            "count": 277,
+            "fields_count": 7,
+            "fields": {
+                "csm_text_full_width": {
+                    "label": "Beschreibung volle Breite",
+                    "type": "boolean",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_accordion_items": {
+                    "label": "Akkordeon Elemente",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_accordion_item"
+                    ]
+                },
+                "ocm_accordion_links": {
+                    "label": "Button Sammlung",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_accordion_link"
+                    ]
+                },
+                "ocm_description_plain": {
+                    "label": "Beschreibung",
+                    "type": "text",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_margin_bottom": {
+                    "label": "Abstand Unten",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_accordion",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_accordion/fields"
+        },
+        "ocm_accordion_item": {
+            "machine_name": "ocm_accordion_item",
+            "label": "Akkordeon Element",
+            "description": "",
+            "count": 1389,
+            "fields_count": 2,
+            "fields": {
+                "ocm_accordion_item_paragraphs": {
+                    "label": "Accordion Item Paragraphs",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_accordion_text",
+                        "ocm_overview_study_subjects",
+                        "csm_accordion_video",
+                        "csm_accordion_image"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Akkorden Titel",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_accordion_item",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_accordion_item/fields"
+        },
+        "ocm_accordion_link": {
+            "machine_name": "ocm_accordion_link",
+            "label": "Button",
+            "description": "",
+            "count": 39,
+            "fields_count": 2,
+            "fields": {
+                "ocm_link": {
+                    "label": "Link",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_link_style": {
+                    "label": "Link Style",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_accordion_link",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_accordion_link/fields"
+        },
+        "ocm_accordion_text": {
+            "machine_name": "ocm_accordion_text",
+            "label": "Akkordeon Text",
+            "description": "",
+            "count": 1557,
+            "fields_count": 1,
+            "fields": {
+                "ocm_description": {
+                    "label": "Text",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_accordion_text",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_accordion_text/fields"
+        },
+        "ocm_blog_overview": {
+            "machine_name": "ocm_blog_overview",
+            "label": "Blog \u00dcbersicht",
+            "description": "View Name: Blog \u00dcbersicht\r\nView Maschinenname: ocm_blog_view",
+            "count": 8,
+            "fields_count": 0,
+            "fields": [],
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_blog_overview",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_blog_overview/fields"
+        },
+        "ocm_blogs": {
+            "machine_name": "ocm_blogs",
+            "label": "Blog Mini Ansicht",
+            "description": "Ansicht, die die 3 aktuellsten Blog-Eintr\u00e4ge anzeigt. Thema und Organisation als optionale Filter.\r\n\r\nView Name: Blog Ansicht\r\nView Maschinenname: ocm_blog_default_view",
+            "count": 9,
+            "fields_count": 7,
+            "fields": {
+                "csm_organisation_reference": {
+                    "label": "Organisation",
+                    "type": "entity_reference",
+                    "target_type": "container",
+                    "target_bundles": []
+                },
+                "csm_structure": {
+                    "label": "Gliederung",
+                    "type": "entity_reference",
+                    "target_type": "node",
+                    "target_bundles": []
+                },
+                "csm_topic_reference": {
+                    "label": "Themen (ODER - Bedingung)",
+                    "type": "entity_reference",
+                    "target_type": "container",
+                    "target_bundles": []
+                },
+                "csm_topic_reference_and": {
+                    "label": "Themen (UND - Bedingung)",
+                    "type": "entity_reference",
+                    "target_type": "container",
+                    "target_bundles": []
+                },
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_link": {
+                    "label": "Eyebrow Link",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_blogs",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_blogs/fields"
+        },
+        "ocm_common_banner": {
+            "machine_name": "ocm_common_banner",
+            "label": "Common Banner",
+            "description": "",
+            "count": 10,
+            "fields_count": 1,
+            "fields": {
+                "ocm_background_image": {
+                    "label": "Background Image",
+                    "type": "image",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_common_banner",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_common_banner/fields"
+        },
+        "ocm_contact_item_link": {
+            "machine_name": "ocm_contact_item_link",
+            "label": "Contact Item Link",
+            "description": "",
+            "count": 0,
+            "fields_count": 2,
+            "fields": {
+                "ocm_link": {
+                    "label": "Link",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_link_target": {
+                    "label": "Link Target",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_contact_item_link",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_contact_item_link/fields"
+        },
+        "ocm_contact_slider": {
+            "machine_name": "ocm_contact_slider",
+            "label": "Kontakt Slider",
+            "description": "",
+            "count": 187,
+            "fields_count": 1,
+            "fields": {
+                "ocm_contact_slider_items": {
+                    "label": "Kontakt Elemente",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_contact_slider_item"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_contact_slider",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_contact_slider/fields"
+        },
+        "ocm_contact_slider_item": {
+            "machine_name": "ocm_contact_slider_item",
+            "label": "Kontakt Element",
+            "description": "",
+            "count": 394,
+            "fields_count": 5,
+            "fields": {
+                "ocm_contact_slider_reference": {
+                    "label": "Kontakt",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "csm_contact_slider_item_custom",
+                        "csm_contact_slider_item_user"
+                    ]
+                },
+                "ocm_description_plain": {
+                    "label": "Beschreibung",
+                    "type": "text",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_media": {
+                    "label": "Bild",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image",
+                        "csm_news_blog_images"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Titel",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_contact_slider_item",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_contact_slider_item/fields"
+        },
+        "ocm_download_item": {
+            "machine_name": "ocm_download_item",
+            "label": "Datei",
+            "description": "",
+            "count": 112,
+            "fields_count": 3,
+            "fields": {
+                "csm_file": {
+                    "label": "Datei",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "document"
+                    ]
+                },
+                "ocm_file": {
+                    "label": "Datei",
+                    "type": "file",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Dateiname",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_download_item",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_download_item/fields"
+        },
+        "ocm_download_links": {
+            "machine_name": "ocm_download_links",
+            "label": "Dateien u. Links",
+            "description": "",
+            "count": 85,
+            "fields_count": 2,
+            "fields": {
+                "ocm_items": {
+                    "label": "Elemente",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_download_item",
+                        "ocm_link"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_download_links",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_download_links/fields"
+        },
+        "ocm_event_overview": {
+            "machine_name": "ocm_event_overview",
+            "label": "Event Overview",
+            "description": "View Name: Event \u00dcbersicht\r\nView Maschinenname: ocm_event_view",
+            "count": 31,
+            "fields_count": 4,
+            "fields": {
+                "csm_organisation_reference": {
+                    "label": "Organisation",
+                    "type": "entity_reference",
+                    "target_type": "container",
+                    "target_bundles": []
+                },
+                "csm_show_past_events": {
+                    "label": "Zeige nur vergangene Veranstaltungen",
+                    "type": "boolean",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_event_overview",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_event_overview/fields"
+        },
+        "ocm_header": {
+            "machine_name": "ocm_header",
+            "label": "Header mit Links",
+            "description": "Header mit Links und Icon.",
+            "count": 35,
+            "fields_count": 8,
+            "fields": {
+                "csm_description_plain_short": {
+                    "label": "Beschreibung",
+                    "type": "text",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "csm_svg_entity": {
+                    "label": "Icon",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "csm_icon"
+                    ]
+                },
+                "ocm_font_color": {
+                    "label": "Text Farbe",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_header_link_items": {
+                    "label": "Link Sammlung",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_header_link_item"
+                    ]
+                },
+                "ocm_link_breakout": {
+                    "label": "Link Breakout",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_margin_bottom": {
+                    "label": "Abstand Unten",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_media": {
+                    "label": "Media",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image",
+                        "csm_news_blog_images"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Titel",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_header",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_header/fields"
+        },
+        "ocm_header_link_item": {
+            "machine_name": "ocm_header_link_item",
+            "label": "Header Link",
+            "description": "",
+            "count": 97,
+            "fields_count": 3,
+            "fields": {
+                "csm_svg_entity": {
+                    "label": "Icon",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "csm_icon"
+                    ]
+                },
+                "ocm_link": {
+                    "label": "Link",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_link_target": {
+                    "label": "Link Target",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_header_link_item",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_header_link_item/fields"
+        },
+        "ocm_header_slider": {
+            "machine_name": "ocm_header_slider",
+            "label": "Header Slider",
+            "description": "Header ohne Links. Mit einem oder mehreren Slides.",
+            "count": 68,
+            "fields_count": 2,
+            "fields": {
+                "ocm_header_slider_items": {
+                    "label": "Header Slides",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_header_slider_item"
+                    ]
+                },
+                "ocm_margin_bottom": {
+                    "label": "Abstand Unten",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_header_slider",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_header_slider/fields"
+        },
+        "ocm_header_slider_item": {
+            "machine_name": "ocm_header_slider_item",
+            "label": "Header Slide",
+            "description": "",
+            "count": 76,
+            "fields_count": 4,
+            "fields": {
+                "csm_description_plain_short": {
+                    "label": "Beschreibung",
+                    "type": "text",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_font_color": {
+                    "label": "Text Farbe",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_media": {
+                    "label": "Media",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image",
+                        "csm_news_blog_images"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Titel",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_header_slider_item",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_header_slider_item/fields"
+        },
+        "ocm_header_video": {
+            "machine_name": "ocm_header_video",
+            "label": "Header Video",
+            "description": "",
+            "count": 0,
+            "fields_count": 2,
+            "fields": {
+                "ocm_margin_bottom": {
+                    "label": "Margin Bottom",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_media": {
+                    "label": "Media",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "video"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_header_video",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_header_video/fields"
+        },
+        "ocm_icon_info_grid": {
+            "machine_name": "ocm_icon_info_grid",
+            "label": "Icon Info Grid",
+            "description": "",
+            "count": 34,
+            "fields_count": 1,
+            "fields": {
+                "ocm_icon_info_items": {
+                    "label": "Icon Info Items",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_icon_info_item"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_icon_info_grid",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_icon_info_grid/fields"
+        },
+        "ocm_icon_info_item": {
+            "machine_name": "ocm_icon_info_item",
+            "label": "Element",
+            "description": "",
+            "count": 306,
+            "fields_count": 3,
+            "fields": {
+                "csm_svg_entity": {
+                    "label": "Icon",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "csm_icon"
+                    ]
+                },
+                "ocm_subtitle": {
+                    "label": "Untere Zeile",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Obere Zeile",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_icon_info_item",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_icon_info_item/fields"
+        },
+        "ocm_icon_info_slider": {
+            "machine_name": "ocm_icon_info_slider",
+            "label": "Icon Info Slider",
+            "description": "",
+            "count": 10,
+            "fields_count": 2,
+            "fields": {
+                "ocm_description_plain": {
+                    "label": "Beschreibung",
+                    "type": "text",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_icon_info_items": {
+                    "label": "Elemente",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_icon_info_item"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_icon_info_slider",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_icon_info_slider/fields"
+        },
+        "ocm_icon_link": {
+            "machine_name": "ocm_icon_link",
+            "label": "Icons mit Link",
+            "description": "Maximal drei Elemente.",
+            "count": 16,
+            "fields_count": 1,
+            "fields": {
+                "ocm_icon_link_items": {
+                    "label": "Icon mit Link Sammlung",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_icon_link_item"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_icon_link",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_icon_link/fields"
+        },
+        "ocm_icon_link_item": {
+            "machine_name": "ocm_icon_link_item",
+            "label": "Icon Link Element",
+            "description": "",
+            "count": 45,
+            "fields_count": 2,
+            "fields": {
+                "csm_svg_entity": {
+                    "label": "Icon",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "csm_icon"
+                    ]
+                },
+                "ocm_link": {
+                    "label": "Link",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_icon_link_item",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_icon_link_item/fields"
+        },
+        "ocm_image_link_grid": {
+            "machine_name": "ocm_image_link_grid",
+            "label": "Bild/Link Grid",
+            "description": "",
+            "count": 148,
+            "fields_count": 5,
+            "fields": {
+                "csm_blue_background": {
+                    "label": "Hintergrund Blau",
+                    "type": "boolean",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_grid_columns_option": {
+                    "label": "Spalten Anzahl",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_image_link_grid_items": {
+                    "label": "Elemente",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_image_link_grid_item"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_image_link_grid",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_image_link_grid/fields"
+        },
+        "ocm_image_link_grid_item": {
+            "machine_name": "ocm_image_link_grid_item",
+            "label": "Element",
+            "description": "",
+            "count": 535,
+            "fields_count": 4,
+            "fields": {
+                "csm_hide_link_title": {
+                    "label": "Link Titel Ausblenden",
+                    "type": "boolean",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_font_color": {
+                    "label": "Text Farbe",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_link": {
+                    "label": "Link",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_media": {
+                    "label": "Media",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image",
+                        "csm_news_blog_images"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_image_link_grid_item",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_image_link_grid_item/fields"
+        },
+        "ocm_image_slider": {
+            "machine_name": "ocm_image_slider",
+            "label": "Bilder Slider",
+            "description": "",
+            "count": 117,
+            "fields_count": 2,
+            "fields": {
+                "csm_show_img_caption": {
+                    "label": "Zeige Bildunterschrift",
+                    "type": "boolean",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_media_collection": {
+                    "label": "Bilder Sammlung",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image",
+                        "csm_news_blog_images"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_image_slider",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_image_slider/fields"
+        },
+        "ocm_images": {
+            "machine_name": "ocm_images",
+            "label": "Bilder",
+            "description": "",
+            "count": 36,
+            "fields_count": 3,
+            "fields": {
+                "csm_show_img_caption": {
+                    "label": "Zeige Bildunterschrift",
+                    "type": "boolean",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_media_collection": {
+                    "label": "Bilder Sammlung",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image",
+                        "csm_news_blog_images"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_images",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_images/fields"
+        },
+        "ocm_job_overview_minimized": {
+            "machine_name": "ocm_job_overview_minimized",
+            "label": "Job Mini Ansicht",
+            "description": "",
+            "count": 5,
+            "fields_count": 3,
+            "fields": {
+                "csm_job_is_uni_related": {
+                    "label": "Zeige nur Uni interne Jobs",
+                    "type": "boolean",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_job_overview_minimized",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_job_overview_minimized/fields"
+        },
+        "ocm_jobs": {
+            "machine_name": "ocm_jobs",
+            "label": "Jobs",
+            "description": "A paragraph with description and views",
+            "count": 1,
+            "fields_count": 3,
+            "fields": {
+                "ocm_description": {
+                    "label": "Description",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_jobs_view": {
+                    "label": "Jobs view",
+                    "type": "viewsreference",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Title",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_jobs",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_jobs/fields"
+        },
+        "ocm_left_content_right_image": {
+            "machine_name": "ocm_left_content_right_image",
+            "label": "Left Content - Right Image",
+            "description": "",
+            "count": 2,
+            "fields_count": 3,
+            "fields": {
+                "ocm_content": {
+                    "label": "Content",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_image": {
+                    "label": "Image",
+                    "type": "image",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Title",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_left_content_right_image",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_left_content_right_image/fields"
+        },
+        "ocm_left_image_right_content": {
+            "machine_name": "ocm_left_image_right_content",
+            "label": "Left Image - Right Content",
+            "description": "",
+            "count": 5,
+            "fields_count": 3,
+            "fields": {
+                "ocm_content": {
+                    "label": "Content",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_image": {
+                    "label": "Image",
+                    "type": "image",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Title",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_left_image_right_content",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_left_image_right_content/fields"
+        },
+        "ocm_link": {
+            "machine_name": "ocm_link",
+            "label": "Link",
+            "description": "",
+            "count": 129,
+            "fields_count": 2,
+            "fields": {
+                "ocm_link": {
+                    "label": "Link",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_link_target": {
+                    "label": "Link Target",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_link",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_link/fields"
+        },
+        "ocm_link_styled": {
+            "machine_name": "ocm_link_styled",
+            "label": "Button",
+            "description": "",
+            "count": 91,
+            "fields_count": 3,
+            "fields": {
+                "ocm_link": {
+                    "label": "Link",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_link_style": {
+                    "label": "Button Darstellung",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_link_target": {
+                    "label": "Link Target",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_link_styled",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_link_styled/fields"
+        },
+        "ocm_news": {
+            "machine_name": "ocm_news",
+            "label": "News Mini Ansicht ",
+            "description": "Ansicht, die die 3 aktuellsten News-Eintr\u00e4ge anzeigt. Thema und Organisation als optionale Filter.\r\n\r\nView Name: News Ansicht\r\nView Maschinenname: ocm_news_default_view",
+            "count": 48,
+            "fields_count": 7,
+            "fields": {
+                "csm_organisation_reference": {
+                    "label": "Organisation",
+                    "type": "entity_reference",
+                    "target_type": "container",
+                    "target_bundles": []
+                },
+                "csm_structure": {
+                    "label": "Gliederung",
+                    "type": "entity_reference",
+                    "target_type": "node",
+                    "target_bundles": []
+                },
+                "csm_topic_reference": {
+                    "label": "Themen (ODER - Bedingung)",
+                    "type": "entity_reference",
+                    "target_type": "container",
+                    "target_bundles": []
+                },
+                "csm_topic_reference_and": {
+                    "label": "Themen (UND - Bedingung)",
+                    "type": "entity_reference",
+                    "target_type": "container",
+                    "target_bundles": []
+                },
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_link": {
+                    "label": "Eyebrow Link",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_news",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_news/fields"
+        },
+        "ocm_news_overview": {
+            "machine_name": "ocm_news_overview",
+            "label": "News \u00dcbersicht",
+            "description": "View Name: News \u00dcbersicht\r\nView Maschinenname: ocm_news_view",
+            "count": 20,
+            "fields_count": 2,
+            "fields": {
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_news_overview",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_news_overview/fields"
+        },
+        "ocm_overview_study_subjects": {
+            "machine_name": "ocm_overview_study_subjects",
+            "label": "Grafik",
+            "description": "Dieses Element stellt eine Grafik dar. Beim Erstellen k\u00f6nnen zwei verschiedene Grafiken hinterlegt werden: eine f\u00fcr die Desktop- und eine f\u00fcr die mobile Ansicht. Optional kann eine Datei angeh\u00e4ngt werden.",
+            "count": 32,
+            "fields_count": 3,
+            "fields": {
+                "csm_file": {
+                    "label": "Datei",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "document"
+                    ]
+                },
+                "ocm_media_collection": {
+                    "label": "Plan (links Mobile, rechts Desktop)",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image",
+                        "csm_news_blog_images"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Dateiname",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_overview_study_subjects",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_overview_study_subjects/fields"
+        },
+        "ocm_partner_grid": {
+            "machine_name": "ocm_partner_grid",
+            "label": "Partner Grid",
+            "description": "",
+            "count": 16,
+            "fields_count": 2,
+            "fields": {
+                "ocm_partner_grid_items": {
+                    "label": "Partner",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_partner_item"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_partner_grid",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_partner_grid/fields"
+        },
+        "ocm_partner_item": {
+            "machine_name": "ocm_partner_item",
+            "label": "Partner",
+            "description": "",
+            "count": 33,
+            "fields_count": 2,
+            "fields": {
+                "ocm_link": {
+                    "label": "Link",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_media": {
+                    "label": "Media",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image",
+                        "csm_news_blog_images"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_partner_item",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_partner_item/fields"
+        },
+        "ocm_quick_information": {
+            "machine_name": "ocm_quick_information",
+            "label": "Kontextmen\u00fc",
+            "description": "Auf maximal drei Punkte reduziertes Kontextmen\u00fc.   ",
+            "count": 8,
+            "fields_count": 1,
+            "fields": {
+                "ocm_quick_information_items": {
+                    "label": "Kontextmen\u00fcpunkte",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_quick_information_item"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_quick_information",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_quick_information/fields"
+        },
+        "ocm_quick_information_item": {
+            "machine_name": "ocm_quick_information_item",
+            "label": "Kontextmen\u00fcpunkt",
+            "description": "",
+            "count": 21,
+            "fields_count": 3,
+            "fields": {
+                "ocm_description_plain": {
+                    "label": "Obere Zeile",
+                    "type": "text",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_links": {
+                    "label": "Links",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Untere Zeile",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_quick_information_item",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_quick_information_item/fields"
+        },
+        "ocm_quicklink_item": {
+            "machine_name": "ocm_quicklink_item",
+            "label": "Quicklink Element",
+            "description": "",
+            "count": 31,
+            "fields_count": 3,
+            "fields": {
+                "csm_svg_entity": {
+                    "label": "Icon",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "csm_icon"
+                    ]
+                },
+                "ocm_quicklink_links": {
+                    "label": "Links Sammlung",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_quicklinks_link"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Titel",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_quicklink_item",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_quicklink_item/fields"
+        },
+        "ocm_quicklinks_link": {
+            "machine_name": "ocm_quicklinks_link",
+            "label": "Quicklink",
+            "description": "",
+            "count": 102,
+            "fields_count": 2,
+            "fields": {
+                "csm_svg_entity": {
+                    "label": "Icon",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "csm_icon"
+                    ]
+                },
+                "ocm_link": {
+                    "label": "Link",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_quicklinks_link",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_quicklinks_link/fields"
+        },
+        "ocm_quote": {
+            "machine_name": "ocm_quote",
+            "label": "Zitat",
+            "description": "",
+            "count": 153,
+            "fields_count": 3,
+            "fields": {
+                "ocm_author": {
+                    "label": "Autor:in",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_description": {
+                    "label": "Text",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_media": {
+                    "label": "Media",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image",
+                        "csm_news_blog_images"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_quote",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_quote/fields"
+        },
+        "ocm_slider_links_item": {
+            "machine_name": "ocm_slider_links_item",
+            "label": "Slide",
+            "description": "",
+            "count": 85,
+            "fields_count": 3,
+            "fields": {
+                "csm_svg_entity": {
+                    "label": "Icon",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "csm_icon"
+                    ]
+                },
+                "ocm_links": {
+                    "label": "Slide Links",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Slide Titel",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_slider_links_item",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_slider_links_item/fields"
+        },
+        "ocm_sprachkenntnisse": {
+            "machine_name": "ocm_sprachkenntnisse",
+            "label": "Sprachkenntnisse",
+            "description": "",
+            "count": 2,
+            "fields_count": 7,
+            "fields": {
+                "csm_andere_sprache": {
+                    "label": "Weitere Sprache",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "csm_spk_sprache": {
+                    "label": "Sprache",
+                    "type": "list_integer",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "csm_sprachzertifikat_deutsch": {
+                    "label": "Sprachzertifikat Deutsch",
+                    "type": "file",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "csm_sprachzertifikat_englisch": {
+                    "label": "Sprachzertifikat Englisch",
+                    "type": "file",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_sprache": {
+                    "label": "Sprache",
+                    "type": "entity_reference",
+                    "target_type": "taxonomy_term",
+                    "target_bundles": [
+                        "ocm_sprachen"
+                    ]
+                },
+                "ocm_sprachnachweis": {
+                    "label": "Sprachnachweis",
+                    "type": "file",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_sprachniveau": {
+                    "label": "Sprachniveau",
+                    "type": "list_integer",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_sprachkenntnisse",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_sprachkenntnisse/fields"
+        },
+        "ocm_sticky_navigation": {
+            "machine_name": "ocm_sticky_navigation",
+            "label": "Sticky Navigation",
+            "description": "Navigation, die sich am rechten Bildschirmrand befindet und mitscrollt.",
+            "count": 33,
+            "fields_count": 1,
+            "fields": {
+                "ocm_sticky_links": {
+                    "label": "Sticky Links",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_sticky_navigation",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_sticky_navigation/fields"
+        },
+        "ocm_sticky_quick_link_item": {
+            "machine_name": "ocm_sticky_quick_link_item",
+            "label": "Sticky Quick Link Item",
+            "description": "",
+            "count": 312,
+            "fields_count": 2,
+            "fields": {
+                "csm_svg_entity": {
+                    "label": "Icon",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "csm_icon"
+                    ]
+                },
+                "ocm_sticky_quick_link_url": {
+                    "label": "Quick Link Url",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_sticky_quick_link_item",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_sticky_quick_link_item/fields"
+        },
+        "ocm_tabs": {
+            "machine_name": "ocm_tabs",
+            "label": "Tabs",
+            "description": "",
+            "count": 44,
+            "fields_count": 4,
+            "fields": {
+                "csm_text_full_width": {
+                    "label": "Content volle Breite?",
+                    "type": "boolean",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_description": {
+                    "label": "Text",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_tabs_items": {
+                    "label": "Tabs Sammlung",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_tabs_item"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_tabs",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_tabs/fields"
+        },
+        "ocm_tabs_accordion": {
+            "machine_name": "ocm_tabs_accordion",
+            "label": "Tabs Akkordeon",
+            "description": "",
+            "count": 98,
+            "fields_count": 3,
+            "fields": {
+                "ocm_tabs_accordion_item": {
+                    "label": "Akkordeon Inhalt",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_accordion_item"
+                    ]
+                },
+                "ocm_tabs_accordion_option": {
+                    "label": "Akkordeon Option",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Akkordeon Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_tabs_accordion",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_tabs_accordion/fields"
+        },
+        "ocm_tabs_item": {
+            "machine_name": "ocm_tabs_item",
+            "label": "Tab (Reiter)",
+            "description": "",
+            "count": 239,
+            "fields_count": 3,
+            "fields": {
+                "ocm_description": {
+                    "label": "Tab Text",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_tab_item_items": {
+                    "label": "Tab Elemente (optional)",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_tabs_accordion"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Tab Titel",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_tabs_item",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_tabs_item/fields"
+        },
+        "ocm_text": {
+            "machine_name": "ocm_text",
+            "label": "Text",
+            "description": "",
+            "count": 700,
+            "fields_count": 7,
+            "fields": {
+                "csm_sidebar_elements": {
+                    "label": "Sidebar Elemente",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "csm_text_sidebar_contact",
+                        "csm_text_sidebar_info"
+                    ]
+                },
+                "csm_text_full_width": {
+                    "label": "Text volle Breite",
+                    "type": "boolean",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_description": {
+                    "label": "Text",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_link": {
+                    "label": "Button",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_margin_bottom": {
+                    "label": "Abstand Unten",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_text",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_text/fields"
+        },
+        "ocm_text_block": {
+            "machine_name": "ocm_text_block",
+            "label": "Text Block",
+            "description": "",
+            "count": 3,
+            "fields_count": 1,
+            "fields": {
+                "ocm_content": {
+                    "label": "Content",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_text_block",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_text_block/fields"
+        },
+        "ocm_text_image": {
+            "machine_name": "ocm_text_image",
+            "label": "Text mit Bild ",
+            "description": "",
+            "count": 678,
+            "fields_count": 8,
+            "fields": {
+                "csm_show_img_caption": {
+                    "label": "Zeige Bildunterschrift",
+                    "type": "boolean",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_description": {
+                    "label": "Text",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_link": {
+                    "label": "Link",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_margin_bottom": {
+                    "label": "Abstand Unten",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_media": {
+                    "label": "Media",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image",
+                        "csm_news_blog_images"
+                    ]
+                },
+                "ocm_media_option": {
+                    "label": "Bild Position",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_text_image",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_text_image/fields"
+        },
+        "ocm_text_image_card_item": {
+            "machine_name": "ocm_text_image_card_item",
+            "label": "Text/Bild Karte",
+            "description": "",
+            "count": 173,
+            "fields_count": 5,
+            "fields": {
+                "ocm_description": {
+                    "label": "Beschreibung",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_link": {
+                    "label": "Link",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_media": {
+                    "label": "Media",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image",
+                        "csm_news_blog_images"
+                    ]
+                },
+                "ocm_media_qr_code": {
+                    "label": "Qr Code",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image",
+                        "csm_news_blog_images"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Titel",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_text_image_card_item",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_text_image_card_item/fields"
+        },
+        "ocm_text_image_cards": {
+            "machine_name": "ocm_text_image_cards",
+            "label": "Text/Bild-Karten Grid",
+            "description": "",
+            "count": 45,
+            "fields_count": 2,
+            "fields": {
+                "ocm_text_image_cards_items": {
+                    "label": "Text/Bild Karten",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_text_image_card_item"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_text_image_cards",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_text_image_cards/fields"
+        },
+        "ocm_text_image_description_grid": {
+            "machine_name": "ocm_text_image_description_grid",
+            "label": "Bild/Text/Beschreibung Grid",
+            "description": "",
+            "count": 16,
+            "fields_count": 2,
+            "fields": {
+                "ocm_description_plain": {
+                    "label": "Beschreibung",
+                    "type": "text",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_text_image_description_items": {
+                    "label": "Elemente",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_text_image_description_item"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_text_image_description_grid",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_text_image_description_grid/fields"
+        },
+        "ocm_text_image_description_item": {
+            "machine_name": "ocm_text_image_description_item",
+            "label": "Element",
+            "description": "",
+            "count": 70,
+            "fields_count": 3,
+            "fields": {
+                "ocm_description": {
+                    "label": "Description",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_media": {
+                    "label": "Media",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image",
+                        "csm_news_blog_images"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Titel",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_text_image_description_item",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_text_image_description_item/fields"
+        },
+        "ocm_text_image_links": {
+            "machine_name": "ocm_text_image_links",
+            "label": "Text mit Bild u. Links",
+            "description": "",
+            "count": 27,
+            "fields_count": 4,
+            "fields": {
+                "ocm_description_plain": {
+                    "label": "Headline/Beschreibung",
+                    "type": "text",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_links": {
+                    "label": "Links Sammlung",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_media": {
+                    "label": "Media",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image",
+                        "csm_news_blog_images"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_text_image_links",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_text_image_links/fields"
+        },
+        "ocm_text_images": {
+            "machine_name": "ocm_text_images",
+            "label": "Text mit Bildern",
+            "description": "",
+            "count": 47,
+            "fields_count": 6,
+            "fields": {
+                "ocm_additional_width": {
+                    "label": "Bild Au\u00dferhalb",
+                    "type": "boolean",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_description": {
+                    "label": "Text",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_media_collection": {
+                    "label": "Bilder Sammlung",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image",
+                        "csm_news_blog_images"
+                    ]
+                },
+                "ocm_slider_links_items": {
+                    "label": "Button Sammlung",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_link_styled"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_text_images",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_text_images/fields"
+        },
+        "ocm_text_images_links": {
+            "machine_name": "ocm_text_images_links",
+            "label": "Bilder mit Links",
+            "description": "",
+            "count": 34,
+            "fields_count": 1,
+            "fields": {
+                "ocm_text_images_links_items": {
+                    "label": "Bilder mit Links Sammlung",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_text_images_links_item"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_text_images_links",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_text_images_links/fields"
+        },
+        "ocm_text_images_links_item": {
+            "machine_name": "ocm_text_images_links_item",
+            "label": "Bild mit Links",
+            "description": "",
+            "count": 42,
+            "fields_count": 4,
+            "fields": {
+                "ocm_font_color": {
+                    "label": "Text Farbe",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_links": {
+                    "label": "Links",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_media": {
+                    "label": "Media",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image",
+                        "csm_news_blog_images"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Title",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_text_images_links_item",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_text_images_links_item/fields"
+        },
+        "ocm_text_item": {
+            "machine_name": "ocm_text_item",
+            "label": "Text Element",
+            "description": "",
+            "count": 27,
+            "fields_count": 4,
+            "fields": {
+                "csm_svg_entity": {
+                    "label": "Icon",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "csm_icon"
+                    ]
+                },
+                "ocm_description": {
+                    "label": "Text",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_link": {
+                    "label": "Link",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Titel",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_text_item",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_text_item/fields"
+        },
+        "ocm_text_media_slider": {
+            "machine_name": "ocm_text_media_slider",
+            "label": "Text mit Bild Slider",
+            "description": "",
+            "count": 35,
+            "fields_count": 4,
+            "fields": {
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_text_media_slider_items": {
+                    "label": "Bild & Text Slider",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_text_media_slider_item"
+                    ]
+                },
+                "ocm_text_media_slider_links": {
+                    "label": "Button Sammlung",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_text_media_slider_link"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_text_media_slider",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_text_media_slider/fields"
+        },
+        "ocm_text_media_slider_item": {
+            "machine_name": "ocm_text_media_slider_item",
+            "label": "Bild & Text Element",
+            "description": "Bild",
+            "count": 125,
+            "fields_count": 3,
+            "fields": {
+                "ocm_description": {
+                    "label": "Beschreibung",
+                    "type": "text_long",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_media": {
+                    "label": "Media",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "image",
+                        "csm_news_blog_images"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Titel",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_text_media_slider_item",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_text_media_slider_item/fields"
+        },
+        "ocm_text_media_slider_link": {
+            "machine_name": "ocm_text_media_slider_link",
+            "label": "Button",
+            "description": "",
+            "count": 34,
+            "fields_count": 2,
+            "fields": {
+                "ocm_link": {
+                    "label": "Link",
+                    "type": "link",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_link_style": {
+                    "label": "Link Style",
+                    "type": "list_string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_text_media_slider_link",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_text_media_slider_link/fields"
+        },
+        "ocm_text_quicklinks_grid": {
+            "machine_name": "ocm_text_quicklinks_grid",
+            "label": "Text od. Quicklinks Grid",
+            "description": "",
+            "count": 21,
+            "fields_count": 1,
+            "fields": {
+                "ocm_text_quicklinks_items": {
+                    "label": "Elemente",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_quicklink_item",
+                        "ocm_text_item"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_text_quicklinks_grid",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_text_quicklinks_grid/fields"
+        },
+        "ocm_text_slider_links": {
+            "machine_name": "ocm_text_slider_links",
+            "label": "Text Slider mit Links",
+            "description": "",
+            "count": 24,
+            "fields_count": 3,
+            "fields": {
+                "ocm_description_plain": {
+                    "label": "Headline/Beschreibung",
+                    "type": "text",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_slider_links_items": {
+                    "label": "Slider Elemente",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_slider_links_item"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_text_slider_links",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_text_slider_links/fields"
+        },
+        "ocm_video": {
+            "machine_name": "ocm_video",
+            "label": "Video",
+            "description": "",
+            "count": 52,
+            "fields_count": 2,
+            "fields": {
+                "ocm_media": {
+                    "label": "Media",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "remote_video",
+                        "video"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Titel",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_video",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_video/fields"
+        },
+        "ocm_video_item": {
+            "machine_name": "ocm_video_item",
+            "label": "Video",
+            "description": "",
+            "count": 38,
+            "fields_count": 2,
+            "fields": {
+                "ocm_media": {
+                    "label": "Video Quelle",
+                    "type": "entity_reference",
+                    "target_type": "media",
+                    "target_bundles": [
+                        "remote_video",
+                        "video"
+                    ]
+                },
+                "ocm_title": {
+                    "label": "Video Titel",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_video_item",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_video_item/fields"
+        },
+        "ocm_videos": {
+            "machine_name": "ocm_videos",
+            "label": "Videos",
+            "description": "",
+            "count": 20,
+            "fields_count": 1,
+            "fields": {
+                "ocm_video_items": {
+                    "label": "Video Sammlung",
+                    "type": "entity_reference_revisions",
+                    "target_type": "paragraph",
+                    "target_bundles": [
+                        "ocm_video_item"
+                    ]
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_videos",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_videos/fields"
+        },
+        "ocm_view_persons_minimized": {
+            "machine_name": "ocm_view_persons_minimized",
+            "label": "Mitarbeiter:innen Mini Ansicht (Infos im Hilfe Text!)",
+            "description": "Ansicht, die ausgew\u00e4hlte Mitarbeiter:innen anzeigt. Die Ansicht ist nicht dynamisch. Falls man Personen einer Organisation anzeigen m\u00f6chte sollte man den Paragrafen \"Organisationseinheit Mitarbeiter\" verwenden!!!",
+            "count": 41,
+            "fields_count": 3,
+            "fields": {
+                "csm_employee_entity": {
+                    "label": "Mitarbeiter:innen",
+                    "type": "entity_reference",
+                    "target_type": "node",
+                    "target_bundles": [
+                        "csm_mitarbeitende"
+                    ]
+                },
+                "ocm_headline": {
+                    "label": "Eyebrow Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                },
+                "ocm_title": {
+                    "label": "Headline",
+                    "type": "string",
+                    "target_type": null,
+                    "target_bundles": []
+                }
+            },
+            "edit_path": "/en/admin/structure/paragraphs_type/ocm_view_persons_minimized",
+            "fields_path": "/admin/structure/paragraphs_type/ocm_view_persons_minimized/fields"
+        }
+    }
+}

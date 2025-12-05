@@ -1,0 +1,5 @@
+site_audit.index:
+  title: 'Site audit reports'
+  description: 'View pluggable site audit reports.'
+  route_name: site_audit.index
+  parent: system.admin_reports

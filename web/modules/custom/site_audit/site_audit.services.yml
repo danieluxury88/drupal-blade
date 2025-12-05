@@ -1,0 +1,48 @@
+services:
+  site_audit.audit_report_manager:
+    class: Drupal\site_audit\Report\AuditReportManager
+    arguments:
+      - 'Plugin/AuditReport'
+      - '@container.namespaces'
+      - '@cache.discovery'
+      - '@module_handler'
+
+  site_audit.index_controller:
+    class: Drupal\site_audit\Controller\AuditReportIndexController
+    arguments:
+      - '@site_audit.audit_report_manager'
+    tags:
+      - { name: controller.service_arguments }
+
+  site_audit.view_controller:
+    class: Drupal\site_audit\Controller\AuditReportViewController
+    arguments:
+      - '@site_audit.audit_report_manager'
+    tags:
+      - { name: controller.service_arguments }
+
+  site_audit.structure_collector:
+    class: Drupal\site_audit\Service\SiteAuditStructureCollector
+    arguments:
+      - '@entity_type.manager'
+
+  site_audit.content_collector:
+    class: Drupal\site_audit\Service\SiteAuditContentCollector
+    arguments: ['@entity_type.manager']
+
+
+  site_audit.config_bundle_collector:
+    class: Drupal\site_audit\Service\SiteAuditConfigBundleCollector
+    arguments:
+      - '@entity_type.manager'
+      - '@entity_field.manager'
+      - '@site_audit.structure_collector'
+      - '@module_handler'
+
+  site_audit.content_bundle_collector:
+    class: Drupal\site_audit\Service\SiteAuditContentBundleCollector
+    arguments:
+      - '@entity_type.manager'
+      - '@database'
+      - '@site_audit.content_collector'
+      - '@entity_field.manager'

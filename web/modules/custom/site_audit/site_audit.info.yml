@@ -1,0 +1,7 @@
+name: 'Site Audit'
+type: module
+description: 'Provides pluggable reports (audit insights) about a Drupal site.'
+core_version_requirement: ^10 || ^11
+package: 'Development'
+dependencies:
+  - drupal:system

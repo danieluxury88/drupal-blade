@@ -1,0 +1,29 @@
+site_audit.index:
+  path: '/admin/reports/site-audit'
+  defaults:
+    _controller: '\Drupal\site_audit\Controller\AuditReportIndexController::index'
+    _title: 'Site audit reports'
+  requirements:
+    _permission: 'administer site configuration'
+
+site_audit.report_view:
+  path: '/admin/reports/site-audit/{audit_report}'
+  defaults:
+    _controller: '\Drupal\site_audit\Controller\AuditReportViewController::html'
+    _title_callback: '\Drupal\site_audit\Controller\AuditReportViewController::title'
+  requirements:
+    _permission: 'administer site configuration'
+
+site_audit.report_view_json:
+  path: '/admin/reports/site-audit/{audit_report}/json'
+  defaults:
+    _controller: '\Drupal\site_audit\Controller\AuditReportViewController::json'
+  requirements:
+    _permission: 'administer site configuration'
+
+site_audit.report_view_markdown:
+  path: '/admin/reports/site-audit/{audit_report}/markdown'
+  defaults:
+    _controller: '\Drupal\site_audit\Controller\AuditReportViewController::markdown'
+  requirements:
+    _permission: 'administer site configuration'
