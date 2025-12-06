@@ -1,0 +1,11 @@
+uuid: 6c50ee85-28fc-415f-86bf-ff699b654b45
+langcode: en
+status: true
+dependencies: {  }
+machine: local
+description: null
+name: Local
+weight: -10
+url: 'http://drupalblade.test'
+fg_color: '#f8f2f2'
+bg_color: '#0089c1'
