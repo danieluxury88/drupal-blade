@@ -15,9 +15,9 @@ template: false
 archive: false
 id: contact
 title: Contact
-description: 'Basic email contact webform.'
+description: '<p>Basic email contact webform.</p>'
 categories: {  }
-elements: |
+elements: |-
   name:
     '#title': 'Your Name'
     '#type': textfield
@@ -32,7 +32,7 @@ elements: |
     '#title': Subject
     '#type': textfield
     '#required': true
-    '#test': 'Testing contact webform from [site:name]'
+    '#test': ''
   message:
     '#title': Message
     '#type': textarea
@@ -51,7 +51,7 @@ settings:
   ajax_effect: ''
   ajax_speed: null
   page: true
-  page_submit_path: ''
+  page_submit_path: /contact
   page_confirm_path: ''
   page_theme_name: ''
   form_title: source_entity_webform
@@ -83,6 +83,7 @@ settings:
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  form_file_limit_message: ''
   form_attributes: {  }
   form_method: ''
   form_action: ''
