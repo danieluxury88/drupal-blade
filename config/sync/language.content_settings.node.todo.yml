@@ -1,0 +1,16 @@
+uuid: eb467222-34a6-4072-95b9-01e9001bfe79
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.todo
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.todo
+target_entity_type_id: node
+target_bundle: todo
+default_langcode: site_default
+language_alterable: true
