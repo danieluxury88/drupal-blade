@@ -1,0 +1,36 @@
+uuid: f04a098b-d869-424e-8f16-882397e300eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_todo_status
+field_name: field_todo_status
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: assigned
+      label: Assigned
+    -
+      value: in_progress
+      label: 'In Progress'
+    -
+      value: complete
+      label: Complete
+    -
+      value: on_hold
+      label: 'On Hold'
+    -
+      value: backlog
+      label: Backlog
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

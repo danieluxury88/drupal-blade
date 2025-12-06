@@ -1,0 +1,38 @@
+uuid: b908dc05-1db0-4063-81c6-4966a764ea64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.todo.field_description
+    - field.field.node.todo.field_todo_status
+    - node.type.todo
+  module:
+    - options
+    - text
+    - user
+id: node.todo.default
+targetEntityType: node
+bundle: todo
+mode: default
+content:
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_todo_status:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

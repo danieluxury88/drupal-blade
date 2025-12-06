@@ -1,0 +1,21 @@
+uuid: 06ea3e12-82f3-422f-ae4c-f2f8a371e5db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_todo_status
+    - node.type.todo
+  module:
+    - options
+id: node.todo.field_todo_status
+field_name: field_todo_status
+entity_type: node
+bundle: todo
+label: Status
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
