@@ -49,6 +49,7 @@
         "drupal/pathauto": "^1.13",
         "drupal/physical": "^1.5",
         "drupal/poll": "^2.0@alpha",
+        "drupal/pwa": "^2.1@beta",
         "drupal/redirect": "^1.11",
         "drupal/scheduler": "^2.2",
         "drupal/seckit": "^2.0",
