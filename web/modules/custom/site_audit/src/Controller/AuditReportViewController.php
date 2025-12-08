@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
- *
+ * Controller for audit report views.
  */
 class AuditReportViewController extends ControllerBase {
 
@@ -18,7 +18,7 @@ class AuditReportViewController extends ControllerBase {
   ) {}
 
   /**
-   *
+   * {@inheritdoc}
    */
   public static function create(ContainerInterface $container): static {
     return new static(

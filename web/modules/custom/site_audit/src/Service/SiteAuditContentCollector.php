@@ -9,8 +9,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 /**
  * Collects content volume information (entity counts).
  */
-class SiteAuditContentCollector
-{
+class SiteAuditContentCollector {
 
   /**
    * The entity type manager.
@@ -25,8 +24,7 @@ class SiteAuditContentCollector
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
    *   The entity type manager.
    */
-  public function __construct(EntityTypeManagerInterface $entity_type_manager)
-  {
+  public function __construct(EntityTypeManagerInterface $entity_type_manager) {
     $this->entityTypeManager = $entity_type_manager;
   }
 
@@ -39,8 +37,7 @@ class SiteAuditContentCollector
    * @return int[]
    *   Array keyed by bundle => count.
    */
-  public function getNodeCountsByBundle(array $bundles): array
-  {
+  public function getNodeCountsByBundle(array $bundles): array {
     return $this->getCountsByBundle('node', 'type', $bundles);
   }
 
@@ -53,17 +50,16 @@ class SiteAuditContentCollector
    * @return int[]
    *   Array keyed by bundle => count.
    */
-  public function getParagraphCountsByBundle(array $bundles): array
-  {
+  public function getParagraphCountsByBundle(array $bundles): array {
     return $this->getCountsByBundle('paragraph', 'type', $bundles);
   }
 
   /**
    * Generic helper to count entities by bundle.
    *
-   * @param string   $entity_type_id
+   * @param string $entity_type_id
    *   The entity type ID (e.g. 'node', 'paragraph', 'media').
-   * @param string   $bundle_key
+   * @param string $bundle_key
    *   The bundle property key (e.g. 'type', 'bundle', 'vid').
    * @param string[] $bundles
    *   List of bundle machine names.
@@ -71,8 +67,7 @@ class SiteAuditContentCollector
    * @return int[]
    *   Array keyed by bundle => count.
    */
-  protected function getCountsByBundle(string $entity_type_id, string $bundle_key, array $bundles): array
-  {
+  protected function getCountsByBundle(string $entity_type_id, string $bundle_key, array $bundles): array {
     $storage = $this->entityTypeManager->getStorage($entity_type_id);
     $counts = [];
 
@@ -86,4 +81,5 @@ class SiteAuditContentCollector
 
     return $counts;
   }
+
 }

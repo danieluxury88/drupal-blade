@@ -37,5 +37,11 @@
     <severity>0</severity>
   </rule>
   -->
+  <rule ref="Drupal.Files.LineLength">
+      <properties>
+          <property name="lineLimit" value="120"/>
+          <property name="absoluteLineLimit" value="180"/>
+      </properties>
+  </rule>
 
 </ruleset>

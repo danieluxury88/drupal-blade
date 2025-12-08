@@ -5,7 +5,6 @@ namespace Drupal\site_audit\Report;
 use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Plugin\DefaultPluginManager;
-use Traversable;
 
 /**
  * Manages AuditReport plugins.
@@ -26,7 +25,7 @@ class AuditReportManager extends DefaultPluginManager {
    */
   public function __construct(
     string $subdir,
-    Traversable $namespaces,
+    \Traversable $namespaces,
     CacheBackendInterface $cache_backend,
     ModuleHandlerInterface $module_handler,
   ) {

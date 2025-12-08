@@ -8,7 +8,6 @@ use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Url;
 use Drupal\Core\Link;
-use Drupal\site_audit\Plugin\AuditReport\AuditReportBase;
 use Drupal\site_audit\Service\SiteAuditContentCollector;
 use Drupal\site_audit\Service\SiteAuditStructureCollector;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -67,7 +66,7 @@ class NodesOverviewReport extends AuditReportBase implements ContainerFactoryPlu
     $plugin_definition,
     SiteAuditStructureCollector $structure_collector,
     SiteAuditContentCollector $content_collector,
-    EntityFieldManagerInterface $entity_field_manager
+    EntityFieldManagerInterface $entity_field_manager,
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->structureCollector = $structure_collector;

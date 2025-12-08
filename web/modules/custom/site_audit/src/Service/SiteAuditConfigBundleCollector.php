@@ -89,7 +89,7 @@ class SiteAuditConfigBundleCollector {
    * Extract paragraph reference fields from a bundle's field list.
    *
    * @param string $entity_type_id
-   *   'node' or 'paragraph'.
+   *   Entity Type 'node' or 'paragraph'.
    * @param string $bundle
    *   Bundle machine name.
    * @param array $fields
@@ -103,7 +103,6 @@ class SiteAuditConfigBundleCollector {
 
     // Option A: use existing getParagraphReferenceFields() and filter.
     // Option B: inspect field definitions here via $entityFieldManager.
-
     // Skeleton implementation; can be refined later.
     foreach ($fields as $field_name => $info) {
       // Later: check field type === 'entity_reference_revisions'
@@ -131,7 +130,6 @@ class SiteAuditConfigBundleCollector {
     //   add them to this list.
     //
     // We can fill this in when we implement the OCM report.
-
     return $dependencies;
   }
 

@@ -2,10 +2,8 @@
 
 namespace Drupal\site_audit\Plugin\AuditReport;
 
-use Drupal;
 use Drupal\Core\Link;
 use Drupal\Core\Url;
-use Drupal\site_audit\Annotation\AuditReport;
 
 /**
  * Provides a paragraph dependencies report.
@@ -23,7 +21,7 @@ class ParagraphDependenciesReport extends AuditReportBase {
    */
   public function buildData(): array {
     /** @var \Drupal\site_audit\Service\SiteAuditStructureCollector $collector */
-    $collector = Drupal::service('site_audit.structure_collector');
+    $collector = \Drupal::service('site_audit.structure_collector');
 
     // Structural snapshots from the collector.
     $node_bundles = $collector->getNodeBundles();

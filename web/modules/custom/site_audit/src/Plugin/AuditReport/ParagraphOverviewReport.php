@@ -8,7 +8,6 @@ use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Url;
 use Drupal\Core\Link;
-use Drupal\site_audit\Plugin\AuditReport\AuditReportBase;
 use Drupal\site_audit\Service\SiteAuditContentCollector;
 use Drupal\site_audit\Service\SiteAuditStructureCollector;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -22,8 +21,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *   description = @Translation("Shows all paragraph types, how many entities exist, how many fields they have, and details about each field.")
  * )
  */
-class ParagraphOverviewReport extends AuditReportBase implements ContainerFactoryPluginInterface
-{
+class ParagraphOverviewReport extends AuditReportBase implements ContainerFactoryPluginInterface {
 
   /**
    * Structure collector.
@@ -68,7 +66,7 @@ class ParagraphOverviewReport extends AuditReportBase implements ContainerFactor
     $plugin_definition,
     SiteAuditStructureCollector $structure_collector,
     SiteAuditContentCollector $content_collector,
-    EntityFieldManagerInterface $entity_field_manager
+    EntityFieldManagerInterface $entity_field_manager,
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->structureCollector = $structure_collector;
@@ -79,8 +77,7 @@ class ParagraphOverviewReport extends AuditReportBase implements ContainerFactor
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition): self
-  {
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition): self {
     return new static(
       $configuration,
       $plugin_id,
@@ -124,8 +121,7 @@ class ParagraphOverviewReport extends AuditReportBase implements ContainerFactor
    *   ],
    * ]
    */
-  public function buildData(): array
-  {
+  public function buildData(): array {
     $paragraph_bundles = $this->structureCollector->getParagraphBundles();
     $bundle_ids = array_keys($paragraph_bundles);
 
@@ -190,8 +186,7 @@ class ParagraphOverviewReport extends AuditReportBase implements ContainerFactor
    *
    * Build HTML render array with a sortable table.
    */
-  public function buildRender(array $data): array
-  {
+  public function buildRender(array $data): array {
     $build = [
       '#type' => 'container',
     ];
@@ -229,7 +224,8 @@ class ParagraphOverviewReport extends AuditReportBase implements ContainerFactor
 
       if ($sort === 'asc') {
         return ($av < $bv) ? -1 : 1;
-      } else {
+      }
+      else {
         return ($av > $bv) ? -1 : 1;
       }
     });
@@ -374,14 +370,12 @@ class ParagraphOverviewReport extends AuditReportBase implements ContainerFactor
     return $build;
   }
 
-
   /**
    * {@inheritdoc}
    *
    * Build a Markdown representation of the report.
    */
-  public function buildMarkdown(array $data): string
-  {
+  public function buildMarkdown(array $data): string {
     $paragraphs = $data['paragraphs'] ?? [];
     if (empty($paragraphs)) {
       return "No paragraph types found.\n";
@@ -430,4 +424,5 @@ class ParagraphOverviewReport extends AuditReportBase implements ContainerFactor
 
     return implode("\n", $lines);
   }
+
 }

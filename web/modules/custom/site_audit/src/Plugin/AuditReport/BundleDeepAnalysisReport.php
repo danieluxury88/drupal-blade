@@ -6,8 +6,6 @@ namespace Drupal\site_audit\Plugin\AuditReport;
 
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Url;
-use Drupal\Core\Link;
-use Drupal\site_audit\Plugin\AuditReport\AuditReportBase;
 use Drupal\site_audit\Service\SiteAuditConfigBundleCollector;
 use Drupal\site_audit\Service\SiteAuditContentBundleCollector;
 use Drupal\site_audit\Service\SiteAuditStructureCollector;
@@ -68,7 +66,7 @@ class BundleDeepAnalysisReport extends AuditReportBase implements ContainerFacto
     $plugin_definition,
     SiteAuditStructureCollector $structure_collector,
     SiteAuditConfigBundleCollector $config_bundle_collector,
-    SiteAuditContentBundleCollector $content_bundle_collector
+    SiteAuditContentBundleCollector $content_bundle_collector,
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->structureCollector = $structure_collector;

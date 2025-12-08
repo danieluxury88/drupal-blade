@@ -11,8 +11,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 /**
  * Collects content usage statistics for a specific bundle.
  */
-class SiteAuditContentBundleCollector
-{
+class SiteAuditContentBundleCollector {
 
   /**
    * The entity type manager.
@@ -76,8 +75,7 @@ class SiteAuditContentBundleCollector
    *   unpublished: int
    *   }
    */
-  public function getNodeBundleUsageSummary(string $bundle): array
-  {
+  public function getNodeBundleUsageSummary(string $bundle): array {
     $node_counts = $this->contentCollector->getNodeCountsByBundle([$bundle]);
     $total = $node_counts[$bundle] ?? 0;
 
@@ -129,8 +127,7 @@ class SiteAuditContentBundleCollector
    * @return array
    *   Paragraph usage info keyed by paragraph type.
    */
-  public function getParagraphUsageForNodeBundle(string $bundle): array
-  {
+  public function getParagraphUsageForNodeBundle(string $bundle): array {
     $usage = [];
 
     // 1. Identify all fields on this bundle that reference paragraphs.
@@ -189,7 +186,8 @@ class SiteAuditContentBundleCollector
         $query->condition('n.type', $bundle);
 
         $result = $query->execute();
-      } catch (\Throwable $e) {
+      }
+      catch (\Throwable $e) {
         // If the table/column/join is weird for this field, just skip it.
         continue;
       }
@@ -260,4 +258,5 @@ class SiteAuditContentBundleCollector
     // @todo Implement if/when needed for the report UI.
     return $node_ids;
   }
+
 }

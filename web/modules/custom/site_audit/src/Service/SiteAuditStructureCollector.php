@@ -266,7 +266,8 @@ class SiteAuditStructureCollector {
       try {
         $edit_path = $config->toUrl('edit-form')->toString();
       }
-      catch (\Throwable $e) {}
+      catch (\Throwable $e) {
+      }
 
       $content_paragraph_fields[$bundle][$field_name] = [
         'field_name' => $field_name,
@@ -299,7 +300,8 @@ class SiteAuditStructureCollector {
       try {
         $edit_path = $config->toUrl('edit-form')->toString();
       }
-      catch (\Throwable $e) {}
+      catch (\Throwable $e) {
+      }
 
       $paragraph_paragraph_fields[$bundle][$field_name] = [
         'field_name' => $field_name,

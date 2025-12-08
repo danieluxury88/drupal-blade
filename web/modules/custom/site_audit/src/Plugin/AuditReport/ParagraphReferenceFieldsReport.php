@@ -8,7 +8,6 @@ use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Url;
 use Drupal\Core\Link;
-use Drupal\site_audit\Plugin\AuditReport\AuditReportBase;
 use Drupal\site_audit\Service\SiteAuditStructureCollector;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -56,7 +55,7 @@ class ParagraphReferenceFieldsReport extends AuditReportBase implements Containe
     $plugin_id,
     $plugin_definition,
     SiteAuditStructureCollector $structure_collector,
-    EntityFieldManagerInterface $entity_field_manager
+    EntityFieldManagerInterface $entity_field_manager,
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->structureCollector = $structure_collector;
@@ -260,8 +259,6 @@ class ParagraphReferenceFieldsReport extends AuditReportBase implements Containe
       // Build reference fields markup with field-level links.
       $field_lines = [];
       foreach ($info['reference_fields'] as $field_name => $field_info) {
-        $line_parts = [];
-
         // Field name + label.
         $field_label = $field_info['label'] ?? $field_name;
 

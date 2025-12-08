@@ -8,7 +8,6 @@ use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Extension\ThemeHandlerInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
-use Drupal\site_audit\Annotation\AuditReport;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -29,7 +28,8 @@ class AdminToolbarReport extends AuditReportBase implements ContainerFactoryPlug
    */
   protected array $interestingModules = [
     'toolbar',
-    'navigation', // New admin navigation in Drupal 10+.
+  // New admin navigation in Drupal 10+.
+    'navigation',
     'admin_toolbar',
     'admin_toolbar_tools',
     'admin_toolbar_links_access_filter',
@@ -107,8 +107,8 @@ class AdminToolbarReport extends AuditReportBase implements ContainerFactoryPlug
       'title' => (string) $this->getLabel(),
       'description' => $this->getDescription(),
       'summary' => [
-        'admin_theme' => $themes_info['admin_theme'] ?? null,
-        'default_theme' => $themes_info['default_theme'] ?? null,
+        'admin_theme' => $themes_info['admin_theme'] ?? NULL,
+        'default_theme' => $themes_info['default_theme'] ?? NULL,
       ],
       'modules' => $modules_info,
       'themes' => $themes_info,
@@ -131,8 +131,7 @@ class AdminToolbarReport extends AuditReportBase implements ContainerFactoryPlug
       $info[$module_name] = [
         'name' => $module_name,
         'enabled' => $enabled,
-        // You can later enrich this with version info via extension.list.module.
-        'version' => null,
+        'version' => NULL,
       ];
     }
 
@@ -154,7 +153,7 @@ class AdminToolbarReport extends AuditReportBase implements ContainerFactoryPlug
     $list_info = $this->themeHandler->listInfo();
 
     foreach ($list_info as $name => $theme) {
-      $is_admin_candidate = !empty($theme->info['admin']) || in_array($name, ['gin', 'claro', 'seven'], true);
+      $is_admin_candidate = !empty($theme->info['admin']) || in_array($name, ['gin', 'claro', 'seven'], TRUE);
 
       $themes[$name] = [
         'name' => $name,
@@ -191,8 +190,10 @@ class AdminToolbarReport extends AuditReportBase implements ContainerFactoryPlug
 
     // Adjust keys to whatever is useful for your setup.
     $keys_of_interest = [
-      'navigation',        // e.g. Gin navigation behavior.
-      'toolbar_variant',   // compact/standard/etc.
+    // e.g. Gin navigation behavior.
+      'navigation',
+    // compact/standard/etc.
+      'toolbar_variant',
       'show_user_toolbar',
     ];
 
@@ -210,8 +211,11 @@ class AdminToolbarReport extends AuditReportBase implements ContainerFactoryPlug
    * Builds diagnostic hints based on collected data.
    *
    * @param array $modules
+   *   Modules information.
    * @param array $themes
+   *   Themes information.
    * @param array $gin_settings
+   *   Gin settings information.
    *
    * @return array
    *   A list of diagnostic strings.
@@ -219,13 +223,13 @@ class AdminToolbarReport extends AuditReportBase implements ContainerFactoryPlug
   protected function buildDiagnostics(array $modules, array $themes, array $gin_settings): array {
     $flags = [];
 
-    $admin_theme = $themes['admin_theme'] ?? null;
+    $admin_theme = $themes['admin_theme'] ?? NULL;
 
-    $has_toolbar = $modules['toolbar']['enabled'] ?? false;
-    $has_navigation = $modules['navigation']['enabled'] ?? false;
-    $has_admin_toolbar = $modules['admin_toolbar']['enabled'] ?? false;
-    $has_gin_toolbar = $modules['gin_toolbar']['enabled'] ?? false;
-    $has_gin = $modules['gin']['enabled'] ?? false;
+    $has_toolbar = $modules['toolbar']['enabled'] ?? FALSE;
+    $has_navigation = $modules['navigation']['enabled'] ?? FALSE;
+    $has_admin_toolbar = $modules['admin_toolbar']['enabled'] ?? FALSE;
+    $has_gin_toolbar = $modules['gin_toolbar']['enabled'] ?? FALSE;
+    $has_gin = $modules['gin']['enabled'] ?? FALSE;
 
     if ($has_navigation && $has_toolbar) {
       $flags[] = $this->t('Both the core Toolbar module and the Navigation module are enabled. This combination may change how the admin menu behaves.');

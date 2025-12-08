@@ -7,7 +7,6 @@ namespace Drupal\site_audit\Plugin\AuditReport;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Url;
 use Drupal\Core\Link;
-use Drupal\site_audit\Plugin\AuditReport\AuditReportBase;
 use Drupal\site_audit\Service\SiteAuditStructureCollector;
 use Drupal\site_audit\Service\SiteAuditContentBundleCollector;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -108,7 +107,7 @@ class SelectedBundlesParagraphUsageReport extends AuditReportBase implements Con
     $plugin_id,
     $plugin_definition,
     SiteAuditStructureCollector $structure_collector,
-    SiteAuditContentBundleCollector $content_bundle_collector
+    SiteAuditContentBundleCollector $content_bundle_collector,
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->structureCollector = $structure_collector;
@@ -331,18 +330,24 @@ class SelectedBundlesParagraphUsageReport extends AuditReportBase implements Con
             case 'machine_name':
             case 'label':
               return $info[$key] ?? '';
+
             case 'exists':
               return $info['exists'] ? 1 : 0;
+
             case 'total_nodes':
               return $node_summary['total'] ?? 0;
+
             case 'published':
               return $node_summary['published'] ?? 0;
+
             case 'unpublished':
               return $node_summary['unpublished'] ?? 0;
+
             case 'paragraph_types':
               return is_array($info['paragraph_usage'] ?? NULL)
                 ? count($info['paragraph_usage'])
                 : 0;
+
             default:
               return 0;
           }

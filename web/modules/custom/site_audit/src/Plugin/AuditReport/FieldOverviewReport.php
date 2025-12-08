@@ -2,10 +2,8 @@
 
 namespace Drupal\site_audit\Plugin\AuditReport;
 
-use Drupal;
 use Drupal\Core\Link;
 use Drupal\Core\Url;
-use Drupal\site_audit\Annotation\AuditReport;
 
 /**
  * Provides a field-level overview report.
@@ -24,7 +22,7 @@ class FieldOverviewReport extends AuditReportBase {
    */
   public function buildData(): array {
     /** @var \Drupal\site_audit\Service\SiteAuditStructureCollector $collector */
-    $collector = Drupal::service('site_audit.structure_collector');
+    $collector = \Drupal::service('site_audit.structure_collector');
 
     return [
       'node_fields' => $collector->getFields('node'),
@@ -50,7 +48,7 @@ class FieldOverviewReport extends AuditReportBase {
    * ]
    */
   protected function getNodeFieldOverview(): array {
-    $etm = Drupal::entityTypeManager();
+    $etm = \Drupal::entityTypeManager();
 
     /** @var \Drupal\field\FieldConfigInterface[] $configs */
     $configs = $etm->getStorage('field_config')->loadByProperties([
@@ -86,7 +84,7 @@ class FieldOverviewReport extends AuditReportBase {
    * Same structure as getNodeFieldOverview(), but keyed by paragraph bundle.
    */
   protected function getParagraphFieldOverview(): array {
-    $etm = Drupal::entityTypeManager();
+    $etm = \Drupal::entityTypeManager();
 
     if (!$etm->hasDefinition('paragraph')) {
       return [];
@@ -235,6 +233,7 @@ class FieldOverviewReport extends AuditReportBase {
 
     return $build;
   }
+
   /**
    * {@inheritdoc}
    */
@@ -264,7 +263,8 @@ class FieldOverviewReport extends AuditReportBase {
         }
         $lines[] = '';
       }
-    } else {
+    }
+    else {
       $lines[] = '_No node fields found._';
       $lines[] = '';
     }
@@ -290,7 +290,8 @@ class FieldOverviewReport extends AuditReportBase {
         }
         $lines[] = '';
       }
-    } else {
+    }
+    else {
       $lines[] = '_No paragraph fields found or Paragraphs module not enabled._';
       $lines[] = '';
     }

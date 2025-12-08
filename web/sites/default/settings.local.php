@@ -163,4 +163,5 @@ $databases['default']['default'] = [
   'collation' => 'utf8mb4_general_ci',
 ];
 
-$config["config_split.config_split.dev"]["status"] = FALSE;
+$config["config_split.config_split.dev"]["status"] = TRUE;
+$base_url = 'http://drupalblade.test';

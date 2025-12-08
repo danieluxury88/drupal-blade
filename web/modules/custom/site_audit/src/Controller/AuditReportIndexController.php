@@ -7,12 +7,18 @@ use Drupal\Core\Url;
 use Drupal\site_audit\Report\AuditReportManager;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
+/**
+ * Controller for the audit report index page.
+ */
 class AuditReportIndexController extends ControllerBase {
 
   public function __construct(
     protected AuditReportManager $reportManager,
   ) {}
 
+  /**
+   * {@inheritdoc}
+   */
   public static function create(ContainerInterface $container): static {
     return new static(
       $container->get('site_audit.audit_report_manager')

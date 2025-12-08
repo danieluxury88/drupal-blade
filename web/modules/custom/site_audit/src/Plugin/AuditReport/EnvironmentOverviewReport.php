@@ -9,7 +9,6 @@ use Drupal\Core\Extension\ThemeHandlerInterface;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
-use Drupal\site_audit\Annotation\AuditReport;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
