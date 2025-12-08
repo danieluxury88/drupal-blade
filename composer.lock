@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "49685af02ce3b2b4c7d45b6c7e20b0aa",
+    "content-hash": "6f1d4b7a41e5459b20b28b1e92d739c7",
     "packages": [
         {
             "name": "albertofem/rsync-lib",
@@ -1153,6 +1153,73 @@
                 }
             ],
             "time": "2024-11-26T16:23:11+00:00"
+        },
+        {
+            "name": "defuse/php-encryption",
+            "version": "v2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/defuse/php-encryption.git",
+                "reference": "f53396c2d34225064647a05ca76c1da9d99e5828"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/defuse/php-encryption/zipball/f53396c2d34225064647a05ca76c1da9d99e5828",
+                "reference": "f53396c2d34225064647a05ca76c1da9d99e5828",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "paragonie/random_compat": ">= 2",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5|^6|^7|^8|^9|^10",
+                "yoast/phpunit-polyfills": "^2.0.0"
+            },
+            "bin": [
+                "bin/generate-defuse-key"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Defuse\\Crypto\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Hornby",
+                    "email": "taylor@defuse.ca",
+                    "homepage": "https://defuse.ca/"
+                },
+                {
+                    "name": "Scott Arciszewski",
+                    "email": "info@paragonie.com",
+                    "homepage": "https://paragonie.com"
+                }
+            ],
+            "description": "Secure PHP Encryption Library",
+            "keywords": [
+                "aes",
+                "authenticated encryption",
+                "cipher",
+                "crypto",
+                "cryptography",
+                "encrypt",
+                "encryption",
+                "openssl",
+                "security",
+                "symmetric key cryptography"
+            ],
+            "support": {
+                "issues": "https://github.com/defuse/php-encryption/issues",
+                "source": "https://github.com/defuse/php-encryption/tree/v2.4.0"
+            },
+            "time": "2023-06-19T06:10:36+00:00"
         },
         {
             "name": "dekor/php-array-table",
@@ -3227,17 +3294,11 @@
         },
         {
             "name": "drupal/drd",
-            "version": "4.1.7",
+            "version": "dev-4.1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/drd.git",
-                "reference": "4.1.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/drd-4.1.7.zip",
-                "reference": "4.1.7",
-                "shasum": "5d27863d23d380550b2d3b1f53e439db889fcf13"
+                "reference": "63073fb43db012c9d6219270fefefc26a436f19e"
             },
             "require": {
                 "albertofem/rsync-lib": "^1.0",
@@ -3247,7 +3308,7 @@
                 "drupal/drd_agent": "^4.1",
                 "drupal/encrypt": "^3.1",
                 "drupal/eva": "^3.0",
-                "drupal/key_value_field": "^1.3 || dev-3431515-automated-drupal-11",
+                "drupal/key_value_field": "^1.3",
                 "mikehaertl/php-shellcommand": "^1.6",
                 "php": ">=8.1",
                 "phpseclib/phpseclib": "^2.0|^3.0",
@@ -3271,12 +3332,15 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-4.1.x": "4.1.x-dev"
+                },
                 "drupal": {
-                    "version": "4.1.7",
-                    "datestamp": "1741339419",
+                    "version": "4.1.7+13-dev",
+                    "datestamp": "1762966543",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -5250,6 +5314,60 @@
                 "source": "https://git.drupalcode.org/project/rat/-/tree/1.0.0"
             },
             "time": "2023-07-19T22:22:22+00:00"
+        },
+        {
+            "name": "drupal/real_aes",
+            "version": "2.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/real_aes.git",
+                "reference": "8.x-2.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/real_aes-8.x-2.6.zip",
+                "reference": "8.x-2.6",
+                "shasum": "c18f40c69beadac60836032a127e53d5c0cd0a57"
+            },
+            "require": {
+                "defuse/php-encryption": "^2.0",
+                "drupal/core": "^8 || ^9 || ^10 || ^11",
+                "drupal/encrypt": "^3.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.6",
+                    "datestamp": "1719066076",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "nerdstein",
+                    "homepage": "https://www.drupal.org/user/1557710"
+                },
+                {
+                    "name": "ptmkenny",
+                    "homepage": "https://www.drupal.org/user/97885"
+                },
+                {
+                    "name": "rlhawk",
+                    "homepage": "https://www.drupal.org/user/352283"
+                }
+            ],
+            "description": "Provides an Authenticated AES encryption method for Encrypt through the Defuse PHP Encryption library.",
+            "homepage": "https://www.drupal.org/project/real_aes",
+            "support": {
+                "source": "https://git.drupalcode.org/project/real_aes"
+            }
         },
         {
             "name": "drupal/redirect",
@@ -18394,6 +18512,7 @@
     "stability-flags": {
         "drupal/advent_calendar": 10,
         "drupal/ckeditor_ai_agent": 10,
+        "drupal/drd": 20,
         "drupal/inline_entity_form": 5,
         "drupal/poll": 15,
         "drupal/pwa": 10,

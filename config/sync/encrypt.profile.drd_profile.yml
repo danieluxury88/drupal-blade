@@ -1,0 +1,13 @@
+uuid: a9c78b94-1c70-4d1a-b6a9-a882c5947eee
+langcode: en
+status: true
+dependencies:
+  config:
+    - key.key.drd_key
+  module:
+    - real_aes
+id: drd_profile
+label: 'DRD Profile'
+encryption_method: real_aes
+encryption_method_configuration: {  }
+encryption_key: drd_key

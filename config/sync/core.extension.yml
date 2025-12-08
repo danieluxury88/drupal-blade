@@ -85,6 +85,7 @@ module:
   project_overview: 0
   pwa: 0
   pwa_a2hs: 0
+  real_aes: 0
   redirect: 0
   scheduler: 0
   search: 0

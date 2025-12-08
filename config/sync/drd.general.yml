@@ -1,13 +1,14 @@
 _core:
   default_config_hash: W_POoYkhMK-cltbo_cvvohhThlUxLIRSCdNKZXBm7-A
-debug: false
-lock_hacked: false
+debug: 0
+lock_hacked: 0
 cleanup:
-  releases: false
-  majors: false
-  projects: false
+  releases: 0
+  majors: 0
+  projects: 0
 remote_blocks: {  }
 local:
   db:
     user: ''
     pass: ''
+encryption_profile: drd_profile
