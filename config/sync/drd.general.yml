@@ -1,0 +1,13 @@
+_core:
+  default_config_hash: W_POoYkhMK-cltbo_cvvohhThlUxLIRSCdNKZXBm7-A
+debug: false
+lock_hacked: false
+cleanup:
+  releases: false
+  majors: false
+  projects: false
+remote_blocks: {  }
+local:
+  db:
+    user: ''
+    pass: ''

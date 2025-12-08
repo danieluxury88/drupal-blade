@@ -1,0 +1,14 @@
+uuid: 504f23e7-414e-4eed-8a0a-04870f46627b
+langcode: en
+status: true
+dependencies:
+  module:
+    - drd
+_core:
+  default_config_hash: muZ-7OOWjsCagmLO_HqKLkKHczGsB-tb4zrVqAu_-zM
+id: drd_action_session
+label: 'Get a session URL'
+type: drd_domain
+plugin: drd_action_session
+configuration:
+  terms: {  }

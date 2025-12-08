@@ -1,0 +1,14 @@
+uuid: a96995ef-d89b-47ed-b94c-05cf605acf08
+langcode: en
+status: true
+dependencies:
+  module:
+    - drd
+_core:
+  default_config_hash: 2RAHF9bxsCpAywHXU31alKnQ8vtVwlTW5plR7Y3GMPo
+id: drd_action_download
+label: 'Download a file'
+type: drd_domain
+plugin: drd_action_download
+configuration:
+  terms: {  }

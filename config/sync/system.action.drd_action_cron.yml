@@ -1,0 +1,14 @@
+uuid: 44bae89d-5472-47fd-956c-d6e3c847d9d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - drd
+_core:
+  default_config_hash: aKMenwGzbjqvwPbJYru8_rPncrPhJO0L6NjsokjaTG8
+id: drd_action_cron
+label: 'Run cron'
+type: drd_domain
+plugin: drd_action_cron
+configuration:
+  terms: {  }

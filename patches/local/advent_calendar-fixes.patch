@@ -1,0 +1,95 @@
+diff --git a/web/modules/contrib/advent_calendar/advent_calendar.info.yml b/web/modules/contrib/advent_calendar/advent_calendar.info.yml
+index 5c7a8f4..8c6b108 100644
+--- a/web/modules/contrib/advent_calendar/advent_calendar.info.yml
++++ b/web/modules/contrib/advent_calendar/advent_calendar.info.yml
+@@
+ core_version_requirement: ^10.1 || ^11
+ dependencies:
+-  - drupal:sdc
+   - drupal:views
+ php: 8.0
+ 
+ # Information added by Drupal.org packaging script on 2023-12-22
+diff --git a/web/modules/contrib/advent_calendar/advent_calendar.module b/web/modules/contrib/advent_calendar/advent_calendar.module
+index 4cd6092..157d8cb 100644
+--- a/web/modules/contrib/advent_calendar/advent_calendar.module
++++ b/web/modules/contrib/advent_calendar/advent_calendar.module
+@@
+ function template_preprocess_views_view_fields__advent_calendar(array &$variables): void {
+   $view = $variables['view'];
+   $options = $view->style_plugin->options;
+ 
+   if ($options['door_closed_image']) {
+@@
+   else {
+     $variables['door_open_image'] = "";
+   }
+ }
++/**
++ * Implements hook_requirements().
++ */
++function advent_calendar_requirements($phase) {
++  $requirements = [];
++
++  if ($phase === 'install' || $phase === 'runtime') {
++    $requirements['advent_calendar.sdc'] = [
++      'title' => t('Single Directory Components (SDC) support'),
++    ];
++
++    $drupal11OrHigher = version_compare(\Drupal::VERSION, '11.0', '>=');
++
++    if ($drupal11OrHigher) {
++      $requirements['advent_calendar.sdc']['value'] = t('Available in core (sdc module is obsolete).');
++      $requirements['advent_calendar.sdc']['severity'] = REQUIREMENT_OK;
++    }
++    elseif (\Drupal::moduleHandler()->moduleExists('sdc')) {
++      $requirements['advent_calendar.sdc']['value'] = t('Core sdc module enabled.');
++      $requirements['advent_calendar.sdc']['severity'] = REQUIREMENT_OK;
++    }
++    else {
++      $requirements['advent_calendar.sdc']['value'] = t('Missing required module.');
++      $requirements['advent_calendar.sdc']['severity'] = REQUIREMENT_ERROR;
++      $requirements['advent_calendar.sdc']['description'] = t('Enable the core Single Directory Components (sdc) module introduced in Drupal 10.1, or update to Drupal 11+ where SDC is built into core.');
++    }
++  }
++
++  return $requirements;
++}
+ 
+ /**
+  * Implements hook_theme().
+  */
+ function advent_calendar_theme($existing, $type, $theme, $path) {
+diff --git a/web/modules/contrib/advent_calendar/README.md b/web/modules/contrib/advent_calendar/README.md
+index 5b8ec8a..97582db 100644
+--- a/web/modules/contrib/advent_calendar/README.md
++++ b/web/modules/contrib/advent_calendar/README.md
+@@
+-This module requires the Single Directory Components core module. As a result,
+-it's minimum required Drupal version is 10.1.
++Single Directory Components (SDC) are required. On Drupal 10.1–10.x you must
++enable the core `sdc` module (experimental). On Drupal 11+ the SDC functionality
++is provided by core automatically and the `sdc` module itself is obsolete.
++As a result, the minimum supported Drupal version is 10.1.
+diff --git a/web/modules/contrib/advent_calendar/advent_calendar_quickstart/advent_calendar_quickstart.install b/web/modules/contrib/advent_calendar/advent_calendar_quickstart/advent_calendar_quickstart.install
+index 7f3d593..ff0d885 100644
+--- a/web/modules/contrib/advent_calendar/advent_calendar_quickstart/advent_calendar_quickstart.install
++++ b/web/modules/contrib/advent_calendar/advent_calendar_quickstart/advent_calendar_quickstart.install
+@@
+ function advent_calendar_quickstart_install($is_syncing) {
+-  // Ensure any field storage introduced via optional config has its database
+-  // tables created before we query against them.
+-  \Drupal::service('entity.definition_update_manager')->applyUpdates();
++  // Ensure any optional config (field storage, view, vocab) is installed.
++  // This is idempotent and avoids missing-field errors during initial install.
++  \Drupal::service('config.installer')->installOptionalConfig(NULL, ['module' => 'advent_calendar_quickstart']);
+ 
+   $year = date("Y");
+   $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties([
+     'vid' => 'year',
+@@
+ function advent_calendar_quickstart_update_8101() {
+-  \Drupal::service('entity.definition_update_manager')->applyUpdates();
++  // Re-run optional config install to ensure field storage exists.
++  \Drupal::service('config.installer')->installOptionalConfig(NULL, ['module' => 'advent_calendar_quickstart']);
+ }

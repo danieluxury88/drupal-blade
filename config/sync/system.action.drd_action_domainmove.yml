@@ -1,0 +1,14 @@
+uuid: 724f162a-a29c-49a3-8ee6-8ecc4ff74dd4
+langcode: en
+status: true
+dependencies:
+  module:
+    - drd
+_core:
+  default_config_hash: JvQ1qRFUKFAsNsXDJjo3nqj7y7IpAtK3v96LNTF_FLw
+id: drd_action_domainmove
+label: 'Move domain to a different host'
+type: drd_domain
+plugin: drd_action_domainmove
+configuration:
+  terms: {  }

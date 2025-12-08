@@ -1,0 +1,14 @@
+uuid: e54d4c8a-c8ca-4647-91b0-70081e6be15c
+langcode: en
+status: true
+dependencies:
+  module:
+    - drd
+_core:
+  default_config_hash: PGnK3U8OJpwkLUAAd0jEXpl6TavM-Q8nCiEg7s4XgOY
+id: drd_action_projects
+label: 'Collect used projects'
+type: drd_domain
+plugin: drd_action_projects
+configuration:
+  terms: {  }

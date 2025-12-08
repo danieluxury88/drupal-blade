@@ -1,0 +1,14 @@
+uuid: 2ae3089f-2223-4545-9cc0-9f4436a9e84f
+langcode: en
+status: true
+dependencies:
+  module:
+    - drd
+_core:
+  default_config_hash: u1trtgK4L_-iXlSV8XIgvEFk2iI614Z8FSh2sMciBms
+id: drd_action_ping
+label: Ping
+type: drd_domain
+plugin: drd_action_ping
+configuration:
+  terms: {  }

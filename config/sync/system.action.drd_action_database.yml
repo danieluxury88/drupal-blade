@@ -1,0 +1,14 @@
+uuid: cf20b8f1-5aa5-457f-be5c-16c6dc2d3e5e
+langcode: en
+status: true
+dependencies:
+  module:
+    - drd
+_core:
+  default_config_hash: L33RrRspmqieWVhP8JxCY32QVZZ4ridHW7Ia4clsyUM
+id: drd_action_database
+label: 'Download a database dump'
+type: drd_domain
+plugin: drd_action_database
+configuration:
+  terms: {  }

@@ -22,6 +22,7 @@
         "composer/installers": "^2.3",
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.6",
+        "drupal/advent_calendar": "^1.0@beta",
         "drupal/ai": "^1.1",
         "drupal/backup_migrate": "^5.1",
         "drupal/book": "^2.0",
@@ -34,6 +35,7 @@
         "drupal/core-project-message": "^11.1",
         "drupal/core-recommended": "^11.1",
         "drupal/devel": "^5.3",
+        "drupal/drd": "^4.1",
         "drupal/entity_browser": "^2.13",
         "drupal/environment_indicator": "^4.0",
         "drupal/field_group": "^4.0",
@@ -141,6 +143,11 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
+        },
+        "patches": {
+            "drupal/advent_calendar": {
+                "Handle SDC dependency and optional config install": "patches/local/advent_calendar-fixes.patch"
+            }
         }
     },
     "require-dev": {

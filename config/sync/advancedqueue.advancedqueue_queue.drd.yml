@@ -1,0 +1,16 @@
+uuid: 28ed7620-6e92-4abd-a280-135f4a4f1793
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: QX16n_3InWL1gkJkdRCs7U5_uyZ9vAsiy-evFO-Hz2s
+id: drd
+label: DRD
+backend: database
+backend_configuration:
+  lease_time: 300
+processor: cron
+processing_time: 90
+threshold: {  }
+locked: false
+stop_when_empty: true

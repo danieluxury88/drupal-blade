@@ -1,0 +1,14 @@
+uuid: 90864ec8-c1d4-4354-a9ef-cdc2b490272e
+langcode: en
+status: true
+dependencies:
+  module:
+    - drd
+_core:
+  default_config_hash: SUCwF94b2tVKWJYfNhSdVsTOu7-un2d9RhMmDTWwEyw
+id: drd_action_domains_receive
+label: 'Receive all domains'
+type: drd_core
+plugin: drd_action_domains_receive
+configuration:
+  terms: {  }

@@ -1,0 +1,56 @@
+display:
+  default:
+    display_title: Máster
+    display_options:
+      fields:
+        drd_entity_actions:
+          label: Acciones
+        id:
+          label: ID
+          separator: ', '
+        name:
+          label: Núcleo
+          separator: ', '
+        name_1:
+          label: Servidor
+          separator: ', '
+        version:
+          label: Versión
+          separator: ', '
+        status_agg:
+          label: Estado
+        operations:
+          label: Operaciones
+      pager:
+        options:
+          tags:
+            next: 'Siguiente >'
+            previous: '‹ Anterior'
+            first: '« Primero'
+            last: 'Último »'
+          expose:
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options_all_label: '- Todo -'
+            offset_label: Desplazamiento
+      exposed_form:
+        options:
+          submit_button: Aplicar
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      filters:
+        id:
+          expose:
+            label: Servidor
+        majorversion:
+          expose:
+            label: 'Versión principal'
+  entity_view_1:
+    display_options:
+      arguments:
+        host:
+          exception:
+            title: Todo(s)
+  page_1:
+    display_title: Página

@@ -1,4 +1,3 @@
-label: Actividad
 display:
   default:
     display_title: Máster
@@ -11,20 +10,22 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       fields:
-        created:
-          label: Fecha
+        label:
+          label: Proyecto
           separator: ', '
-        rendered_entity:
-          label: Mensaje
-        uid:
-          label: Usuario
+        version:
+          label: Versión
           separator: ', '
+        status_label:
+          label: Estado
+      title: Publicaciones
       arguments:
-        source_entity_id:
+        id:
           exception:
             title: Todo(s)
-        source_entity_type:
+  entity_view_2:
+    display_options:
+      arguments:
+        core:
           exception:
             title: Todo(s)
-  block_1:
-    display_title: Bloque

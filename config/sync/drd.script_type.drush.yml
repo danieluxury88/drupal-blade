@@ -1,0 +1,13 @@
+uuid: 099cd5fe-0906-4aff-8b49-ea843ae7a4f1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ACsqzct_YZ8xWN49TtG7d6prXCmRjHyKzW7y8CKlaQM
+id: drush
+label: Drush
+interpreter: /bin/sh
+extension: sh
+prefix: ''
+suffix: ''
+linesuffix: null

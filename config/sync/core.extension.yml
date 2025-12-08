@@ -4,6 +4,9 @@ module:
   address: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
+  advancedqueue: 0
+  advent_calendar: 0
+  advent_calendar_quickstart: 0
   ai: 0
   ai_assistant_api: 0
   ai_logging: 0
@@ -38,14 +41,18 @@ module:
   datetime: 0
   datetime_range: 0
   dblog: 0
+  drd: 0
+  drd_agent: 0
   dynamic_page_cache: 0
   editor: 0
+  encrypt: 0
   entity: 0
   entity_browser: 0
   entity_browser_entity_form: 0
   entity_reference_revisions: 0
   environment_indicator: 0
   environment_indicator_ui: 0
+  eva: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -59,6 +66,7 @@ module:
   inline_entity_form: 0
   inline_form_errors: 0
   key: 0
+  key_value_field: 0
   language: 0
   link: 0
   locale: 0
@@ -82,6 +90,7 @@ module:
   redirect: 0
   scheduler: 0
   search: 0
+  serialization: 0
   settings_tray: 0
   shortcut: 0
   simple_sitemap: 0

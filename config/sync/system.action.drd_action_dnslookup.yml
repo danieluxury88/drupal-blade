@@ -1,0 +1,14 @@
+uuid: bea260e7-8b58-40db-a4ce-27ac190b87e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - drd
+_core:
+  default_config_hash: HhieTI3ViqzjUzau-nWFkHUvy8jy8DjnmKpQG55JHVU
+id: drd_action_dnslookup
+label: 'Get all IPs'
+type: drd_host
+plugin: drd_action_dnslookup
+configuration:
+  terms: {  }

@@ -1,0 +1,14 @@
+uuid: 9b6e1fa3-80ff-47cc-9ae8-a0c4ce6f302b
+langcode: en
+status: true
+dependencies:
+  module:
+    - drd
+_core:
+  default_config_hash: miDHW7OehXeYUqlep6bVtlaCA_mLGE0vJxvRpyX6cWc
+id: drd_action_projects_status
+label: 'Collect projects status from drupal.org'
+type: drd
+plugin: drd_action_projects_status
+configuration:
+  terms: {  }

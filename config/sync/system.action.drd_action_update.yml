@@ -1,0 +1,14 @@
+uuid: 919a797a-6fa9-4084-ad9a-28f2f645dbaa
+langcode: en
+status: true
+dependencies:
+  module:
+    - drd
+_core:
+  default_config_hash: kPoWZZDlbzx6flLSuISTNRipSddsnozAEY-dn6ScytM
+id: drd_action_update
+label: 'Run updates'
+type: drd_domain
+plugin: drd_action_update
+configuration:
+  terms: {  }

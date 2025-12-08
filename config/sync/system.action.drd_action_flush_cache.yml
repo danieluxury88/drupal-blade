@@ -1,0 +1,14 @@
+uuid: 2f1c8343-ff4a-4e14-bdd3-89d801bc8062
+langcode: en
+status: true
+dependencies:
+  module:
+    - drd
+_core:
+  default_config_hash: 4GkN6DfZiFDZrNcKk_SVUA-J48zaSmI9ATahLXWllJg
+id: drd_action_flush_cache
+label: 'Flush all caches'
+type: drd_domain
+plugin: drd_action_flush_cache
+configuration:
+  terms: {  }

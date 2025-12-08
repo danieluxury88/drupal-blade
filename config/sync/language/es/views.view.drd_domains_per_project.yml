@@ -1,4 +1,3 @@
-label: Actividad
 display:
   default:
     display_title: Máster
@@ -11,20 +10,21 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       fields:
-        created:
-          label: Fecha
+        version:
+          label: Versión
           separator: ', '
-        rendered_entity:
-          label: Mensaje
-        uid:
-          label: Usuario
+        domain:
+          label: Dominios
+          separator: ', '
+        name_2:
+          label: Nombre
+        name:
+          label: Núcleo
+          separator: ', '
+        name_1:
+          label: Servidor
           separator: ', '
       arguments:
-        source_entity_id:
+        id:
           exception:
             title: Todo(s)
-        source_entity_type:
-          exception:
-            title: Todo(s)
-  block_1:
-    display_title: Bloque
