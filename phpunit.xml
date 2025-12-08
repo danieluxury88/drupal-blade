@@ -25,9 +25,9 @@
     <!-- Do not limit the amount of memory tests take to run. -->
     <ini name="memory_limit" value="-1"/>
     <!-- Example SIMPLETEST_BASE_URL value: http://localhost -->
-    <env name="SIMPLETEST_BASE_URL" value=""/>
+    <env name="SIMPLETEST_BASE_URL" value="http://drupalblade.test"/>
     <!-- Example SIMPLETEST_DB value: mysql://username:password@localhost/database_name#table_prefix -->
-    <env name="SIMPLETEST_DB" value=""/>
+    <env name="SIMPLETEST_DB" value="mysql://root:root@localhost/drupal_blade"/>
     <!-- By default, browser tests will output links that use the base URL set
      in SIMPLETEST_BASE_URL. However, if your SIMPLETEST_BASE_URL is an internal
      path (such as may be the case in a virtual or Docker-based environment),
@@ -70,6 +70,11 @@
     </bootstrap>
   </extensions>
   <testsuites>
+    <testsuite name="custom">
+      <directory>web/modules/custom/**/tests/src/Unit</directory>
+      <directory>web/modules/custom/**/tests/src/Kernel</directory>
+      <directory>web/modules/custom/**/tests/src/Functional</directory>
+    </testsuite>
     <testsuite name="unit">
       <directory>modules/**/tests/src/Unit</directory>
       <directory>profiles/**/tests/src/Unit</directory>
@@ -77,6 +82,8 @@
       <directory>web/modules/**/tests/src/Unit</directory>
       <directory>web/profiles/**/tests/src/Unit</directory>
       <directory>web/themes/**/tests/src/Unit</directory>
+      <!-- Exclude tests that depend on optional modules not installed -->
+      <exclude>web/modules/contrib/honeypot/tests/src/Unit/Integration</exclude>
     </testsuite>
     <testsuite name="kernel">
       <directory>modules/**/tests/src/Kernel</directory>
