@@ -35,7 +35,7 @@
         "drupal/core-project-message": "^11.1",
         "drupal/core-recommended": "^11.1",
         "drupal/devel": "^5.3",
-        "drupal/drd": "^4.1",
+        "drupal/drd": "4.1.x-dev",
         "drupal/entity_browser": "^2.13",
         "drupal/environment_indicator": "^4.0",
         "drupal/field_group": "^4.0",

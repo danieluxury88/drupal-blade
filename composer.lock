@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c26a6b5acc75350aa67d99d2f2b4ed14",
+    "content-hash": "6f1d4b7a41e5459b20b28b1e92d739c7",
     "packages": [
         {
             "name": "albertofem/rsync-lib",
@@ -2966,16 +2966,16 @@
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "11.3.0-rc1",
+            "version": "11.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
-                "reference": "b8ea85a2072b52f88a1fadec28306a3946980b8e"
+                "reference": "891b4615c479e17245c81571c9be0156be4b03f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-composer-scaffold/zipball/b8ea85a2072b52f88a1fadec28306a3946980b8e",
-                "reference": "b8ea85a2072b52f88a1fadec28306a3946980b8e",
+                "url": "https://api.github.com/repos/drupal/core-composer-scaffold/zipball/891b4615c479e17245c81571c9be0156be4b03f8",
+                "reference": "891b4615c479e17245c81571c9be0156be4b03f8",
                 "shasum": ""
             },
             "require": {
@@ -3010,9 +3010,9 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/11.3.0-rc1"
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/11.2.9"
             },
-            "time": "2025-10-13T16:03:31+00:00"
+            "time": "2025-05-05T16:18:58+00:00"
         },
         {
             "name": "drupal/core-project-message",
@@ -3294,17 +3294,11 @@
         },
         {
             "name": "drupal/drd",
-            "version": "4.1.7",
+            "version": "dev-4.1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/drd.git",
-                "reference": "4.1.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/drd-4.1.7.zip",
-                "reference": "4.1.7",
-                "shasum": "5d27863d23d380550b2d3b1f53e439db889fcf13"
+                "reference": "63073fb43db012c9d6219270fefefc26a436f19e"
             },
             "require": {
                 "albertofem/rsync-lib": "^1.0",
@@ -3314,7 +3308,7 @@
                 "drupal/drd_agent": "^4.1",
                 "drupal/encrypt": "^3.1",
                 "drupal/eva": "^3.0",
-                "drupal/key_value_field": "^1.3 || dev-3431515-automated-drupal-11",
+                "drupal/key_value_field": "^1.3",
                 "mikehaertl/php-shellcommand": "^1.6",
                 "php": ">=8.1",
                 "phpseclib/phpseclib": "^2.0|^3.0",
@@ -3338,12 +3332,15 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-4.1.x": "4.1.x-dev"
+                },
                 "drupal": {
-                    "version": "4.1.7",
-                    "datestamp": "1741339419",
+                    "version": "4.1.7+13-dev",
+                    "datestamp": "1762966543",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -12661,16 +12658,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.5.9",
+            "version": "1.5.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "1905981ee626e6f852448b7aaa978f8666c5bc54"
+                "reference": "961a5e4056dd2e4a2eedcac7576075947c28bf63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/1905981ee626e6f852448b7aaa978f8666c5bc54",
-                "reference": "1905981ee626e6f852448b7aaa978f8666c5bc54",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/961a5e4056dd2e4a2eedcac7576075947c28bf63",
+                "reference": "961a5e4056dd2e4a2eedcac7576075947c28bf63",
                 "shasum": ""
             },
             "require": {
@@ -12717,7 +12714,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/ca-bundle/issues",
-                "source": "https://github.com/composer/ca-bundle/tree/1.5.9"
+                "source": "https://github.com/composer/ca-bundle/tree/1.5.10"
             },
             "funding": [
                 {
@@ -12729,7 +12726,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-11-06T11:46:17+00:00"
+            "time": "2025-12-08T15:06:51+00:00"
         },
         {
             "name": "composer/class-map-generator",
@@ -18515,6 +18512,7 @@
     "stability-flags": {
         "drupal/advent_calendar": 10,
         "drupal/ckeditor_ai_agent": 10,
+        "drupal/drd": 20,
         "drupal/inline_entity_form": 5,
         "drupal/poll": 15,
         "drupal/pwa": 10,
