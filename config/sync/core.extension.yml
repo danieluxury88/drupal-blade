@@ -5,8 +5,6 @@ module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
   advancedqueue: 0
-  advent_calendar: 0
-  advent_calendar_quickstart: 0
   ai: 0
   ai_assistant_api: 0
   ai_logging: 0
