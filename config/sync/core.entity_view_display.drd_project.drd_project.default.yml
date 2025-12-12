@@ -11,36 +11,41 @@ targetEntityType: drd_project
 bundle: drd_project
 mode: default
 content:
+  drd_domains_per_project_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   label:
-    label: hidden
     type: string
-    weight: -4
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: -4
     region: content
   name:
-    label: inline
     type: string
-    weight: -3
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: -3
     region: content
   terms:
+    type: entity_reference_label
     label: inline
-    weight: -1
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: -1
     region: content
   type:
+    type: string
     label: inline
-    weight: -2
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: -2
     region: content
 hidden: {  }

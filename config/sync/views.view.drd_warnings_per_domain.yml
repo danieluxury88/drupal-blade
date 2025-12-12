@@ -17,74 +17,12 @@ base_table: drd_requirement
 base_field: id
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: perm
-        options:
-          perm: 'drd.view published domain entities'
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Apply
-          reset_button: true
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: none
-        options:
-          items_per_page: 0
-          offset: 0
-      style:
-        type: table
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          override: true
-          sticky: false
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            label: label
-            category: category
-          info:
-            label:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            category:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: '-1'
-          empty_table: false
-      row:
-        type: fields
+      title: ''
       fields:
         category:
           id: category
@@ -93,6 +31,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: drd_requirement
+          entity_field: category
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -134,7 +75,6 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          drd_status: warning
           click_sort_column: value
           type: string
           settings:
@@ -149,9 +89,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: drd_requirement
-          entity_field: category
-          plugin_id: field
+          drd_status: warning
         label:
           id: label
           table: drd_requirement
@@ -159,6 +97,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: drd_requirement
+          entity_field: label
+          plugin_id: field
           label: Warnings
           exclude: false
           alter:
@@ -214,10 +155,29 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: drd_requirement
-          entity_field: label
-          plugin_id: field
-      filters: {  }
+      pager:
+        type: none
+        options:
+          offset: 0
+          items_per_page: 0
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: true
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'drd.view published domain entities'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
       sorts:
         category:
           id: category
@@ -226,13 +186,13 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
           entity_type: drd_requirement
           entity_field: category
           plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+          exposed: false
         label:
           id: label
           table: drd_requirement
@@ -240,28 +200,13 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
           entity_type: drd_requirement
           entity_field: label
           plugin_id: standard
-      title: ''
-      header: {  }
-      footer: {  }
-      empty: {  }
-      relationships:
-        warning_domains:
-          id: warning_domains
-          table: drd_requirement
-          field: warning_domains
-          relationship: none
-          group_type: group
-          admin_label: 'Domains with this warning'
-          required: true
-          entity_type: drd_requirement
-          plugin_id: entity_reverse
+          order: ASC
+          expose:
+            label: ''
+          exposed: false
       arguments:
         id:
           id: id
@@ -270,6 +215,9 @@ display:
           relationship: warning_domains
           group_type: group
           admin_label: ''
+          entity_type: drd_domain
+          entity_field: id
+          plugin_id: numeric
           default_action: default
           exception:
             value: all
@@ -284,8 +232,8 @@ display:
           summary_options:
             base_path: ''
             count: true
-            items_per_page: 25
             override: false
+            items_per_page: 25
           summary:
             sort_order: asc
             number_of_records: 0
@@ -297,11 +245,63 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
-          entity_type: drd_domain
-          entity_field: id
-          plugin_id: numeric
-      display_extenders: {  }
+      filters: {  }
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            label: label
+            category: category
+          default: '-1'
+          info:
+            label:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            category:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          empty_table: false
+          caption: ''
+          description: ''
+      row:
+        type: fields
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships:
+        warning_domains:
+          id: warning_domains
+          table: drd_requirement
+          field: warning_domains
+          relationship: none
+          group_type: group
+          admin_label: 'Domains with this warning'
+          entity_type: drd_requirement
+          plugin_id: entity_reverse
+          required: true
       css_class: drd-view
+      header: {  }
+      footer: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: 0
       contexts:
@@ -311,9 +311,9 @@ display:
         - user.permissions
       tags: {  }
   entity_view_1:
-    display_plugin: entity_view
     id: entity_view_1
     display_title: EVA
+    display_plugin: entity_view
     position: 1
     display_options:
       display_extenders: {  }

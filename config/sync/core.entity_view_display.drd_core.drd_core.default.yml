@@ -12,66 +12,66 @@ bundle: drd_core
 mode: default
 content:
   actions:
-    weight: 1
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   drd_domain_entity_view_1:
-    weight: 8
     settings: {  }
     third_party_settings: {  }
+    weight: 8
     region: content
   drd_releases_per_domain_entity_view_2:
-    weight: 0
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
   drupalroot:
+    type: string
     label: inline
-    weight: 4
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 4
     region: content
   drupalversion:
+    type: entity_reference_label
     label: inline
-    weight: 5
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 5
     region: content
   gitrepo:
+    type: string
     label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
     weight: -4
     region: content
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
   host:
+    type: entity_reference_label
     label: inline
-    weight: 3
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 3
     region: content
   name:
-    label: hidden
     type: string
-    weight: 2
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 2
     region: content
   terms:
+    type: entity_reference_label
     label: inline
-    weight: 7
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 7
     region: content
 hidden: {  }
