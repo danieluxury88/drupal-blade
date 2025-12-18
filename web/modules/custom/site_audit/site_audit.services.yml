@@ -46,3 +46,18 @@ services:
       - '@database'
       - '@site_audit.content_collector'
       - '@entity_field.manager'
+
+  site_audit.views_collector:
+    class: Drupal\site_audit\Service\SiteAuditViewsCollector
+    arguments:
+      - '@entity_type.manager'
+
+  site_audit.project_collector:
+    class: Drupal\site_audit\Service\SiteAuditProjectCollector
+    arguments:
+      - '@module_handler'
+      - '@extension.list.module'
+      - '@language_manager'
+      - '@config.factory'
+      - '@config.storage'
+      - '@entity_type.manager'

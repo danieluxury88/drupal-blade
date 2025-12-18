@@ -3,7 +3,7 @@
 namespace Drupal\site_audit\Plugin\AuditReport;
 
 /**
- * Interface for audit report plugins.
+ * Interface for audit reports.
  */
 interface AuditReportInterface {
 
@@ -48,7 +48,7 @@ interface AuditReportInterface {
    *   Report data from buildData().
    *
    * @return string
-   *   Markdown string.
+   *   A Markdown string.
    */
   public function buildMarkdown(array $data): string;
 
