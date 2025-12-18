@@ -14,7 +14,8 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * @AuditReport(
  *   id = "project_overview",
  *   label = @Translation("Project overview"),
- *   description = @Translation("Shows high-level Drupal project information and configuration footprint.")
+ *   description = @Translation("Shows high-level Drupal project information and configuration footprint."),
+ *   enabled = FALSE,
  * )
  */
 class ProjectOverviewReport extends AuditReportBase implements ContainerFactoryPluginInterface {

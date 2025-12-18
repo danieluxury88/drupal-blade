@@ -16,7 +16,8 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * @AuditReport(
  *   id = "views_overview",
  *   label = @Translation("Views overview"),
- *   description = @Translation("Lists all Views with a rough complexity score and quick links to edit.")
+ *   description = @Translation("Lists all Views with a rough complexity score and quick links to edit."),
+ *   enabled = FALSE,
  * )
  */
 class ViewsOverviewReport extends AuditReportBase implements ContainerFactoryPluginInterface {

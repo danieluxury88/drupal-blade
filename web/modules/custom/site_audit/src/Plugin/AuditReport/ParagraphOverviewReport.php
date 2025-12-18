@@ -18,7 +18,8 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * @AuditReport(
  *   id = "paragraph_overview",
  *   label = @Translation("Paragraph overview"),
- *   description = @Translation("Shows all paragraph types, how many entities exist, how many fields they have, and details about each field.")
+ *   description = @Translation("Shows all paragraph types, how many entities exist, how many fields they have, and details about each field."),
+ *   enabled = FALSE,
  * )
  */
 class ParagraphOverviewReport extends AuditReportBase implements ContainerFactoryPluginInterface {
@@ -164,13 +165,20 @@ class ParagraphOverviewReport extends AuditReportBase implements ContainerFactor
         ];
       }
 
+      // Filter to only reference fields.
+      $reference_fields = array_filter($fields, static function (array $field_info): bool {
+        return in_array($field_info['type'], ['entity_reference', 'entity_reference_revisions'], TRUE);
+      });
+
       $paragraphs[$bundle] = [
         'machine_name' => $bundle,
         'label' => (string) ($info['label'] ?? $bundle),
         'description' => (string) ($info['description'] ?? ''),
         'count' => (int) ($counts[$bundle] ?? 0),
         'fields_count' => count($fields),
+        'reference_fields_count' => count($reference_fields),
         'fields' => $fields,
+        'reference_fields' => $reference_fields,
         'edit_path' => (string) ($info['edit_path'] ?? "/admin/structure/paragraphs_type/$bundle"),
         'fields_path' => (string) ($info['fields_path'] ?? "/admin/structure/paragraphs_type/$bundle/fields"),
       ];
@@ -205,7 +213,7 @@ class ParagraphOverviewReport extends AuditReportBase implements ContainerFactor
     $order = $request->query->get('order') ?: 'machine_name';
     $sort = strtolower($request->query->get('sort') ?: 'asc');
 
-    $allowed_order = ['machine_name', 'label', 'count', 'fields_count'];
+    $allowed_order = ['machine_name', 'label', 'count', 'fields_count', 'reference_fields_count'];
     if (!in_array($order, $allowed_order, TRUE)) {
       $order = 'machine_name';
     }
@@ -240,6 +248,7 @@ class ParagraphOverviewReport extends AuditReportBase implements ContainerFactor
       'label' => $this->t('Label'),
       'count' => $this->t('Entities'),
       'fields_count' => $this->t('Fields'),
+      'reference_fields_count' => $this->t('Ref fields'),
     ];
 
     $header = [];
@@ -271,6 +280,9 @@ class ParagraphOverviewReport extends AuditReportBase implements ContainerFactor
     $header['fields'] = [
       'data' => $this->t('Fields detail'),
     ];
+    $header['reference_fields'] = [
+      'data' => $this->t('Reference fields (type → target)'),
+    ];
     $header['operations'] = [
       'data' => $this->t('Operations'),
     ];
@@ -298,6 +310,27 @@ class ParagraphOverviewReport extends AuditReportBase implements ContainerFactor
       $fields_markup = $field_lines
         ? '<ul><li>' . implode('</li><li>', array_map('htmlspecialchars', $field_lines)) . '</li></ul>'
         : $this->t('No configurable fields.');
+
+      // Build reference fields markup.
+      $ref_field_lines = [];
+      foreach ($info['reference_fields'] as $field_name => $field_info) {
+        $line = '`' . $field_name . '`';
+        $line .= ' (' . $field_info['label'] . ')';
+        $line .= ' – ' . $field_info['type'];
+
+        if (!empty($field_info['target_type'])) {
+          $line .= ' → ' . $field_info['target_type'];
+          if (!empty($field_info['target_bundles'])) {
+            $line .= ' [' . implode(', ', $field_info['target_bundles']) . ']';
+          }
+        }
+
+        $ref_field_lines[] = $line;
+      }
+
+      $ref_fields_markup = $ref_field_lines
+        ? '<ul><li>' . implode('</li><li>', array_map('htmlspecialchars', $ref_field_lines)) . '</li></ul>'
+        : $this->t('No reference fields.');
 
       // Operations: edit paragraph type, manage fields.
       $edit_url = Url::fromUserInput($info['edit_path'], [
@@ -341,9 +374,19 @@ class ParagraphOverviewReport extends AuditReportBase implements ContainerFactor
             '#markup' => (string) $info['fields_count'],
           ],
         ],
+        'reference_fields_count' => [
+          'data' => [
+            '#markup' => (string) $info['reference_fields_count'],
+          ],
+        ],
         'fields' => [
           'data' => [
             '#markup' => $fields_markup,
+          ],
+        ],
+        'reference_fields' => [
+          'data' => [
+            '#markup' => $ref_fields_markup,
           ],
         ],
         'operations' => [
@@ -385,8 +428,8 @@ class ParagraphOverviewReport extends AuditReportBase implements ContainerFactor
 
     $lines[] = '# Paragraph overview';
     $lines[] = '';
-    $lines[] = '| Machine name | Label | Entities | Fields | Field details |';
-    $lines[] = '| --- | --- | ---: | ---: | --- |';
+    $lines[] = '| Machine name | Label | Entities | Fields | Ref fields | Field details | Reference fields |';
+    $lines[] = '| --- | --- | ---: | ---: | ---: | --- | --- |';
 
     foreach ($paragraphs as $bundle => $info) {
       $field_chunks = [];
@@ -410,13 +453,37 @@ class ParagraphOverviewReport extends AuditReportBase implements ContainerFactor
 
       $fields_text = $field_chunks ? implode('<br>', $field_chunks) : 'No configurable fields.';
 
+      // Reference fields for markdown.
+      $ref_chunks = [];
+      foreach ($info['reference_fields'] as $field_name => $field_info) {
+        $chunk = sprintf(
+          '`%s` (%s) – %s',
+          $field_name,
+          $field_info['label'],
+          $field_info['type']
+        );
+
+        if (!empty($field_info['target_type'])) {
+          $chunk .= ' → ' . $field_info['target_type'];
+          if (!empty($field_info['target_bundles'])) {
+            $chunk .= ' [' . implode(', ', $field_info['target_bundles']) . ']';
+          }
+        }
+
+        $ref_chunks[] = $chunk;
+      }
+
+      $ref_fields_text = $ref_chunks ? implode('<br>', $ref_chunks) : 'No reference fields.';
+
       $lines[] = sprintf(
-        '| `%s` | %s | %d | %d | %s |',
+        '| `%s` | %s | %d | %d | %d | %s | %s |',
         $bundle,
         $info['label'],
         $info['count'],
         $info['fields_count'],
-        $fields_text
+        $info['reference_fields_count'],
+        $fields_text,
+        $ref_fields_text
       );
     }
 

@@ -11,7 +11,8 @@ use Drupal\Core\Url;
  * @AuditReport(
  *   id = "paragraph_dependencies",
  *   label = @Translation("Paragraph dependencies"),
- *   description = @Translation("Shows which content types and paragraph types use which paragraph types, including nesting.")
+ *   description = @Translation("Shows which content types and paragraph types use which paragraph types, including nesting."),
+ *   enabled = FALSE,
  * )
  */
 class ParagraphDependenciesReport extends AuditReportBase {

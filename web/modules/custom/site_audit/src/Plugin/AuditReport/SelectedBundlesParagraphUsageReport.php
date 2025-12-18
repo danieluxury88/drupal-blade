@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Drupal\site_audit\Plugin\AuditReport;
 
+use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Url;
 use Drupal\Core\Link;
@@ -37,6 +38,13 @@ class SelectedBundlesParagraphUsageReport extends AuditReportBase implements Con
   protected SiteAuditContentBundleCollector $contentBundleCollector;
 
   /**
+   * Entity field manager.
+   *
+   * @var \Drupal\Core\Entity\EntityFieldManagerInterface
+   */
+  protected EntityFieldManagerInterface $entityFieldManager;
+
+  /**
    * Node bundles (content types) to focus on.
    *
    * Machine name => human label.
@@ -45,47 +53,48 @@ class SelectedBundlesParagraphUsageReport extends AuditReportBase implements Con
    */
   protected array $targetBundles = [
     // CSM bundles.
-    'csm_documents' => 'Documents',
-    'csm_document_type' => 'Document Type',
-    'csm_externe_projekt_institutione' => 'Externe Projekt Institutionen',
-    'csm_higher_education_institution' => 'Higher Education Institutions',
+    // 'csm_documents' => 'Documents',
+    // 'csm_document_type' => 'Document Type',
+    // 'csm_externe_projekt_institutione' => 'Externe Projekt Institutionen',
+    // 'csm_higher_education_institution' => 'Higher Education Institutions`,
     'csm_kurse' => 'Kurse/Module',
-    'csm_media_releases' => 'Medienmitteilungen',
-    'csm_mitarbeitende' => 'Mitarbeitende',
-    'csm_profile' => 'Mitarbeiter Profile',
-    'csm_mitarbeiter_profil_typ' => 'Mitarbeiter Profil Typ',
     'csm_projekte' => 'Projekte',
-    'csm_projektmitarbeiter_rolle' => 'Projektmitarbeiter/Rolle',
-    'csm_projekt_ober_typ' => 'Projekt Ober Typ',
-    'csm_projekt_positionen' => 'Projekt Positionen',
-    'csm_projekt_schlagworte' => 'Projekt Schlagworte',
-    'csm_projekt_status' => 'Projekt Status',
-    'csm_projekt_typ' => 'Projekt Typ',
-    'csm_publikationen' => 'Publikationen',
-    'csm_publikations_typen' => 'Publikations Typen',
-    'csm_sprache' => 'Sprache',
-    'csm_studienangebot' => 'Studienangebot',
-    'csm_veranstalltungs_kategorie' => 'Veranstalltungs Kategorie',
-    'csm_veranstaltung' => 'Veranstaltung "UNI NEU"',
-    'csm_veranstaltungstyp' => 'Veranstaltungstyp',
-    // CSX.
-    'csx_veranstaltungsart' => 'Veranstaltungsart',
-
-    // OCM bundles.
-    'ocm_blog_entry' => 'Blog Entry',
-    'ocm_course' => 'Course',
-    'page' => 'Einfache Seite',
-    'ocm_functionassignment' => 'FunctionAssignment',
-    'ocm_funktion_mitarbeiter_' => 'Funktion (Mitarbeiter)',
-    'ocm_google_search' => 'Google Search',
-    'ocm_institution' => 'Institution',
-    'ocm_job_offer' => 'Jobangebot',
-    'ocm_job_application' => 'Job application',
-    'ocm_country' => 'Land',
     'ocm_news_entry' => 'News Entry',
-    'ocm_semester' => 'Semester',
-    'ocm_sprachen' => 'Sprachen',
-    'ocm_studiengang' => 'Studiengang',
+    'ocm_blog_entry' => 'Blog Entry',
+    'csm_publikationen' => 'Publikationen',
+    'csm_veranstaltung' => 'Veranstaltung "UNI NEU"',
+    'csm_media_releases' => 'Medienmitteilungen',
+    'page' => 'Einfache Seite',
+    // Added on list manually.
+    'csm_projekt_beteiligte_organisat' => 'Projekt Beteiligte Organisation',
+    'ocm_functionassignment' => 'FunctionAssignment',
+    // 'csm_mitarbeitende' => 'Mitarbeitende',
+    // 'csm_profile' => 'Mitarbeiter Profile',
+    // 'csm_mitarbeiter_profil_typ' => 'Mitarbeiter Profil Typ',
+    // 'csm_projektmitarbeiter_rolle' => 'Projektmitarbeiter/Rolle',
+    // 'csm_projekt_ober_typ' => 'Projekt Ober Typ',
+    // 'csm_projekt_positionen' => 'Projekt Positionen',
+    // 'csm_projekt_schlagworte' => 'Projekt Schlagworte',
+    // 'csm_projekt_status' => 'Projekt Status',
+    // 'csm_projekt_typ' => 'Projekt Typ',
+    // 'csm_publikations_typen' => 'Publikations Typen',
+    // 'csm_sprache' => 'Sprache',
+    // 'csm_studienangebot' => 'Studienangebot',
+    // 'csm_veranstalltungs_kategorie' => 'Veranstalltungs Kategorie',
+    // 'csm_veranstaltungstyp' => 'Veranstaltungstyp',
+    // CSX.
+    // 'csx_veranstaltungsart' => 'Veranstaltungsart',
+    // OCM bundles.
+    // 'ocm_course' => 'Course',
+    // 'ocm_funktion_mitarbeiter_' => 'Funktion (Mitarbeiter)',
+    // 'ocm_google_search' => 'Google Search',
+    // 'ocm_institution' => 'Institution',
+    // 'ocm_job_offer' => 'Jobangebot',
+    // 'ocm_job_application' => 'Job application',
+    // 'ocm_country' => 'Land',
+    // 'ocm_semester' => 'Semester',
+    // 'ocm_sprachen' => 'Sprachen',
+    // 'ocm_studiengang' => 'Studiengang',
   ];
 
   /**
@@ -101,6 +110,8 @@ class SelectedBundlesParagraphUsageReport extends AuditReportBase implements Con
    *   The structure collector service.
    * @param \Drupal\site_audit\Service\SiteAuditContentBundleCollector $content_bundle_collector
    *   The content bundle collector service.
+   * @param \Drupal\Core\Entity\EntityFieldManagerInterface $entity_field_manager
+   *   The entity field manager.
    */
   public function __construct(
     array $configuration,
@@ -108,10 +119,12 @@ class SelectedBundlesParagraphUsageReport extends AuditReportBase implements Con
     $plugin_definition,
     SiteAuditStructureCollector $structure_collector,
     SiteAuditContentBundleCollector $content_bundle_collector,
+    EntityFieldManagerInterface $entity_field_manager,
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->structureCollector = $structure_collector;
     $this->contentBundleCollector = $content_bundle_collector;
+    $this->entityFieldManager = $entity_field_manager;
   }
 
   /**
@@ -123,7 +136,8 @@ class SelectedBundlesParagraphUsageReport extends AuditReportBase implements Con
       $plugin_id,
       $plugin_definition,
       $container->get('site_audit.structure_collector'),
-      $container->get('site_audit.content_bundle_collector')
+      $container->get('site_audit.content_bundle_collector'),
+      $container->get('entity_field.manager')
     );
   }
 
@@ -146,6 +160,15 @@ class SelectedBundlesParagraphUsageReport extends AuditReportBase implements Con
    *         'unpublished' => 23,
    *       ],
    *       'paragraph_usage' => [ ... ],
+   *       'fields_count' => 10,
+   *       'fields' => [
+   *         'field_body' => [
+   *           'label' => 'Body',
+   *           'type' => 'text_with_summary',
+   *           'target_type' => null,
+   *           'target_bundles' => [],
+   *         ],
+   *       ],
    *       'edit_path' => '/admin/structure/types/manage/page',
    *       'fields_path' => '/admin/structure/types/manage/page/fields',
    *       'list_path' => '/admin/content?type=page',
@@ -235,12 +258,60 @@ class SelectedBundlesParagraphUsageReport extends AuditReportBase implements Con
         }
       }
 
+      // Get configurable fields for this node bundle.
+      $fields = [];
+      if ($exists) {
+        $field_definitions = $this->entityFieldManager->getFieldDefinitions('node', $bundle);
+
+        foreach ($field_definitions as $field_name => $definition) {
+          // Skip base fields; we only want configurable fields.
+          if ($definition->getFieldStorageDefinition()->isBaseField()) {
+            continue;
+          }
+
+          $field_type = $definition->getType();
+          $field_label = $definition->getLabel();
+          $target_type = NULL;
+          $target_bundles = [];
+
+          if (in_array($field_type, ['entity_reference', 'entity_reference_revisions'], TRUE)) {
+            $settings = $definition->getSettings();
+            $target_type = $settings['target_type'] ?? NULL;
+
+            $handler_settings = $settings['handler_settings'] ?? [];
+            if (!empty($handler_settings['target_bundles']) && is_array($handler_settings['target_bundles'])) {
+              $target_bundles = array_keys($handler_settings['target_bundles']);
+            }
+          }
+
+          $fields[$field_name] = [
+            'label' => (string) $field_label,
+            'type' => $field_type,
+            'target_type' => $target_type,
+            'target_bundles' => $target_bundles,
+          ];
+        }
+      }
+
+      // Calculate configured paragraph types from fields.
+      $configured_paragraph_types = [];
+      foreach ($fields as $field_info) {
+        if ($field_info['target_type'] === 'paragraph' && !empty($field_info['target_bundles'])) {
+          foreach ($field_info['target_bundles'] as $ptype) {
+            $configured_paragraph_types[$ptype] = TRUE;
+          }
+        }
+      }
+
       $bundles_data[$bundle] = [
         'machine_name' => $bundle,
         'label' => $label,
         'exists' => $exists,
         'node_summary' => $node_summary,
         'paragraph_usage' => $paragraph_usage,
+        'paragraph_types_configured' => count($configured_paragraph_types),
+        'fields_count' => count($fields),
+        'fields' => $fields,
         'edit_path' => $edit_path,
         'fields_path' => $fields_path,
         'list_path' => $list_path,
@@ -312,9 +383,9 @@ class SelectedBundlesParagraphUsageReport extends AuditReportBase implements Con
         'label',
         'exists',
         'total_nodes',
-        'published',
-        'unpublished',
-        'paragraph_types',
+        'fields_count',
+        'paragraph_types_configured',
+        'paragraph_types_used',
       ];
       if (!in_array($bundles_order, $allowed_bundles_order, TRUE)) {
         $bundles_order = 'label';
@@ -337,13 +408,13 @@ class SelectedBundlesParagraphUsageReport extends AuditReportBase implements Con
             case 'total_nodes':
               return $node_summary['total'] ?? 0;
 
-            case 'published':
-              return $node_summary['published'] ?? 0;
+            case 'fields_count':
+              return $info['fields_count'] ?? 0;
 
-            case 'unpublished':
-              return $node_summary['unpublished'] ?? 0;
+            case 'paragraph_types_configured':
+              return $info['paragraph_types_configured'] ?? 0;
 
-            case 'paragraph_types':
+            case 'paragraph_types_used':
               return is_array($info['paragraph_usage'] ?? NULL)
                 ? count($info['paragraph_usage'])
                 : 0;
@@ -373,9 +444,9 @@ class SelectedBundlesParagraphUsageReport extends AuditReportBase implements Con
         'label' => $this->t('Label'),
         'exists' => $this->t('Exists'),
         'total_nodes' => $this->t('Total nodes'),
-        'published' => $this->t('Published'),
-        'unpublished' => $this->t('Unpublished'),
-        'paragraph_types' => $this->t('Paragraph types used'),
+        'fields_count' => $this->t('Fields'),
+        'paragraph_types_configured' => $this->t('Paragraphs configured'),
+        'paragraph_types_used' => $this->t('Paragraphs used'),
       ];
 
       $bundle_header = [];
@@ -401,7 +472,10 @@ class SelectedBundlesParagraphUsageReport extends AuditReportBase implements Con
         ];
       }
 
-      // Non-sortable column.
+      // Non-sortable columns.
+      $bundle_header['fields_detail'] = [
+        'data' => $this->t('Fields detail'),
+      ];
       $bundle_header['operations'] = [
         'data' => $this->t('Operations'),
       ];
@@ -412,15 +486,42 @@ class SelectedBundlesParagraphUsageReport extends AuditReportBase implements Con
         $exists = $info['exists'];
         $node_summary = $info['node_summary'] ?? [];
         $paragraph_usage = $info['paragraph_usage'] ?? [];
+        $fields = $info['fields'] ?? [];
 
         $total_nodes = $node_summary['total'] ?? 0;
-        $published = $node_summary['published'] ?? 0;
-        $unpublished = $node_summary['unpublished'] ?? 0;
-        $paragraph_types_count = is_array($paragraph_usage) ? count($paragraph_usage) : 0;
+        $fields_count = $info['fields_count'] ?? 0;
+        $paragraph_types_configured = $info['paragraph_types_configured'] ?? 0;
+        $paragraph_types_used = is_array($paragraph_usage) ? count($paragraph_usage) : 0;
 
         $status = $exists
           ? $this->t('Yes')
           : $this->t('No (bundle not present in this site)');
+
+        // Build fields detail markup (sorted by field type).
+        $fields_sorted = $fields;
+        uasort($fields_sorted, static function (array $a, array $b): int {
+          return strcmp($a['type'], $b['type']);
+        });
+
+        $field_lines = [];
+        foreach ($fields_sorted as $field_name => $field_info) {
+          $line = '`' . $field_name . '`';
+          $line .= ' (' . $field_info['label'] . ')';
+          $line .= ' – ' . $field_info['type'];
+
+          if (!empty($field_info['target_type'])) {
+            $line .= ' → ' . $field_info['target_type'];
+            if (!empty($field_info['target_bundles'])) {
+              $line .= ' [' . implode(', ', $field_info['target_bundles']) . ']';
+            }
+          }
+
+          $field_lines[] = $line;
+        }
+
+        $fields_markup = $field_lines
+          ? '<ul><li>' . implode('</li><li>', array_map('htmlspecialchars', $field_lines)) . '</li></ul>'
+          : $this->t('No configurable fields.');
 
         // Operations only if the bundle exists.
         $operations_links = [];
@@ -467,10 +568,15 @@ class SelectedBundlesParagraphUsageReport extends AuditReportBase implements Con
           'label' => ['data' => ['#markup' => $info['label']]],
           'exists' => ['data' => ['#markup' => $status]],
           'total_nodes' => ['data' => ['#markup' => (string) $total_nodes]],
-          'published' => ['data' => ['#markup' => (string) $published]],
-          'unpublished' => ['data' => ['#markup' => (string) $unpublished]],
-          'paragraph_types' => [
-            'data' => ['#markup' => (string) $paragraph_types_count],
+          'fields_count' => ['data' => ['#markup' => (string) $fields_count]],
+          'paragraph_types_configured' => [
+            'data' => ['#markup' => (string) $paragraph_types_configured],
+          ],
+          'paragraph_types_used' => [
+            'data' => ['#markup' => (string) $paragraph_types_used],
+          ],
+          'fields_detail' => [
+            'data' => ['#markup' => $fields_markup],
           ],
           'operations' => [
             'data' => $operations_cell,
@@ -502,9 +608,10 @@ class SelectedBundlesParagraphUsageReport extends AuditReportBase implements Con
             $this->t('Label'),
             $this->t('Exists'),
             $this->t('Total nodes'),
-            $this->t('Published'),
-            $this->t('Unpublished'),
-            $this->t('Paragraph types used'),
+            $this->t('Fields'),
+            $this->t('Paragraphs configured'),
+            $this->t('Paragraphs used'),
+            $this->t('Fields detail'),
             $this->t('Operations'),
           ],
           '#rows' => [],
@@ -837,8 +944,8 @@ class SelectedBundlesParagraphUsageReport extends AuditReportBase implements Con
     // Bundles overview.
     $lines[] = '## Bundles overview';
     $lines[] = '';
-    $lines[] = '| Machine name | Label | Exists | Total nodes | Published | Unpublished | Paragraph types used |';
-    $lines[] = '| --- | --- | --- | ---: | ---: | ---: | ---: |';
+    $lines[] = '| Machine name | Label | Exists | Total nodes | Fields | P. configured | P. used | Field details |';
+    $lines[] = '| --- | --- | --- | ---: | ---: | ---: | ---: | --- |';
 
     foreach ($bundles as $bundle => $info) {
       $exists = $info['exists']
@@ -847,26 +954,54 @@ class SelectedBundlesParagraphUsageReport extends AuditReportBase implements Con
 
       $node_summary = $info['node_summary'] ?? [];
       $total_nodes = $node_summary['total'] ?? 0;
-      $published = $node_summary['published'] ?? 0;
-      $unpublished = $node_summary['unpublished'] ?? 0;
-      $paragraph_types_count = is_array($info['paragraph_usage'] ?? NULL)
+      $fields_count = $info['fields_count'] ?? 0;
+      $paragraph_types_configured = $info['paragraph_types_configured'] ?? 0;
+      $paragraph_types_used = is_array($info['paragraph_usage'] ?? NULL)
         ? count($info['paragraph_usage'])
         : 0;
 
+      // Build field details (sorted by field type).
+      $fields_sorted = $info['fields'] ?? [];
+      uasort($fields_sorted, static function (array $a, array $b): int {
+        return strcmp($a['type'], $b['type']);
+      });
+
+      $field_chunks = [];
+      foreach ($fields_sorted as $field_name => $field_info) {
+        $chunk = sprintf(
+          '`%s` (%s) – %s',
+          $field_name,
+          $field_info['label'],
+          $field_info['type']
+        );
+
+        if (!empty($field_info['target_type'])) {
+          $chunk .= ' → ' . $field_info['target_type'];
+          if (!empty($field_info['target_bundles'])) {
+            $chunk .= ' [' . implode(', ', $field_info['target_bundles']) . ']';
+          }
+        }
+
+        $field_chunks[] = $chunk;
+      }
+
+      $fields_text = $field_chunks ? implode('<br>', $field_chunks) : 'No configurable fields.';
+
       $lines[] = sprintf(
-        '| `%s` | %s | %s | %d | %d | %d | %d |',
+        '| `%s` | %s | %s | %d | %d | %d | %d | %s |',
         $bundle,
         $info['label'],
         $exists,
         $total_nodes,
-        $published,
-        $unpublished,
-        $paragraph_types_count
+        $fields_count,
+        $paragraph_types_configured,
+        $paragraph_types_used,
+        $fields_text
       );
     }
 
     if (empty($bundles)) {
-      $lines[] = '| *(none)* | | | 0 | 0 | 0 | 0 |';
+      $lines[] = '| *(none)* | | | 0 | 0 | 0 | 0 | |';
     }
 
     $lines[] = '';
