@@ -1,0 +1,13 @@
+config_package.form:
+  title: 'Config package builder'
+  description: 'Analyze a content type and list required config + module dependencies for partial imports.'
+  route_name: config_package.form
+  parent: system.admin_config_development
+  weight: 100
+
+config_package.check:
+  title: 'Config package readiness check'
+  description: 'Check whether this site is ready to import a config package (modules, plugins, collisions).'
+  route_name: config_package.check
+  parent: system.admin_config_development
+  weight: 101

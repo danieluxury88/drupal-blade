@@ -1,0 +1,30 @@
+services:
+  config_package.analyzer:
+    class: Drupal\config_package\Service\ConfigPackageAnalyzer
+    arguments:
+      - '@entity_type.manager'
+      - '@config.manager'
+      - '@config.factory'
+      - '@extension.list.module'
+      - '@plugin.manager.field.widget'
+      - '@plugin.manager.field.formatter'
+
+  config_package.exporter:
+    class: Drupal\config_package\Service\ConfigPackageExporter
+    arguments:
+      - '@config.storage.sync'
+      - '@file_system'
+      - '@datetime.time'
+      - '%app.root%'
+
+  config_package.readiness_checker:
+    class: Drupal\config_package\Service\ConfigPackageReadinessChecker
+    arguments:
+      - '@file_system'
+      - '@config.storage'
+      - '@extension.list.module'
+      - '@module_handler'
+      - '@plugin.manager.field.widget'
+      - '@plugin.manager.field.formatter'
+      - '%app.root%'
+

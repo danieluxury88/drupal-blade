@@ -1,0 +1,9 @@
+name: Config Package
+type: module
+description: Build partial-config packages for a selected content type (including paragraph dependencies).
+core_version_requirement: ^10 || ^11
+package: Custom
+dependencies:
+  - drupal:node
+  - drupal:field
+  - drupal:system

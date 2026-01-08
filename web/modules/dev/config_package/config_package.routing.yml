@@ -1,0 +1,15 @@
+config_package.form:
+  path: '/admin/config/development/config-package'
+  defaults:
+    _form: '\Drupal\config_package\Form\ConfigPackageAnalyzeForm'
+    _title: 'Config package builder'
+  requirements:
+    _permission: 'administer site configuration'
+
+config_package.check:
+  path: '/admin/config/development/config-package/check'
+  defaults:
+    _form: '\Drupal\config_package\Form\ConfigPackageCheckForm'
+    _title: 'Config package readiness check'
+  requirements:
+    _permission: 'administer site configuration'
