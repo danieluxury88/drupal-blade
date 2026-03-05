@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f1d4b7a41e5459b20b28b1e92d739c7",
+    "content-hash": "7b625c9762ac5d9c1f0875dce01e6d66",
     "packages": [
         {
             "name": "albertofem/rsync-lib",
@@ -3527,6 +3527,55 @@
                 "source": "https://www.drupal.org/project/dropzonejs",
                 "issues": "https://www.drupal.org/project/issues/dropzonejs",
                 "#media": "http://drupal.slack.com"
+            }
+        },
+        {
+            "name": "drupal/emm",
+            "version": "1.0.0-alpha6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/emm.git",
+                "reference": "1.0.0-alpha6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/emm-1.0.0-alpha6.zip",
+                "reference": "1.0.0-alpha6",
+                "shasum": "1ad025d29388f424a9bbaeac60dc6a3007dd0075"
+            },
+            "require": {
+                "drupal/core": "^10 || ^11"
+            },
+            "require-dev": {
+                "drupal/ai": "*",
+                "drupal/enhanced_menu_manager-enhanced_menu_manager": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha6",
+                    "datestamp": "1771093599",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "thronedigital",
+                    "homepage": "https://www.drupal.org/user/2737297"
+                }
+            ],
+            "description": "Enhanced Menu Manager with tree view, drag-and-drop, inline editing, snapshots, and more.",
+            "homepage": "https://www.drupal.org/project/emm",
+            "support": {
+                "source": "https://git.drupalcode.org/project/emm",
+                "issues": "https://www.drupal.org/project/issues/emm"
             }
         },
         {
@@ -18545,6 +18594,7 @@
         "drupal/advent_calendar": 10,
         "drupal/ckeditor_ai_agent": 10,
         "drupal/drd": 20,
+        "drupal/emm": 15,
         "drupal/inline_entity_form": 5,
         "drupal/poll": 15,
         "drupal/pwa": 10,
@@ -18555,5 +18605,5 @@
     "prefer-lowest": false,
     "platform": {},
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
