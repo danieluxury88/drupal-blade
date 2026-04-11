@@ -13,6 +13,8 @@ display:
         label:
           label: Proyecto
           separator: ', '
+        status_label:
+          label: 'Actualizar estado'
         majorversion:
           separator: ', '
         operations:

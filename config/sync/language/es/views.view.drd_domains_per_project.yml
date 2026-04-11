@@ -13,6 +13,8 @@ display:
         version:
           label: Versión
           separator: ', '
+        status_label:
+          label: 'Actualizar estado'
         domain:
           label: Dominios
           separator: ', '
