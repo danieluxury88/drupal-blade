@@ -111,14 +111,14 @@ Based on the enabled modules in [`config/sync/core.extension.yml`](/home/daniel2
 Two helper scripts already exist at the project root:
 
 ```bash
-./lint.sh
-./test.sh
+./scripts/lint.sh
+./scripts/test.sh
 ```
 
 They currently wrap:
 
-- PHPCS / PHPCBF via [`lint.sh`](/home/daniel24/Projects/DrupalBlade/lint.sh)
-- PHPUnit custom test suite via [`test.sh`](/home/daniel24/Projects/DrupalBlade/test.sh)
+- PHPCS / PHPCBF via [`scripts/lint.sh`](/home/daniel24/Projects/DrupalBlade/scripts/lint.sh)
+- PHPUnit custom test suite via [`scripts/test.sh`](/home/daniel24/Projects/DrupalBlade/scripts/test.sh)
 
 ## Status
 

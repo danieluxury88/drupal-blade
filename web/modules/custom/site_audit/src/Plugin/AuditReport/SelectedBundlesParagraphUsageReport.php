@@ -56,7 +56,7 @@ class SelectedBundlesParagraphUsageReport extends AuditReportBase implements Con
     // 'csm_documents' => 'Documents',
     // 'csm_document_type' => 'Document Type',
     // 'csm_externe_projekt_institutione' => 'Externe Projekt Institutionen',
-    // 'csm_higher_education_institution' => 'Higher Education Institutions`,
+    // 'csm_higher_education_institution' => 'Higher Education Institutions',
     'csm_kurse' => 'Kurse/Module',
     'csm_projekte' => 'Projekte',
     'ocm_news_entry' => 'News Entry',
