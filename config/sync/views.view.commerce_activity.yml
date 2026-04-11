@@ -21,7 +21,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Order logs'
+      title: 'Order activity'
       fields:
         created:
           id: created
@@ -77,9 +77,18 @@ display:
           click_sort_column: value
           type: timestamp
           settings:
-            date_format: medium
+            date_format: short
             custom_date_format: ''
             timezone: ''
+            tooltip:
+              date_format: ''
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -155,8 +164,8 @@ display:
           label: User
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '<span class="commerce-text--muted">By: {{ uid }}</span> '
             make_link: false
             path: ''
             absolute: false
@@ -263,7 +272,7 @@ display:
           admin_label: ''
           entity_type: commerce_log
           entity_field: source_entity_id
-          plugin_id: entity_target_id
+          plugin_id: numeric
           default_action: empty
           exception:
             value: all
@@ -290,7 +299,6 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
-          target_entity_type_id: commerce_log
         source_entity_type:
           id: source_entity_type
           table: commerce_log
@@ -341,14 +349,14 @@ display:
           columns:
             created: created
             rendered_entity: rendered_entity
-            uid: uid
-          default: '-1'
+            uid: created
+          default: created
           info:
             created:
               sortable: true
               default_sort_order: desc
               align: ''
-              separator: ''
+              separator: '<br/>'
               empty_column: false
               responsive: ''
             rendered_entity:
@@ -368,10 +376,9 @@ display:
           override: true
           sticky: false
           summary: ''
-          empty_table: false
+          empty_table: true
           caption: ''
           description: ''
-          class: ''
       row:
         type: fields
       query:
@@ -383,6 +390,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      use_ajax: true
       header:
         commerce_log_admin_comment_form:
           id: commerce_log_admin_comment_form

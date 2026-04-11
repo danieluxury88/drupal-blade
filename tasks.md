@@ -8,6 +8,7 @@
 - [ ] Update site_audit module.
 - [ ] Set up eCommerce.
 - [ ] Set up Proton Drupal workflow.
+
 ## Config Inspector follow-up
 
 - Done: investigated `config:inspect` errors from `ddev drush core:requirements`.

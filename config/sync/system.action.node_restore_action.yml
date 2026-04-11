@@ -1,0 +1,12 @@
+uuid: 4b2a3152-75ca-4701-96c2-fdf5eef87378
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - trash
+id: node_restore_action
+label: 'Restore content item from trash'
+type: node
+plugin: 'entity:restore_action:node'
+configuration: {  }

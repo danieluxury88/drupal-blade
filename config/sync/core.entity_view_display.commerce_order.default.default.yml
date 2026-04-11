@@ -6,6 +6,7 @@ dependencies:
     - commerce_order.commerce_order_type.default
   module:
     - commerce_order
+    - commerce_payment
     - commerce_price
     - state_machine
     - user
@@ -24,6 +25,15 @@ content:
       currency_display: symbol
     third_party_settings: {  }
     weight: 9
+    region: content
+  billing_profile:
+    type: commerce_billing_information
+    label: hidden
+    settings:
+      profile_view_mode: admin
+      show_payment_information: true
+    third_party_settings: {  }
+    weight: 5
     region: content
   changed:
     type: timestamp
@@ -44,6 +54,25 @@ content:
       timezone: ''
     third_party_settings: {  }
     weight: 2
+    region: content
+  created:
+    type: timestamp
+    label: inline
+    settings:
+      date_format: short
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 0
     region: content
   customer_comments:
     type: string
@@ -71,9 +100,11 @@ content:
   order_items:
     type: commerce_order_item_table
     label: hidden
-    settings: {  }
+    settings:
+      view: commerce_order_item_table_admin
+      show_add_items_link: true
     third_party_settings: {  }
-    weight: 0
+    weight: 12
     region: content
   placed:
     type: timestamp
@@ -102,13 +133,6 @@ content:
     third_party_settings: {  }
     weight: 5
     region: content
-  total_price:
-    type: commerce_order_total_summary
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
-    region: content
   uid:
     type: author
     label: inline
@@ -117,6 +141,6 @@ content:
     weight: 5
     region: content
 hidden:
-  billing_profile: true
   order_number: true
   total_paid: true
+  total_price: true
