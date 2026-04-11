@@ -735,27 +735,6 @@ display:
       entity_type: drd_project
       bundles:
         - drd_project
-      merge_rows: 0
-      use_grouping: 0
-      field_config:
-        version:
-          merge_option: filter
-          exclude_first: 0
-          prefix: ''
-          separator: ', '
-          suffix: ''
-        status_label:
-          merge_option: filter
-          exclude_first: 0
-          prefix: ''
-          separator: ', '
-          suffix: ''
-        domain:
-          merge_option: merge_unique
-          exclude_first: 0
-          prefix: ''
-          separator: '<br/>'
-          suffix: ''
     cache_metadata:
       max-age: 0
       contexts:

@@ -543,27 +543,6 @@ display:
       entity_type: drd_core
       bundles:
         - drd_core
-      merge_rows: 0
-      use_grouping: 0
-      field_config:
-        label:
-          merge_option: filter
-          exclude_first: 0
-          prefix: ''
-          separator: ', '
-          suffix: ''
-        version:
-          merge_option: merge_unique
-          exclude_first: 0
-          prefix: ''
-          separator: ', '
-          suffix: ''
-        status_label:
-          merge_option: merge_unique
-          exclude_first: 0
-          prefix: ''
-          separator: ', '
-          suffix: ''
     cache_metadata:
       max-age: 0
       contexts:

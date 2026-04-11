@@ -89,7 +89,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          drd_status: warning
         label:
           id: label
           table: drd_requirement

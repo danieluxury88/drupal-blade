@@ -754,57 +754,6 @@ display:
       display_extenders:
         views_merge_rows: {  }
       path: drd/projects
-      merge_rows: 0
-      use_grouping: 0
-      field_config:
-        id:
-          merge_option: filter
-          exclude_first: 0
-          prefix: ''
-          separator: ', '
-          suffix: ''
-        label:
-          merge_option: merge_unique
-          exclude_first: 0
-          prefix: ''
-          separator: ', '
-          suffix: ''
-        status_label:
-          merge_option: merge_unique
-          exclude_first: 0
-          prefix: ''
-          separator: ''
-          suffix: ''
-        coreversion:
-          merge_option: merge_unique
-          exclude_first: 0
-          prefix: ''
-          separator: ', '
-          suffix: ''
-        version:
-          merge_option: merge_unique
-          exclude_first: 0
-          prefix: ''
-          separator: '<br>'
-          suffix: ''
-        id_1:
-          merge_option: count
-          exclude_first: 0
-          prefix: ''
-          separator: ', '
-          suffix: ''
-        type:
-          merge_option: merge_unique
-          exclude_first: 0
-          prefix: ''
-          separator: ', '
-          suffix: ''
-        operations:
-          merge_option: merge_unique
-          exclude_first: 0
-          prefix: ''
-          separator: ', '
-          suffix: ''
     cache_metadata:
       max-age: -1
       contexts:

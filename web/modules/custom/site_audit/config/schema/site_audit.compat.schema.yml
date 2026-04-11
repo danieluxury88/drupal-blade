@@ -1,0 +1,255 @@
+views.field.drd_entity_actions:
+  type: views_field_bulk_form
+  label: 'DRD entity bulk actions'
+
+views.field.drd_domain_secure:
+  type: views.field.boolean
+  label: 'DRD secure Views field'
+
+views.field.drd_requirement_category:
+  type: views_field
+  label: 'DRD requirement category field'
+  mapping:
+    drd_status:
+      type: string
+      label: 'DRD status'
+
+drd.general:
+  type: config_object
+  label: 'DRD general settings'
+  mapping:
+    debug:
+      type: boolean
+      label: 'Debug'
+    lock_hacked:
+      type: boolean
+      label: 'Lock hacked releases'
+    cleanup:
+      type: mapping
+      label: 'Cleanup settings'
+      mapping:
+        releases:
+          type: boolean
+          label: 'Cleanup releases'
+        majors:
+          type: boolean
+          label: 'Cleanup major versions'
+        projects:
+          type: boolean
+          label: 'Cleanup projects'
+    remote_blocks:
+      type: mapping
+      label: 'Remote blocks'
+    local:
+      type: mapping
+      label: 'Local settings'
+      mapping:
+        db:
+          type: mapping
+          label: 'Database credentials'
+          mapping:
+            user:
+              type: string
+              label: 'Database user'
+            pass:
+              type: string
+              label: 'Database password'
+    encryption_profile:
+      type: string
+      label: 'Encryption profile'
+
+field.formatter.settings.drd_domain_secure:
+  type: field.formatter.settings.boolean
+  label: 'DRD secure formatter'
+
+field.formatter.settings.drd-secure:
+  type: field.formatter.settings.boolean
+  label: 'DRD secure Views formatter'
+
+action.configuration.drd_action_blocks:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_cron:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_database:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_dnslookup:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_domainchange:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_domainmove:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_domains_enableall:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_domains_receive:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_download:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_error_logs:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_flush_cache:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_info:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_job_scheduler:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_maintenance_mode:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_php:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_ping:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_projects:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_projects_status:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_projects_update:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_session:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_update:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_update_translations:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+action.configuration.drd_action_user_credentials:
+  type: mapping
+  label: 'DRD action configuration'
+  mapping:
+    terms:
+      type: mapping
+      label: 'Terms'
+
+views.display_extender.views_merge_rows:
+  type: views_display_extender
+  label: 'Views merge rows display extender'
