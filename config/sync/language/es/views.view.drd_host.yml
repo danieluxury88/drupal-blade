@@ -23,6 +23,7 @@ display:
       fields:
         drd_entity_actions:
           label: Acciones
+          action_title: 'Con selección'
         id:
           label: ID
           separator: ', '

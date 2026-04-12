@@ -1,15 +1,8 @@
-label: Actividad
 display:
   default:
     display_title: Máster
     display_options:
-      exposed_form:
-        options:
-          submit_button: Aplicar
-          reset_button_label: Restablecer
-          exposed_sorts_label: 'Ordenar por'
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+      title: 'Actividad del pedido'
       fields:
         created:
           label: Fecha
@@ -19,6 +12,13 @@ display:
         uid:
           label: Usuario
           separator: ', '
+      exposed_form:
+        options:
+          submit_button: Aplicar
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       arguments:
         source_entity_id:
           exception:

@@ -61,6 +61,7 @@
         "drupal/site_audit": "^4.1",
         "drupal/smart_date": "^4.2",
         "drupal/svg_image_field": "^2.3",
+        "drupal/toolbar_language_switcher": "^2.0",
         "drupal/trash": "^3.0",
         "drupal/twig_tweak": "^3.4",
         "drupal/type_tray": "^1.3",
