@@ -1,5 +1,6 @@
 _core:
   default_config_hash: bBsKNU9uuzzS7zaKZhHpof7W8sOAuKBZJDF5Eh76BTs
+langcode: en
 name: DrupalBlade
 short_name: DrupalBlade
 app_id: drupal.seriousdesign.net

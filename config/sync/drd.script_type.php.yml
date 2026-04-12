@@ -10,4 +10,4 @@ interpreter: /usr/bin/php
 extension: php
 prefix: '<?php'
 suffix: ''
-linesuffix: null
+lineprefix: ''

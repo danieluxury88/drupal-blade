@@ -10,4 +10,4 @@ interpreter: /usr/bin/python
 extension: py
 prefix: ''
 suffix: ''
-linesuffix: null
+lineprefix: ''

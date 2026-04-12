@@ -10,4 +10,4 @@ interpreter: /bin/sh
 extension: sh
 prefix: ''
 suffix: ''
-linesuffix: null
+lineprefix: ''
