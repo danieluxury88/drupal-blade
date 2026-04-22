@@ -1,8 +1,8 @@
 # Todo
 
-- [ ] Update readme.
-- [ ] Update modules.
-- [ ] Install modules: admin language switcher.
+- [x] Update readme.
+- [x] Update modules.
+- [x] Install modules: admin language switcher.
 - [ ] Create module to manage tasks.
 - [ ] Set Spanish as non admin language.
 - [ ] Update site_audit module.
