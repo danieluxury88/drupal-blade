@@ -15,6 +15,7 @@
 # IDE and editor files
 .idea/
 .vscode/
+*.code-workspace
 *.swp
 *~
 
