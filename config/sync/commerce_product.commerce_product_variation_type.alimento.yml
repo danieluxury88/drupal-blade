@@ -1,0 +1,10 @@
+uuid: 4161d47e-2ca0-4d78-9cc5-acb8620317f3
+langcode: en
+status: true
+dependencies: {  }
+id: alimento
+label: Alimento
+traits: {  }
+locked: false
+orderItemType: default
+generateTitle: null

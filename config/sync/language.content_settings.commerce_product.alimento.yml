@@ -1,0 +1,11 @@
+uuid: 29462b1e-630e-4e0d-a6c0-d803dd0f13f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.alimento
+id: commerce_product.alimento
+target_entity_type_id: commerce_product
+target_bundle: alimento
+default_langcode: site_default
+language_alterable: false
