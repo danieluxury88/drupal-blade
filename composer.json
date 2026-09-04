@@ -84,11 +84,13 @@
             "drupal/core-project-message": true,
             "php-http/discovery": true,
             "phpstan/extension-installer": true,
+            "symfony/runtime": true,
             "tbachert/spi": true
         },
         "sort-packages": true
     },
     "extra": {
+        "composer-exit-on-patch-failure": true,
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
@@ -148,9 +150,6 @@
             ]
         },
         "patches": {
-            "drupal/advent_calendar": {
-                "Handle SDC dependency and optional config install": "patches/local/advent_calendar-fixes.patch"
-            }
         }
     },
     "require-dev": {
