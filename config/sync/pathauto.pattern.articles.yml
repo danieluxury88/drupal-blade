@@ -8,25 +8,25 @@ dependencies:
 id: articles
 label: Articles
 type: 'canonical_entities:node'
-pattern: '[node:title]'
+pattern: '/[node:title]'
 selection_criteria:
   c6c2919a-aa90-42a4-be3f-523839ef53aa:
     id: 'entity_bundle:node'
     negate: false
-    uuid: c6c2919a-aa90-42a4-be3f-523839ef53aa
     context_mapping:
       node: node
     bundles:
       article: article
+    uuid: c6c2919a-aa90-42a4-be3f-523839ef53aa
   68231b32-09bc-4ca2-9f14-769eaecb702e:
     id: language
     negate: false
-    uuid: 68231b32-09bc-4ca2-9f14-769eaecb702e
     context_mapping:
       language: 'node:langcode:language'
     langcodes:
       en: en
       es: es
+    uuid: 68231b32-09bc-4ca2-9f14-769eaecb702e
 selection_logic: and
 weight: -10
 relationships:
