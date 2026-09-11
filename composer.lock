@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ccace4737eba2dccb204e2695888bf44",
+    "content-hash": "2b60715fd7edf83be31c6a2690f11c92",
     "packages": [
         {
             "name": "albertofem/rsync-lib",
@@ -10436,6 +10436,155 @@
                 "source": "https://github.com/platformsh/platformsh-oauth2-php/tree/0.0.3"
             },
             "time": "2021-10-20T20:12:14+00:00"
+        },
+        {
+            "name": "protonsystems/cookie-consent",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/Proton.Systems/drupal/cookie-consent.git",
+                "reference": "9b7bdb1c85f61616fe93fab04b1982d966e2ee9a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/Proton%2ESystems%2Fdrupal%2Fcookie-consent/repository/archive.zip?sha=9b7bdb1c85f61616fe93fab04b1982d966e2ee9a",
+                "reference": "9b7bdb1c85f61616fe93fab04b1982d966e2ee9a",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/core": "^11",
+                "php": "^8.3"
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Reusable, theme-overridable Drupal 11 cookie consent module built on vanilla-cookieconsent, used headlessly.",
+            "support": {
+                "issues": "https://gitlab.com/Proton.Systems/drupal/cookie-consent/-/issues",
+                "source": "https://gitlab.com/Proton.Systems/drupal/cookie-consent/-/tree/v1.0.2"
+            },
+            "time": "2026-09-01T21:39:28+00:00"
+        },
+        {
+            "name": "protonsystems/dev-tools",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/Proton.Systems/drupal/dev-tools.git",
+                "reference": "6c369e4497adb841e82eae9d5b9aa621322df733"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/Proton%2ESystems%2Fdrupal%2Fdev-tools/repository/archive.zip?sha=6c369e4497adb841e82eae9d5b9aa621322df733",
+                "reference": "6c369e4497adb841e82eae9d5b9aa621322df733",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/core": "^10 || ^11",
+                "php": "^8.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.5"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drush": {
+                    "services": {
+                        "drush.services.yml": true
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\dev_tools\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Reusable Drupal module providing a read-only developer inspection toolkit as Drush commands.",
+            "support": {
+                "issues": "https://gitlab.com/Proton.Systems/drupal/dev-tools/-/issues",
+                "source": "https://gitlab.com/Proton.Systems/drupal/dev-tools/-/tree/v1.2.0"
+            },
+            "time": "2026-08-24T21:34:38+00:00"
+        },
+        {
+            "name": "protonsystems/qa",
+            "version": "v2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/Proton.Systems/drupal/qa.git",
+                "reference": "ed4f3cac48cbf3ebc4fd40463eab6a0fd8ab2d94"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/Proton%2ESystems%2Fdrupal%2Fqa/repository/archive.zip?sha=ed4f3cac48cbf3ebc4fd40463eab6a0fd8ab2d94",
+                "reference": "ed4f3cac48cbf3ebc4fd40463eab6a0fd8ab2d94",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/core": "^10 || ^11",
+                "php": "^8.3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drush": {
+                    "services": {
+                        "drush.services.yml": true
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Reusable Drupal module for pre-release QA gate checks and Drush reporting.",
+            "support": {
+                "issues": "https://gitlab.com/Proton.Systems/drupal/qa/-/issues",
+                "source": "https://gitlab.com/Proton.Systems/drupal/qa/-/tree/v2.3.0"
+            },
+            "time": "2026-08-28T20:04:57+00:00"
+        },
+        {
+            "name": "protonsystems/site-audit",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/Proton.Systems/drupal/site-audit.git",
+                "reference": "9785e0fc38529b773d7e3cc152e29579c8a04075"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/Proton%2ESystems%2Fdrupal%2Fsite-audit/repository/archive.zip?sha=9785e0fc38529b773d7e3cc152e29579c8a04075",
+                "reference": "9785e0fc38529b773d7e3cc152e29579c8a04075",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/core": "^11",
+                "php": "^8.3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drush": {
+                    "services": {
+                        "drush.services.yml": true
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Reusable Drupal 11 site audit module with pluggable reports and collectors.",
+            "support": {
+                "issues": "https://gitlab.com/Proton.Systems/drupal/site-audit/-/issues",
+                "source": "https://gitlab.com/Proton.Systems/drupal/site-audit/-/tree/v1.1.0"
+            },
+            "time": "2026-08-14T18:06:23+00:00"
         },
         {
             "name": "psr/cache",
