@@ -1,0 +1,17 @@
+type_settings:
+  states:
+    draft:
+      label: Borrador
+    published:
+      label: Publicado
+    archived:
+      label: Archivado
+  transitions:
+    publish:
+      label: Publicar
+    archive:
+      label: Archivo
+    restore_to_draft:
+      label: 'Restaurar a Borrador'
+    restore:
+      label: Restaurar

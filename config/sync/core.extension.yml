@@ -6,8 +6,17 @@ module:
   admin_toolbar_tools: 0
   advancedqueue: 0
   ai: 0
+  ai_agents: 0
+  ai_agents_explorer: 0
+  ai_api_explorer: 0
   ai_assistant_api: 0
+  ai_automators: 0
+  ai_ckeditor: 0
+  ai_content_suggestions: 0
+  ai_context: 0
   ai_logging: 0
+  ai_provider_openai: 0
+  ai_seo: 0
   announcements_feed: 0
   antibot: 0
   automated_cron: 0
@@ -18,6 +27,7 @@ module:
   book: 0
   breakpoint: 0
   ckeditor5: 0
+  ckeditor_ai_agent: 0
   coffee: 0
   comment: 0
   commerce: 0
@@ -59,6 +69,7 @@ module:
   field: 0
   field_group: 0
   field_ui: 0
+  field_widget_actions: 0
   file: 0
   filter: 0
   gin_toolbar: 0
@@ -74,15 +85,19 @@ module:
   language: 0
   link: 0
   locale: 0
+  markdownify: 0
   media: 0
   media_library: 0
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
+  metatag_ai: 0
+  modeler_api: 0
   mysql: 0
   node: 0
   options: 0
   page_cache: 0
+  paragraph_info: 0
   path: 0
   path_alias: 0
   physical: 0

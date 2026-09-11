@@ -1,0 +1,46 @@
+display:
+  default:
+    display_title: 'Por defecto'
+    display_options:
+      fields:
+        id:
+          label: ID
+          separator: ', '
+        context_item_id:
+          separator: ', '
+        entity_item_link:
+          label: Entidad
+        changed:
+          separator: ', '
+        usage_record_link:
+          label: Ver
+      pager:
+        options:
+          tags:
+            next: 'Siguiente >'
+            previous: '‹ Anterior'
+            first: '« Primero'
+            last: 'Último »'
+          expose:
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options_all_label: '- Todo -'
+            offset_label: Desplazamiento
+      exposed_form:
+        options:
+          submit_button: Filtro
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      filters:
+        entity_item_type:
+          expose:
+            label: 'Tipo de entidad'
+        entity_item_id:
+          expose:
+            label: 'ID de entidad'
+        routes:
+          expose:
+            label: Ruta
+  page_usage:
+    display_title: Página

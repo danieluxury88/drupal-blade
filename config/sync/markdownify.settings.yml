@@ -1,0 +1,34 @@
+_core:
+  default_config_hash: e42oXhRRH3OBgW1Noh8NsXR5V6jdDToxz2KJg7mg5A8
+supported_entities:
+  node:
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  taxonomy_term:
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+default_converter: league
+noindex: true
+converters:
+  league:
+    header_style: atx
+    suppress_errors: true
+    strip_tags: true
+    strip_placeholder_links: false
+    bold_style: '**'
+    italic_style: '*'
+    remove_nodes: ''
+    hard_break: false
+    list_item_style: '-'
+    preserve_comments: false
+    use_autolinks: true
+    table_pipe_escape: \|
+    table_caption_side: top
