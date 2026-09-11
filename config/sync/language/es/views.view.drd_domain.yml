@@ -1,12 +1,10 @@
 display:
   default:
-    display_title: Máster
     display_options:
-      title: Dominios
       fields:
         drd_entity_actions:
-          label: Acciones
           action_title: 'Con selección'
+          label: Acciones
         id:
           label: ID
           separator: ', '
@@ -28,6 +26,7 @@ display:
           label: Estado
         operations:
           label: Operaciones
+      title: Dominios
       pager:
         options:
           tags:
@@ -65,6 +64,7 @@ display:
         secure:
           expose:
             label: SSL
+    display_title: Máster
   entity_view_1:
     display_options:
       arguments:

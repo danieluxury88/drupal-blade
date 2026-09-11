@@ -75,8 +75,11 @@
         "drupal/upgrade_status": "^4.3",
         "drupal/webform": "^6.3@beta",
         "drush/drush": "^13.6",
+        "protonsystems/content-reviewer": "^1.1",
         "protonsystems/cookie-consent": "^1.0",
+        "protonsystems/demo-content": "^1.0",
         "protonsystems/dev-tools": "^1.2",
+        "protonsystems/paragraph-info": "^1.0",
         "protonsystems/qa": "^2.3",
         "protonsystems/site-audit": "^1.1",
         "seriousdesign/project_overview": "dev-main"

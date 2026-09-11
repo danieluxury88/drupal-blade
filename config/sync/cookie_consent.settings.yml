@@ -1,0 +1,42 @@
+_core:
+  default_config_hash: hTTyGINfeymbFxp-Ms4SYGYweW91xKfa3Jdq2K5alVw
+cookie:
+  name: cc_cookie
+  expires_after_days: 182
+embed:
+  allowed_hosts:
+    - www.youtube-nocookie.com
+    - youtube-nocookie.com
+    - www.youtube.com
+    - youtube.com
+    - player.vimeo.com
+    - www.google.com
+    - www.openstreetmap.org
+links:
+  privacy_policy: /privacy-policy
+  imprint: /imprint
+categories:
+  required:
+    label: Required
+    description: 'Always active. Needed for core functionality and carries out no tracking.'
+  marketing:
+    label: Marketing
+    description: 'Analytics and marketing tools (e.g. Google Analytics, Google Tag Manager).'
+  external:
+    label: 'External services'
+    description: 'Third-party embeds such as YouTube and Google Maps.'
+text:
+  banner_text: 'We use required cookies, marketing cookies (analytics), and cookies for external services (YouTube, Maps). You can change your decision at any time.'
+  banner_accept_all: 'Accept all'
+  banner_necessary_only: 'Necessary only'
+  banner_configure: Configure
+  modal_title: 'Cookie preferences'
+  modal_description: '"Required" cookies are needed for core functionality and carry out no tracking.'
+  modal_cancel: Cancel
+  modal_save: 'Save preferences'
+  modal_privacy_link_label: 'Privacy policy'
+  modal_imprint_link_label: Imprint
+  badge_label: 'Cookie settings'
+  embed_default_service: 'External content'
+  embed_load_button: 'Load external content'
+  embed_note: 'Your choice applies to all external content and can be changed at any time via the cookie settings. More details in the'

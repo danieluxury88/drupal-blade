@@ -1,11 +1,10 @@
 display:
   default:
-    display_title: Máster
     display_options:
       fields:
         drd_entity_actions:
-          label: Acciones
           action_title: 'Con selección'
+          label: Acciones
         id:
           label: ID
           separator: ', '
@@ -47,6 +46,7 @@ display:
         majorversion:
           expose:
             label: 'Versión principal'
+    display_title: Máster
   entity_view_1:
     display_options:
       arguments:

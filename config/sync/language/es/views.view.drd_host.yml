@@ -1,7 +1,24 @@
 display:
   default:
-    display_title: Máster
     display_options:
+      fields:
+        drd_entity_actions:
+          action_title: 'Con selección'
+          label: Acciones
+        id:
+          label: ID
+          separator: ', '
+        name:
+          label: Servidor
+          separator: ', '
+        ipv4:
+          separator: ', '
+        ipv6:
+          separator: ', '
+        status_agg:
+          label: Estado
+        operations:
+          label: Operaciones
       exposed_form:
         options:
           submit_button: Aplicar
@@ -20,24 +37,7 @@ display:
             items_per_page_label: 'Elementos por página'
             items_per_page_options_all_label: '- Todo -'
             offset_label: Desplazamiento
-      fields:
-        drd_entity_actions:
-          label: Acciones
-          action_title: 'Con selección'
-        id:
-          label: ID
-          separator: ', '
-        name:
-          label: Servidor
-          separator: ', '
-        ipv4:
-          separator: ', '
-        ipv6:
-          separator: ', '
-        status_agg:
-          label: Estado
-        operations:
-          label: Operaciones
       title: Servidor
+    display_title: Máster
   page_1:
     display_title: Página

@@ -1,0 +1,6 @@
+categories:
+  required:
+    label: Obligatorio
+text:
+  banner_configure: Configurar
+  modal_cancel: Cancelar

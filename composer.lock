@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2b60715fd7edf83be31c6a2690f11c92",
+    "content-hash": "94df90b7448d3cadb11dbd05d0d96da4",
     "packages": [
         {
             "name": "albertofem/rsync-lib",
@@ -10438,6 +10438,45 @@
             "time": "2021-10-20T20:12:14+00:00"
         },
         {
+            "name": "protonsystems/content-reviewer",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/Proton.Systems/drupal/content-reviewer.git",
+                "reference": "2ba11d652af359f945c36c6b8844268c8c3a5982"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/Proton%2ESystems%2Fdrupal%2Fcontent-reviewer/repository/archive.zip?sha=2ba11d652af359f945c36c6b8844268c8c3a5982",
+                "reference": "2ba11d652af359f945c36c6b8844268c8c3a5982",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/core": "^10 || ^11",
+                "drupal/paragraphs": "^1.20",
+                "php": "^8.3",
+                "protonsystems/qa": "^2.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drush": {
+                    "services": {
+                        "drush.services.yml": true
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Reusable Drupal module for plugin-based content issue scanning, admin review reporting, and deterministic fix commands.",
+            "support": {
+                "issues": "https://gitlab.com/Proton.Systems/drupal/content-reviewer/-/issues",
+                "source": "https://gitlab.com/Proton.Systems/drupal/content-reviewer/-/tree/v1.1.0"
+            },
+            "time": "2026-08-16T22:00:21+00:00"
+        },
+        {
             "name": "protonsystems/cookie-consent",
             "version": "v1.0.2",
             "source": {
@@ -10466,6 +10505,49 @@
                 "source": "https://gitlab.com/Proton.Systems/drupal/cookie-consent/-/tree/v1.0.2"
             },
             "time": "2026-09-01T21:39:28+00:00"
+        },
+        {
+            "name": "protonsystems/demo-content",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/Proton.Systems/drupal/demo-content.git",
+                "reference": "01ad4f5dda3ec1149dd77f879b22fcd7fdb260f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/Proton%2ESystems%2Fdrupal%2Fdemo-content/repository/archive.zip?sha=01ad4f5dda3ec1149dd77f879b22fcd7fdb260f8",
+                "reference": "01ad4f5dda3ec1149dd77f879b22fcd7fdb260f8",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/core": "^10 || ^11",
+                "drupal/paragraphs": "^1.20",
+                "php": "^8.3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drush": {
+                    "services": {
+                        "drush.services.yml": true
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\demo_content\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Reusable deterministic demo-content generation for paragraph-heavy Drupal projects.",
+            "support": {
+                "issues": "https://gitlab.com/Proton.Systems/drupal/demo-content/-/issues",
+                "source": "https://gitlab.com/Proton.Systems/drupal/demo-content/-/tree/v1.0.0"
+            },
+            "time": "2026-08-24T19:56:59+00:00"
         },
         {
             "name": "protonsystems/dev-tools",
@@ -10511,6 +10593,37 @@
                 "source": "https://gitlab.com/Proton.Systems/drupal/dev-tools/-/tree/v1.2.0"
             },
             "time": "2026-08-24T21:34:38+00:00"
+        },
+        {
+            "name": "protonsystems/paragraph-info",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.com/Proton.Systems/drupal/paragraph-info.git",
+                "reference": "1d96c47da82cc112b35276ff6a010d35b7b60370"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/api/v4/projects/Proton%2ESystems%2Fdrupal%2Fparagraph-info/repository/archive.zip?sha=1d96c47da82cc112b35276ff6a010d35b7b60370",
+                "reference": "1d96c47da82cc112b35276ff6a010d35b7b60370",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/core": "^11",
+                "drupal/paragraphs": "^1.23",
+                "php": "^8.3"
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Reusable Drupal 11 module exposing stable paragraph anchor IDs and a permission-gated paragraph info overlay.",
+            "support": {
+                "issues": "https://gitlab.com/Proton.Systems/drupal/paragraph-info/-/issues",
+                "source": "https://gitlab.com/Proton.Systems/drupal/paragraph-info/-/tree/v1.0.2"
+            },
+            "time": "2026-08-14T10:37:33+00:00"
         },
         {
             "name": "protonsystems/qa",
