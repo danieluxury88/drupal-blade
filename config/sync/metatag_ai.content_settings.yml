@@ -1,0 +1,43 @@
+metatag_ai:
+  metadata_content_types:
+    article: article
+    page: page
+    book: 0
+    forum: 0
+    todo: 0
+  metadata_field_id: field_metatag
+  provider_model: openai__gpt-5-mini
+  system_prompts:
+    en:
+      prompt: |-
+        When i ask for help, you will reply the following information:
+          1. title with maximum of 60 characters
+          2. description with maximum of 160 characters
+          3. abstract with a brief and concise summary of the content with maximum of 160 characters
+          4. maximum of 10 keywords
+          Suggest content for SEO ranking. Reply in JSON format of the title, description, abstract and keywords.
+      title: 'title with maximum of 60 characters'
+      description: 'description with maximum of 160 characters'
+      abstract: 'abstract with a brief and concise summary of the content with maximum of 160 characters'
+      keywords:
+        number: '10'
+        instruction: ''
+      additional: ''
+    es:
+      prompt: |-
+        When i ask for help, you will reply the following information:
+          1. title with maximum of 60 characters
+          2. description with maximum of 160 characters
+          3. abstract with a brief and concise summary of the content with maximum of 160 characters
+          4. maximum of 10 keywords
+          Suggest content for SEO ranking. Reply in JSON format of the title, description, abstract and keywords.
+      title: 'title with maximum of 60 characters'
+      description: 'description with maximum of 160 characters'
+      abstract: 'abstract with a brief and concise summary of the content with maximum of 160 characters'
+      keywords:
+        number: '10'
+        instruction: ''
+      additional: ''
+  system_messages:
+    en: 'Configure Metatag AI settings including content types, AI provider/model, and system prompts for each language.'
+    es: 'Configure Metatag AI settings including content types, AI provider/model, and system prompts for each language.'

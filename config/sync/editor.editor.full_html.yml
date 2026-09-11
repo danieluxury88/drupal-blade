@@ -14,6 +14,7 @@ settings:
   toolbar:
     items:
       - aiAgentButton
+      - aickeditor
       - aiAgentToneButton
       - '|'
       - bold
@@ -29,7 +30,7 @@ settings:
       - numberedList
       - '|'
       - blockQuote
-      - drupalInsertImage
+      - drupalMedia
       - insertTable
       - horizontalLine
       - '|'
@@ -38,6 +39,49 @@ settings:
       - '|'
       - sourceEditing
   plugins:
+    ai_ckeditor_ai:
+      dialog:
+        autoresize: 'min-width: 600px'
+        height: '750'
+        width: '900'
+        dialog_class: ai-ckeditor-modal
+      plugins:
+        ai_agents_ckeditor:
+          agents: {  }
+          enabled: false
+        ai_automators_ckeditor:
+          enabled: false
+          workflows: {  }
+        ai_ckeditor_completion:
+          enabled: true
+          provider: ''
+        ai_ckeditor_help:
+          enabled: false
+        ai_ckeditor_modify_prompt:
+          enabled: true
+          provider: ''
+        ai_ckeditor_reformat_html:
+          enabled: true
+          provider: ''
+        ai_ckeditor_spellfix:
+          enabled: true
+          provider: ''
+        ai_ckeditor_summarize:
+          enabled: true
+          provider: ''
+        ai_ckeditor_tone:
+          enabled: false
+          provider: ''
+          autocreate: false
+          tone_vocabulary: ai_agent_commands
+          use_description: false
+        ai_ckeditor_translate:
+          enabled: false
+          provider: ''
+          language_source: tax
+          autocreate: false
+          translate_vocabulary: ai_agent_commands
+          use_description: false
     ckeditor5_codeBlock:
       languages:
         -
@@ -89,8 +133,6 @@ settings:
         - heading4
         - heading5
         - heading6
-    ckeditor5_imageResize:
-      allow_resize: true
     ckeditor5_list:
       properties:
         reversed: true
@@ -99,6 +141,42 @@ settings:
       multiBlock: true
     ckeditor5_sourceEditing:
       allowed_tags: {  }
+    ckeditor_ai_agent_ai_agent:
+      aiAgent:
+        model: 'openai:gpt-5-nano'
+        endpointUrl: null
+        temperature: null
+        maxOutputTokens: null
+        maxInputTokens: null
+        contextSize: null
+        editorContextRatio: null
+        timeOutDuration: null
+        retryAttempts: null
+        debugMode: false
+        showErrorDuration: null
+        moderationEnable: null
+        moderationKey: null
+        toneOfVoiceVocabulary: null
+        commandsVocabulary: null
+        promptSettings:
+          overrides:
+            responseRules: ''
+            htmlFormatting: ''
+            contentStructure: ''
+            tone: ''
+            imageHandling: ''
+            referenceGuidelines: ''
+            contextRequirements: ''
+          additions:
+            responseRules: ''
+            htmlFormatting: ''
+            contentStructure: ''
+            tone: ''
+            imageHandling: ''
+            referenceGuidelines: ''
+            contextRequirements: ''
+    media_media:
+      allow_view_mode_override: false
 image_upload:
   status: true
   scheme: public

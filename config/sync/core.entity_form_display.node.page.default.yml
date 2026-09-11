@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_metatag
     - field.field.node.page.field_paragraphs
     - node.type.page
   module:
+    - metatag
     - paragraphs
     - path
     - text
@@ -32,6 +34,14 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_metatag:
+    type: metatag_firehose
+    weight: 122
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_paragraphs:
     type: paragraphs
