@@ -111,7 +111,9 @@ module:
   real_aes: 0
   redirect: 0
   scheduler: 0
+  schema_metatag: 0
   search: 0
+  security_review: 0
   serialization: 0
   settings_tray: 0
   shortcut: 0
