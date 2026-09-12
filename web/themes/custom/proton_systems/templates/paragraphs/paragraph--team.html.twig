@@ -1,57 +1,19 @@
 {# LINK: assets/sass/paragraphs/_paragraph-team.scss
-
-   Static content for now, ported from proton.systems' own team
-   (content/4_ueber-uns/{1_felipe,2_milan,4_daniel}/person.en.txt — real
-   bios and "hidden" quotes, photos re-cropped from the same source). The
-   Drupal integration step should replace `members` below with a real
-   "person" content type/view.
+   LINK: templates/teaser/node--person--teaser.html.twig
+   LINK: templates/fields/field--field-members.html.twig
 #}
-{% set members = [
-    {
-        image: 'felipe.jpg',
-        name: 'Felipe - Founder & Web Developer',
-        description: 'Felipe has been building websites since 2008. In 2018, he founded proton.systems. Since then, he has delivered dozens of projects with a small team, including company websites and complex web applications. As a father of two, he knows what priorities look like. He speaks plainly and tells his clients what their project actually needs.',
-        quote: '"The true magic of technology lies not only in its ability to solve problems, but also in its ability to create new opportunities and make our dreams come true."',
-    },
-    {
-        image: 'milan.jpg',
-        name: 'Milan',
-        description: 'Milan took an unusual path into web development. He started as a toolmaker, then became a CNC programmer. In 2022, he changed direction, completed a software development course at Digital Campus Vorarlberg, and joined proton.systems as an intern. Since 2023, he has been a permanent team member. He thinks like a craftsman: precise and solution-oriented.',
-        quote: '"If your only tool is a hammer, everything starts to look like a nail."',
-    },
-    {
-        image: 'daniel.jpg',
-        name: 'Daniel - Developer',
-        description: 'Daniel spent 10 years as an electronics engineer. He developed firmware for automotive systems. Software running in real vehicles. In 2022, he moved into web development. What he brings: an understanding of systems that goes far beyond HTML. When a project gets complex, Daniel is the right person.',
-        quote: '"The highest wisdom is for a person to remain in grace, because at the end of the journey, those who live in truth understand—and those who don\'t, understand nothing."',
-    },
-] %}
+{% if paragraph.published %}
+    <div class="paragraph-team__wrapper">
+        <div class="u-generic-wrapper">
+            <div class="u-generic-wrapper-margin">
+                {% if paragraph.field_title.value %}
+                    <h2 class="paragraph-team__title">{{ paragraph.field_title.value }}</h2>
+                {% endif %}
 
-<div class="paragraph-team__wrapper">
-    <div class="u-generic-wrapper">
-        <div class="u-generic-wrapper-margin">
-            <h2 class="paragraph-team__title">Our team</h2>
-
-            <div class="paragraph-team__items">
-                {% for member in members %}
-                    <div class="paragraph-team-item">
-                        <div class="paragraph-team-item__card">
-                            <figure class="paragraph-team-item__picture">
-                                <img src="{{ directory }}/assets/images/{{ member.image }}" alt="{{ member.name }}" width="600" height="800" loading="lazy">
-                            </figure>
-
-                            <div class="paragraph-team-item__content small-content-text">
-                                <h3 class="paragraph-team-item__name">{{ member.name }}</h3>
-                                <p class="paragraph-team-item__description">{{ member.description }}</p>
-                            </div>
-
-                            <div class="paragraph-team-item__quote">
-                                {{ member.quote }}
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
+                <div class="paragraph-team__items">
+                    {{ content.field_members }}
+                </div>
             </div>
         </div>
     </div>
-</div>
+{% endif %}

@@ -1,0 +1,27 @@
+{# LINK: assets/sass/paragraphs/_paragraph-team.scss
+
+   One team member card, rendered wherever a "person" node is referenced in
+   teaser view mode (currently: paragraph--team.html.twig's field_members).
+#}
+{% set image_uri = node.field_photo.entity.uri.value %}
+
+<div class="paragraph-team-item">
+    <div class="paragraph-team-item__card">
+        {% if image_uri %}
+            <figure class="paragraph-team-item__picture">
+                <img src="{{ file_url(image_uri) }}" alt="{{ node.field_photo.alt ?: node.label }}" loading="lazy">
+            </figure>
+        {% endif %}
+
+        <div class="paragraph-team-item__content small-content-text">
+            <h3 class="paragraph-team-item__name">{{ node.label }}</h3>
+            <div class="paragraph-team-item__description">{{ node.field_description.processed }}</div>
+        </div>
+
+        {% if node.field_quote.value %}
+            <div class="paragraph-team-item__quote">
+                {{ node.field_quote.processed }}
+            </div>
+        {% endif %}
+    </div>
+</div>

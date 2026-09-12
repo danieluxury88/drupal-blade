@@ -1,0 +1,22 @@
+uuid: 69707ed6-049c-4291-ba46-a99a1f09d960
+langcode: en
+status: true
+dependencies:
+  theme:
+    - proton_systems
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: proton_systems_primary_local_tasks
+theme: proton_systems
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

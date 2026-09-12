@@ -1,0 +1,27 @@
+uuid: 530952db-513c-4f3a-b34c-832ac01affb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.person.field_description
+    - field.field.node.person.field_photo
+    - field.field.node.person.field_quote
+    - node.type.person
+  module:
+    - user
+id: node.person.teaser
+targetEntityType: node
+bundle: person
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_description: true
+  field_photo: true
+  field_quote: true
+  langcode: true

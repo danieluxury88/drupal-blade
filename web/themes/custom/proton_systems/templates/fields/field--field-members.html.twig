@@ -1,0 +1,6 @@
+{# Same bare-loop override as field--field-slides.html.twig: strips Drupal's
+   default field/field__item wrapper divs so this stays a plain list of
+   rendered referenced entities inside our own custom markup. #}
+{% for item in items %}
+    {{ item.content }}
+{% endfor %}

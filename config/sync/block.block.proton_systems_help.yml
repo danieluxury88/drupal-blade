@@ -1,0 +1,22 @@
+uuid: 39b55ed8-f634-40a7-a520-b33ec4c07b12
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - proton_systems
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: proton_systems_help
+theme: proton_systems
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

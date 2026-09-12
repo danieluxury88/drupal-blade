@@ -1,27 +1,16 @@
 {# LINK: assets/sass/paragraphs/_paragraph-accordion.scss
    LINK: assets/js/accordion.js
    LINK: templates/paragraphs/paragraph--accordion-item.html.twig
-
-   Static content for now, ported from proton.systems' "Partners & Friends"
-   accordion (content/4_ueber-uns/default.en.txt). The Drupal integration
-   step should turn `items` below into paragraph.field_accordion_items and
-   include paragraph--accordion-item.html.twig once per item.
+   LINK: templates/fields/field--field-items.html.twig
 #}
-{% set items = [
-    {
-        title: 'Partners &amp; Friends',
-        content: '<p><a href="https://www.ady.at/" target="_blank">Absolute Dynamics</a><br><a href="https://drueber.rocks/" target="_blank">Drüber</a><br><a href="https://www.meusburger.systems/" target="_blank">meusburger.systems</a><br><a href="https://phuc.at/" target="_blank">Phuc Le</a><br><a href="https://www.publique.at/" target="_blank">Publique Informationsarchitektur und Mediendesign</a><br><a href="https://quertrakt.com/" target="_blank">Quertrakt</a><br><a href="https://sente-gmbh.de/" target="_blank">Sente</a><br><a href="https://www.super-bfg.com/" target="_blank">Super BfG</a><br><a href="https://www.weitweit.com/" target="_blank">weitweit</a><br><a href="https://www.zeughaus.com/" target="_blank">Zeughaus Design</a></p>',
-    },
-] %}
-
-<div class="paragraph-accordion__wrapper">
-    <div class="u-generic-wrapper">
-        <div class="u-generic-wrapper-margin">
-            <div class="paragraph-accordion">
-                {% for item in items %}
-                    {% include '@proton_systems/paragraphs/paragraph--accordion-item.html.twig' with { item: item, delta: loop.index } only %}
-                {% endfor %}
+{% if paragraph.published %}
+    <div class="paragraph-accordion__wrapper">
+        <div class="u-generic-wrapper">
+            <div class="u-generic-wrapper-margin">
+                <div class="paragraph-accordion">
+                    {{ content.field_items }}
+                </div>
             </div>
         </div>
     </div>
-</div>
+{% endif %}

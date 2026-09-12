@@ -1,0 +1,10 @@
+uuid: 93f1bf8b-e161-4084-b318-2acf00d1588b
+langcode: en
+status: true
+dependencies: {  }
+id: hero
+label: Hero
+icon_uuid: null
+icon_default: null
+description: 'Full-width slider, e.g. at the top of the front page.'
+behavior_plugins: {  }

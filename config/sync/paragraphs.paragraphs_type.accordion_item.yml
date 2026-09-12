@@ -1,0 +1,10 @@
+uuid: b7691b70-6ac8-41e7-b384-3072ea993c18
+langcode: en
+status: true
+dependencies: {  }
+id: accordion_item
+label: 'Accordion item'
+icon_uuid: null
+icon_default: null
+description: 'One item of an accordion paragraph.'
+behavior_plugins: {  }

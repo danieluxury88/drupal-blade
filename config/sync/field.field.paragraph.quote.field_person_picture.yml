@@ -1,0 +1,38 @@
+uuid: 38b826db-ac4a-4093-afa7-3c98071728fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_person_picture
+    - paragraphs.paragraphs_type.quote
+  module:
+    - image
+id: paragraph.quote.field_person_picture
+field_name: field_person_picture
+entity_type: paragraph
+bundle: quote
+label: 'Person picture'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

@@ -1,0 +1,22 @@
+uuid: e134a102-299b-41ab-816a-f37f76e58d04
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - proton_systems
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: proton_systems_powered
+theme: proton_systems
+region: header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

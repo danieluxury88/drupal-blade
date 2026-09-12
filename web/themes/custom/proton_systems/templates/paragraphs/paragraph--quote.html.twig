@@ -1,28 +1,33 @@
-{# LINK: assets/sass/paragraphs/_paragraph-quote.scss
+{# LINK: assets/sass/paragraphs/_paragraph-quote.scss #}
+{% if paragraph.published %}
+    {% set image_uri = paragraph.field_person_picture.entity.uri.value %}
 
-   Static content for now, a real client testimonial ported from
-   proton.systems' own "Zutritto" reference project
-   (content/3_referenzen/zutritto/project.en.txt, block-quote). The Drupal
-   integration step should replace these with paragraph.field_quote /
-   field_person_name / field_person_title / field_person_picture.
-#}
-<div class="paragraph-quote__wrapper">
-    <div class="u-generic-wrapper">
-        <div class="u-generic-wrapper-margin">
-            <div class="paragraph-quote">
-                <div class="paragraph-quote__content">
-                    <div class="paragraph-quote__text-content">
-                        <blockquote class="paragraph-quote__quote">
-                            &ldquo;The new platform let us ship incoming products faster while keeping our heavy-duty specs crystal clear.&rdquo;
-                        </blockquote>
+    <div class="paragraph-quote__wrapper">
+        <div class="u-generic-wrapper">
+            <div class="u-generic-wrapper-margin">
+                <div class="paragraph-quote">
+                    <div class="paragraph-quote__content">
+                        {% if image_uri %}
+                            <div class="paragraph-quote__photo">
+                                <img src="{{ file_url(image_uri) }}" alt="{{ paragraph.field_person_picture.alt ?: (paragraph.field_person_name.value ~ ' photo') }}">
+                            </div>
+                        {% endif %}
 
-                        <div class="paragraph-quote__attribution">
-                            <div class="paragraph-quote__person-name">Karl Rumbart</div>
-                            <div class="paragraph-quote__person-title">Product Manager, Fulterer</div>
+                        <div class="paragraph-quote__text-content">
+                            <blockquote class="paragraph-quote__quote">
+                                &ldquo;{{ paragraph.field_quote.value }}&rdquo;
+                            </blockquote>
+
+                            <div class="paragraph-quote__attribution">
+                                <div class="paragraph-quote__person-name">{{ paragraph.field_person_name.value }}</div>
+                                {% if paragraph.field_person_title.value %}
+                                    <div class="paragraph-quote__person-title">{{ paragraph.field_person_title.value }}</div>
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+{% endif %}

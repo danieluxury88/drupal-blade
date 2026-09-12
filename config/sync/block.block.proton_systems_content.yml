@@ -1,0 +1,22 @@
+uuid: 1c65c631-4c15-4b41-8d25-cbd977d4d21e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - proton_systems
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: proton_systems_content
+theme: proton_systems
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

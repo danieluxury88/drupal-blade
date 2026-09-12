@@ -1,0 +1,11 @@
+uuid: 86cbb0dc-f188-484d-a153-74d22a7dee37
+langcode: en
+status: true
+dependencies: {  }
+name: Person
+type: person
+description: "Person — referenced by the Proton Systems theme's paragraph components."
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

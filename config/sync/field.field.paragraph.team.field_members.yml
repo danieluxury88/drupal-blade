@@ -1,0 +1,26 @@
+uuid: 99f2366c-dfd2-4982-9a07-3278efa5c8c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_members
+    - node.type.person
+    - paragraphs.paragraphs_type.team
+id: paragraph.team.field_members
+field_name: field_members
+entity_type: paragraph
+bundle: team
+label: Members
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      person: person
+    sort:
+      field: _none
+field_type: entity_reference

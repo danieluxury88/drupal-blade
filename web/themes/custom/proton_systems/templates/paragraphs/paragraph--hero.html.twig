@@ -1,72 +1,18 @@
 {# LINK: assets/sass/paragraphs/_paragraph-hero.scss
    LINK: assets/js/hero-slider.js
+   LINK: templates/paragraphs/paragraph--hero-slide.html.twig
+   LINK: templates/fields/field--field-slides.html.twig
 
-   Static content for now, ported from proton.systems' home page slider
-   (content/1_home/home.en.txt, rendered by
-   site/templates/blocks/block-full-page-slider.html.twig). The Drupal
-   integration step should turn `slides` below into a real
-   field_slides/paragraph reference and loop paragraph.field_x values instead.
+   field_slides is an entity_reference_revisions field to "hero_slide"
+   paragraphs; field--field-slides.html.twig strips Drupal's default field
+   wrapper so each rendered slide can sit directly in .swiper-wrapper.
 #}
-{% set slides = [
-    {
-        anchor: 'leistungen',
-        icon: 'hero-leistungen',
-        title: 'Our Services',
-        description: 'From websites to automation. What we build for you.',
-        link: '#leistungen',
-        link_text: 'View services',
-    },
-    {
-        anchor: 'referenzen',
-        icon: 'hero-referenzen',
-        title: 'Our references',
-        description: 'Projects for universities, law firms and international companies.',
-        link: '#referenzen',
-        link_text: 'View references',
-    },
-    {
-        anchor: 'ueber-uns',
-        icon: 'hero-ueberuns',
-        title: 'About us',
-        description: 'The team behind the projects. Three developers from Vorarlberg.',
-        link: '#ueber-uns',
-        link_text: 'Meet the team',
-    },
-    {
-        anchor: 'kontakt',
-        icon: 'hero-kontakt',
-        title: 'Contact',
-        description: 'Start your project. We\'ll get back to you within 24 hours.',
-        link: '#kontakt',
-        link_text: 'Get in touch',
-    },
-] %}
-
-<div class="paragraph-hero__wrapper">
-    <div class="paragraph-hero swiper js-hero-slider">
-        <div class="swiper-wrapper">
-            {% for slide in slides %}
-                <div class="paragraph-hero__slide swiper-slide" id="{{ slide.anchor }}">
-                    <picture class="paragraph-hero__slide__image">
-                        {% include '@proton_systems/assets/icons/' ~ slide.icon ~ '.svg' %}
-                    </picture>
-
-                    <div class="paragraph-hero__slide__content-wrapper">
-                        <div class="u-generic-wrapper">
-                            <div class="u-generic-wrapper-margin">
-                                <div class="paragraph-hero__slide__content big-content-text">
-                                    <h2>{{ slide.title }}</h2>
-                                    <p>{{ slide.description }}</p>
-
-                                    <a href="{{ slide.link }}" class="button button--reverse button--big paragraph-hero__slide__button">
-                                        {{ slide.link_text }}
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
+{% if paragraph.published %}
+    <div class="paragraph-hero__wrapper">
+        <div class="paragraph-hero swiper js-hero-slider">
+            <div class="swiper-wrapper">
+                {{ content.field_slides }}
+            </div>
         </div>
     </div>
-</div>
+{% endif %}

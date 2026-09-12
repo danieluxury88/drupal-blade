@@ -1,0 +1,42 @@
+{# LINK: assets/sass/paragraphs/_paragraph-hero.scss
+
+   One slide of a "hero" paragraph. field_media is a plain image field (an
+   SVG illustration on proton.systems' own slides), so it's linked via
+   file_url() rather than an image style — GD-based styles don't do
+   anything useful with vector source images.
+#}
+{% if paragraph.published %}
+    {% set image_uri = paragraph.field_media.entity.uri.value %}
+    {% set link_url = paragraph.field_link.0.getUrl.toString %}
+    {% set link_title = paragraph.field_link.0.title %}
+
+    <div class="paragraph-hero__slide swiper-slide">
+        {% if image_uri %}
+            <picture class="paragraph-hero__slide__image">
+                <img src="{{ file_url(image_uri) }}" alt="{{ paragraph.field_media.alt }}">
+            </picture>
+        {% endif %}
+
+        <div class="paragraph-hero__slide__content-wrapper">
+            <div class="u-generic-wrapper">
+                <div class="u-generic-wrapper-margin">
+                    <div class="paragraph-hero__slide__content big-content-text">
+                        {% if paragraph.field_title.value %}
+                            <h2>{{ paragraph.field_title.value }}</h2>
+                        {% endif %}
+
+                        {% if paragraph.field_description.value %}
+                            <p>{{ paragraph.field_description.value }}</p>
+                        {% endif %}
+
+                        {% if link_url and link_title %}
+                            <a href="{{ link_url }}" class="button button--reverse button--big paragraph-hero__slide__button">
+                                {{ link_title }}
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}

@@ -1,0 +1,7 @@
+{# Ported from subdron/zaunprofi's field--field-collection.html.twig: strips
+   Drupal's default field/field__item wrapper divs so each referenced
+   hero_slide paragraph (paragraph--hero-slide.html.twig) can sit directly
+   inside .swiper-wrapper as a .swiper-slide, as swiper requires. #}
+{% for item in items %}
+    {{ item.content }}
+{% endfor %}

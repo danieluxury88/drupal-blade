@@ -1,0 +1,11 @@
+uuid: 9f6b237d-d260-4d08-8fbf-721e4c0634c8
+langcode: en
+status: true
+dependencies: {  }
+name: Project
+type: project
+description: "Project — referenced by the Proton Systems theme's paragraph components."
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

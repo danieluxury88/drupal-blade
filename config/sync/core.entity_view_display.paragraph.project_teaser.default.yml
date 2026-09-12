@@ -1,0 +1,22 @@
+uuid: 3f8c2a63-c807-469e-80fd-63edf1774f8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.project_teaser.field_project
+    - paragraphs.paragraphs_type.project_teaser
+id: paragraph.project_teaser.default
+targetEntityType: paragraph
+bundle: project_teaser
+mode: default
+content:
+  field_project:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+hidden: {  }

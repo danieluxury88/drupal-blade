@@ -1,27 +1,31 @@
-{# LINK: assets/sass/paragraphs/_paragraph-cta.scss
+{# LINK: assets/sass/paragraphs/_paragraph-cta.scss #}
+{% if paragraph.published %}
+    {% set link_url = paragraph.field_link.0.getUrl.toString %}
+    {% set link_title = paragraph.field_link.0.title %}
 
-   Static content for now, ported from proton.systems' own CTA copy
-   (site/languages/en.php: cta.enterprise.title / cta.enterprise.content /
-   cta.primary.button). The Drupal integration step should replace the
-   hardcoded strings below with paragraph.field_title / field_description /
-   field_primary_button.
-#}
-<div class="paragraph-cta__wrapper">
-    <div class="u-generic-wrapper">
-        <div class="u-generic-wrapper-margin">
-            <div class="paragraph-cta paragraph-cta--default">
-                <div class="paragraph-cta__content">
-                    <h2 class="paragraph-cta__title">Need enterprise-grade web engineering?</h2>
+    <div class="paragraph-cta__wrapper">
+        <div class="u-generic-wrapper">
+            <div class="u-generic-wrapper-margin">
+                <div class="paragraph-cta paragraph-cta--default">
+                    <div class="paragraph-cta__content">
+                        {% if paragraph.field_title.value %}
+                            <h2 class="paragraph-cta__title">{{ paragraph.field_title.value }}</h2>
+                        {% endif %}
 
-                    <div class="paragraph-cta__text content-text">
-                        <p>We build accessible, high-performance web solutions. Designed for clarity, speed, and easy maintenance.</p>
-                    </div>
+                        {% if paragraph.field_description.value %}
+                            <div class="paragraph-cta__text content-text">
+                                {{ paragraph.field_description.processed }}
+                            </div>
+                        {% endif %}
 
-                    <div class="paragraph-cta__buttons">
-                        <a href="#kontakt" class="button">Start a project</a>
+                        {% if link_url and link_title %}
+                            <div class="paragraph-cta__buttons">
+                                <a href="{{ link_url }}" class="button">{{ link_title }}</a>
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+{% endif %}

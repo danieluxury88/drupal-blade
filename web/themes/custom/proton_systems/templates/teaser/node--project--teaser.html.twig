@@ -1,0 +1,36 @@
+{# LINK: assets/sass/paragraphs/_paragraph-project-teaser.scss
+
+   Rendered wherever a "project" node is referenced in teaser view mode
+   (currently: paragraph--project-teaser.html.twig's field_project).
+#}
+{% set image_uri = node.field_teaser_image.entity.uri.value %}
+
+<div class="paragraph-project-teaser__content">
+    {% if image_uri %}
+        <div class="paragraph-project-teaser__image">
+            <img src="{{ file_url(image_uri) }}" alt="{{ node.field_teaser_image.alt ?: node.label }}" loading="lazy">
+        </div>
+    {% endif %}
+
+    <div class="paragraph-project-teaser__text-content">
+        <h2 class="paragraph-project-teaser__title">{{ node.label }}</h2>
+
+        {% if node.field_technologies.value %}
+            <div class="content-tags">
+                {% for item in node.field_technologies %}
+                    <span class="content-tag">{{ item.value }}</span>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <div class="paragraph-project-teaser__description content-text">
+            {{ node.field_teaser_description.processed }}
+        </div>
+
+        {% if node.field_project_url.uri %}
+            <a href="{{ node.field_project_url.0.getUrl.toString }}" class="paragraph-project-teaser__link" target="_blank" rel="noopener">
+                View project →
+            </a>
+        {% endif %}
+    </div>
+</div>

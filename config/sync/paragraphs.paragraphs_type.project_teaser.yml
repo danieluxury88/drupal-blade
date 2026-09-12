@@ -1,0 +1,10 @@
+uuid: 9f5b1f87-d3f0-4d9d-88f7-39ee2249e75b
+langcode: en
+status: true
+dependencies: {  }
+id: project_teaser
+label: 'Project teaser'
+icon_uuid: null
+icon_default: null
+description: 'Highlights one referenced project.'
+behavior_plugins: {  }

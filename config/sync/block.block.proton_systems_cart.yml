@@ -1,0 +1,22 @@
+uuid: 35ea5012-0685-4893-b15f-ff553060fb3a
+langcode: en
+status: false
+dependencies:
+  module:
+    - commerce_cart
+  theme:
+    - proton_systems
+id: proton_systems_cart
+theme: proton_systems
+region: secondary_menu
+weight: 0
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Cart
+  label_display: visible
+  provider: commerce_cart
+  dropdown: true
+  show_if_empty: true
+visibility: {  }

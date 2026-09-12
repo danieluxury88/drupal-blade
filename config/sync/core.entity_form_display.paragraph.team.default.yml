@@ -1,0 +1,34 @@
+uuid: a766dea9-b139-4144-86a4-5cfa274a32af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.team.field_members
+    - field.field.paragraph.team.field_title
+    - paragraphs.paragraphs_type.team
+id: paragraph.team.default
+targetEntityType: paragraph
+bundle: team
+mode: default
+content:
+  field_members:
+    type: entity_reference_autocomplete
+    weight: 12
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

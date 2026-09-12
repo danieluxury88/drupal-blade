@@ -1,0 +1,22 @@
+uuid: 813d0281-67fd-4df4-960f-4db5b828e693
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - proton_systems
+_core:
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
+id: proton_systems_messages
+theme: proton_systems
+region: highlighted
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

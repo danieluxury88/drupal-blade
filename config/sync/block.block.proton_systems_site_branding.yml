@@ -1,0 +1,25 @@
+uuid: 11ac33f4-29a7-4d9b-b6ba-623e0107762e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - proton_systems
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: proton_systems_site_branding
+theme: proton_systems
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

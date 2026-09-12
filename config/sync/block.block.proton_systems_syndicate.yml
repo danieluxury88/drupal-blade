@@ -1,0 +1,23 @@
+uuid: c416d573-c046-44dd-9bb0-472f0e174849
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - proton_systems
+_core:
+  default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
+id: proton_systems_syndicate
+theme: proton_systems
+region: header
+weight: 0
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'RSS feed'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }

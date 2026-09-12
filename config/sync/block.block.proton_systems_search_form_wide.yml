@@ -1,0 +1,23 @@
+uuid: b069aa97-8b92-420c-b948-5d42814c2b53
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - proton_systems
+_core:
+  default_config_hash: pbbed0hdqGDF-_QWVVTWRAwgDIotFuAvWH5mWUZu0fA
+id: proton_systems_search_form_wide
+theme: proton_systems
+region: secondary_menu
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

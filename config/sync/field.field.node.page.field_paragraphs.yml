@@ -5,6 +5,13 @@ dependencies:
   config:
     - field.storage.node.field_paragraphs
     - node.type.page
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.cta
+    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.project_teaser
+    - paragraphs.paragraphs_type.quote
+    - paragraphs.paragraphs_type.team
+    - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
 id: node.page.field_paragraphs
@@ -20,10 +27,35 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: null
+    target_bundles:
+      text: text
+      hero: hero
+      cta: cta
+      accordion: accordion
+      team: team
+      project_teaser: project_teaser
+      quote: quote
     negate: 1
     target_bundles_drag_drop:
-      text:
+      accordion:
+        weight: 3
+        enabled: true
+      cta:
         weight: 2
-        enabled: false
+        enabled: true
+      hero:
+        weight: 1
+        enabled: true
+      project_teaser:
+        weight: 5
+        enabled: true
+      quote:
+        weight: 6
+        enabled: true
+      team:
+        weight: 4
+        enabled: true
+      text:
+        weight: 0
+        enabled: true
 field_type: entity_reference_revisions

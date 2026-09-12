@@ -1,36 +1,14 @@
 {# LINK: assets/sass/paragraphs/_paragraph-project-teaser.scss
-
-   Static content for now, ported from proton.systems' own "Zutritto"
-   reference project (content/3_referenzen/zutritto/project.en.txt). The
-   Drupal integration step should replace this with a real
-   project.field_x reference, as block-project-teaser.html.twig does on
-   proton.systems (it pulls from a referenced "project" page).
+   LINK: templates/teaser/node--project--teaser.html.twig
 #}
-<div class="paragraph-project-teaser__wrapper">
-    <div class="u-generic-wrapper">
-        <div class="u-generic-wrapper-margin">
-            <div class="paragraph-project-teaser">
-                <div class="paragraph-project-teaser__content">
-                    <div class="paragraph-project-teaser__image">
-                        <img src="{{ directory }}/assets/images/zutritto-teaser.jpg" width="700" height="525" alt="Zutritto" loading="lazy">
-                    </div>
-
-                    <div class="paragraph-project-teaser__text-content">
-                        <h2 class="paragraph-project-teaser__title">Zutritto – Intelligent access to events and ticket sales</h2>
-
-                        <div class="content-tags">
-                            <span class="content-tag">Symfony</span>
-                            <span class="content-tag">Playwright</span>
-                        </div>
-
-                        <div class="paragraph-project-teaser__description content-text">
-                            Zutritto is an innovative event management system designed to optimize reservations, automate QR-based check-ins, and improve the experience for participants. Developed with Symfony 7!
-                        </div>
-
-                        <a href="#" class="paragraph-project-teaser__link">View project →</a>
-                    </div>
+{% if paragraph.published %}
+    <div class="paragraph-project-teaser__wrapper">
+        <div class="u-generic-wrapper">
+            <div class="u-generic-wrapper-margin">
+                <div class="paragraph-project-teaser">
+                    {{ content.field_project }}
                 </div>
             </div>
         </div>
     </div>
-</div>
+{% endif %}

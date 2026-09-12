@@ -1,0 +1,10 @@
+uuid: 531bf0f0-406b-40d1-8097-cbddd85df14f
+langcode: en
+status: true
+dependencies: {  }
+id: cta
+label: 'Call to action'
+icon_uuid: null
+icon_default: null
+description: 'Title, text and a button.'
+behavior_plugins: {  }

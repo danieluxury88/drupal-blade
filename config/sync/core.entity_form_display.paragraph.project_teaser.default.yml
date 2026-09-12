@@ -1,0 +1,25 @@
+uuid: 206b76e7-ac91-493b-b24b-b42fea8cbcd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.project_teaser.field_project
+    - paragraphs.paragraphs_type.project_teaser
+id: paragraph.project_teaser.default
+targetEntityType: paragraph
+bundle: project_teaser
+mode: default
+content:
+  field_project:
+    type: entity_reference_autocomplete
+    weight: 13
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

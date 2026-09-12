@@ -1,0 +1,24 @@
+uuid: 1df5086c-d266-40c8-abd8-c20d384cd159
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_description
+    - filter.format.basic_html
+    - node.type.project
+  module:
+    - text
+id: node.project.field_teaser_description
+field_name: field_teaser_description
+entity_type: node
+bundle: project
+label: 'Teaser description'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long
