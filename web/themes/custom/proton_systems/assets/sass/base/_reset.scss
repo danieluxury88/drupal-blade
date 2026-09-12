@@ -1,0 +1,65 @@
+// Adapted from zaunprofi/subdron's base/_reset.scss, swapped to proton.systems'
+// type/color tokens.
+
+@use "../vars" as *;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+// Swiper sets content-box on .swiper-wrapper; the inherit above would leak it to every slide.
+.swiper-slide {
+    box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    text-rendering: geometricPrecision;
+    -webkit-backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-underline-offset: 4px;
+}
+
+body {
+    @include font-regular;
+
+    min-height: 100%;
+    background-color: $color-white;
+    font-family: $font-source-sans-pro;
+    color: $color-black;
+}
+
+// Scroll lock applied to <body> while the mobile nav drawer is open.
+.no-scroll {
+    overflow: hidden;
+}
+
+::selection {
+    background-color: var(--color-blue);
+    color: $color-white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Theme override to display a single page.
+ *
+ * The header/footer markup itself is not printed from here yet — it lives as
+ * static, standalone partials (templates/layout/header.html.twig and
+ * footer.html.twig) included directly below, since there's no menu/block
+ * config to drive `page.header` / `page.footer` regions yet. Swap these
+ * `include()` calls for the normal `{{ page.header }}` / `{{ page.footer }}`
+ * region prints once that config exists.
+ *
+ * @see template_preprocess_page()
+ */
+#}
+{% include '@proton_systems/layout/header.html.twig' %}
+
+<main id="main-content" class="main">
+    {{ page.highlighted }}
+    {{ page.breadcrumb }}
+    {{ page.content }}
+</main>
+
+{% include '@proton_systems/layout/footer.html.twig' %}

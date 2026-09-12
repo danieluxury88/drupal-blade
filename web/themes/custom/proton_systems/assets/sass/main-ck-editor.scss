@@ -1,0 +1,8 @@
+// Styles CKEditor's own editing surface (its own libraries.yml
+// ckeditor5-stylesheets entry, not the front end) so a "Full HTML"/"Basic HTML"
+// field editor previews the same typography readers see. Only wiring the
+// content-text base for now, since the paragraph components above aren't
+// exposed to CKEditor.
+
+@use "vars";
+@use "elements/content-text";

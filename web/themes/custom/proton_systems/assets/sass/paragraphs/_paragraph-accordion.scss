@@ -1,0 +1,113 @@
+// Ported from proton.systems (public/assets/sass/blocks/_block-accordion.scss),
+// renamed to the paragraph-* convention used by subdron/zaunprofi.
+// LINK: templates/paragraphs/paragraph--accordion.html.twig
+// LINK: templates/paragraphs/paragraph--accordion-item.html.twig
+
+@use "../vars" as *;
+
+.paragraph-accordion {
+    display: flex;
+    flex-flow: column nowrap;
+
+    @include breakpoint(desktop) {
+        max-width: 65%;
+    }
+
+    &__wrapper {
+        @include block-wrapper-margin;
+
+        scroll-margin-top: 8rem;
+    }
+
+    &__item-heading {
+        margin: 0;
+        padding: 0;
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+    }
+
+    &__item {
+        border-top: 1px solid $color-black;
+
+        &:last-child {
+            border-bottom: 1px solid $color-black;
+        }
+    }
+
+    &__item-trigger {
+        @include font-regular;
+
+        cursor: pointer;
+        font-weight: 600;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 2rem 0 1.7rem;
+        text-align: left;
+        width: 100%;
+        background: none;
+        color: $color-black;
+        border: none;
+    }
+
+    &__sign {
+        position: relative;
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        flex-shrink: 0;
+        margin-top: 0.4rem;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: $color-blue;
+            transition:
+                transform var(--color-change-animation-time) ease-in-out,
+                opacity var(--color-change-animation-time) ease-in-out;
+        }
+
+        &::before {
+            width: 1.4rem;
+            height: 0.15rem;
+            transform: translate(-50%, -50%);
+        }
+
+        &::after {
+            width: 0.15rem;
+            height: 1.4rem;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__item-trigger[aria-expanded="true"] &__sign {
+        &::after {
+            transform: translate(-50%, -50%) scaleY(0);
+            opacity: 0;
+        }
+    }
+
+    &__item-panel {
+        display: grid;
+        grid-template-rows: 0fr;
+        overflow: hidden;
+        color: $color-black;
+        transition: grid-template-rows var(--color-change-animation-time) ease-in-out;
+
+        &.is-open {
+            grid-template-rows: 1fr;
+        }
+    }
+
+    &__item-content {
+        min-height: 0;
+        overflow: hidden;
+        padding-bottom: 2rem;
+    }
+}

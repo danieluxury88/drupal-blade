@@ -1,0 +1,88 @@
+// Adapted from proton.systems' static-cta component
+// (public/assets/sass/blocks/_block-cta.scss).
+// LINK: templates/paragraphs/paragraph--cta.html.twig
+
+@use "../vars" as *;
+
+.paragraph-cta {
+    border-radius: 1rem;
+
+    &--default {
+        background: $color-gray-light-3;
+
+        .paragraph-cta__text {
+            color: $color-gray;
+        }
+    }
+
+    &--accent {
+        background: var(--color-blue);
+        color: $color-white;
+
+        a {
+            color: $color-white;
+        }
+    }
+
+    &__wrapper {
+        @include block-wrapper-margin;
+    }
+
+    &__content {
+        text-align: center;
+        padding: 4rem 2rem;
+
+        @include breakpoint(tablet_landscape) {
+            padding: 5rem 4rem;
+        }
+
+        @include breakpoint(desktop) {
+            padding: 6rem 5rem;
+        }
+    }
+
+    &__title {
+        margin: 0 0 1.5rem;
+        font-size: 1.7rem;
+        line-height: 1.3;
+        font-weight: 600;
+
+        @include breakpoint(tablet_portrait) {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        @include breakpoint(tablet_landscape) {
+            font-size: 2.25rem;
+            margin-bottom: 2rem;
+        }
+
+        @include breakpoint(desktop) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__text {
+        & {
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        @include breakpoint(tablet_portrait) {
+            margin: 0 auto 2.5rem;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        @include breakpoint(tablet_portrait) {
+            flex-flow: row nowrap;
+            gap: 1.5rem;
+        }
+    }
+}

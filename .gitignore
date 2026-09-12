@@ -47,6 +47,10 @@ Thumbs.db
 /logs/
 *.log
 
+# Front-end build tooling (see package.json / webpack.*.config.js)
+/node_modules/
+/web/themes/custom/*/assets/dist/
+
 # Local environment overrides (deploy credentials, etc.)
 /.env
 /Makefile.local

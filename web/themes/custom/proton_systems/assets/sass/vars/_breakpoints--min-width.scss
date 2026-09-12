@@ -1,0 +1,71 @@
+// Ported from proton.systems (public/assets/sass/vars/_breakpoints--min-width.scss).
+// https://responsivedesign.is/develop/getting-started-with-sass-and-breakpoint-mixin/
+
+@mixin breakpoint($breakpoint, $orientation: null) {
+    @if $breakpoint == phone {
+        // > 480px
+        @if $orientation {
+            @media only screen and (min-width: 30em) and (orientation: $orientation) {
+                @content;
+            }
+        } @else {
+            @media only screen and (min-width: 30em) {
+                @content;
+            }
+        }
+    }
+
+    @if $breakpoint == tablet_portrait {
+        // > 600px
+        @if $orientation {
+            @media only screen and (min-width: 37.5em) and (orientation: $orientation) {
+                @content;
+            }
+        } @else {
+            @media only screen and (min-width: 37.5em) {
+                @content;
+            }
+        }
+    }
+
+    @if $breakpoint == tablet_landscape {
+        // > 900px
+        @if $orientation {
+            @media only screen and (min-width: 56.25em) and (orientation: $orientation) {
+                @content;
+            }
+        } @else {
+            @media only screen and (min-width: 56.25em) {
+                @content;
+            }
+        }
+    }
+
+    @if $breakpoint == desktop {
+        // > 1200px
+        @media only screen and (min-width: 75em) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == desktop_big {
+        // > 1440px
+        @media only screen and (min-width: 90em) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == desktop_bigger {
+        // > 1920px
+        @media only screen and (min-width: 120em) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == small_landscape {
+        // small phone in landscape (min-width: 600px, max-height: 400px, landscape)
+        @media only screen and (min-width: 37.5em) and (max-height: 25em) and (orientation: landscape) {
+            @content;
+        }
+    }
+}

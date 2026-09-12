@@ -1,0 +1,182 @@
+// Ported from proton.systems (public/assets/sass/layout/_header.scss).
+// LINK: templates/layout/header.html.twig
+
+@use "../vars" as *;
+
+.header {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(tablet_portrait, landscape) {
+        align-items: flex-start;
+    }
+
+    @include breakpoint(desktop) {
+        align-items: center;
+    }
+
+    &__wrapper {
+        width: 100%;
+        padding: 3.2rem 0 7.8rem;
+        z-index: 10;
+        color: var(--color-blue);
+
+        @include breakpoint(tablet_portrait, landscape) {
+            color: $color-white;
+            padding-bottom: 0.5rem;
+        }
+
+        @include breakpoint(desktop) {
+            color: var(--color-blue);
+            padding-bottom: 3.2rem;
+        }
+
+        &--default {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            color: var(--color-blue);
+            padding-bottom: 3.2rem;
+            background-color: $color-white;
+        }
+
+        &--absolute {
+            position: absolute;
+        }
+    }
+
+    &__logo {
+        display: flex;
+
+        svg {
+            height: 5rem;
+            width: auto;
+
+            @include breakpoint(tablet_portrait, landscape) {
+                height: 4.5rem;
+            }
+
+            @include breakpoint(tablet_portrait, portrait) {
+                height: 6.5rem;
+            }
+
+            @include breakpoint(tablet_landscape, landscape) {
+                height: 6rem;
+            }
+
+            @include breakpoint(tablet_landscape, portrait) {
+                height: 8rem;
+            }
+
+            @include breakpoint(desktop) {
+                height: 9rem;
+            }
+        }
+    }
+
+    &__language-switcher {
+        flex-grow: 1;
+    }
+
+    &__nav {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        gap: 2rem;
+        width: 0;
+    }
+
+    &__contrast {
+        height: 2.8rem;
+        margin-right: 2rem;
+        cursor: pointer;
+        border: none;
+
+        svg,
+        figure {
+            height: 2rem;
+            max-height: 2rem;
+            max-width: 2rem;
+        }
+
+        svg path {
+            fill: var(--color-blue);
+        }
+    }
+
+    button {
+        background: transparent;
+    }
+
+    &__nav-icon {
+        position: relative;
+        border: none;
+        height: 2rem;
+        color: currentcolor;
+        cursor: pointer;
+
+        &:focus-visible {
+            outline-offset: 0.3rem;
+        }
+    }
+
+    button[aria-expanded="true"] {
+        color: $color-white;
+
+        .nav-icon {
+            background-color: transparent;
+
+            &::after {
+                transform: rotate(-135deg);
+                top: 0;
+            }
+
+            &::before {
+                transform: rotate(135deg);
+                top: 0;
+            }
+        }
+
+        & ~ .header__nav {
+            display: flex;
+            opacity: 1;
+            visibility: visible;
+            height: 100%;
+            width: 100%;
+            min-height: 100vh;
+            position: fixed;
+            z-index: 100;
+            overflow-y: auto;
+            top: 0;
+            bottom: 0;
+            background-color: var(--color-blue);
+
+            @include breakpoint(tablet_portrait) {
+                width: 50%;
+            }
+
+            @include breakpoint(tablet_portrait, landscape) {
+                width: 100%;
+            }
+
+            @include breakpoint(desktop) {
+                width: 50%;
+            }
+        }
+    }
+}
+
+// Prevent scroll when the main nav is open.
+body:has(.header button[aria-expanded="true"]) {
+    overflow: hidden;
+}

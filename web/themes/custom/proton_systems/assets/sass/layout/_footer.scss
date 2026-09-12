@@ -1,0 +1,115 @@
+// Ported from proton.systems (public/assets/sass/layout/_footer.scss).
+// LINK: templates/layout/footer.html.twig
+
+@use "../vars" as *;
+
+.footer {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 2rem 0;
+    color: $color-white;
+    row-gap: 3rem;
+
+    @include breakpoint(tablet_landscape) {
+        padding: 5rem 0;
+        row-gap: 4rem;
+    }
+
+    &__wrapper {
+        background: var(--color-blue);
+    }
+
+    &__primary {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 3rem;
+
+        @include breakpoint(tablet_landscape) {
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+    }
+
+    &__primary-logo {
+        svg {
+            width: 50%;
+
+            @include breakpoint(tablet_portrait) {
+                width: 30%;
+            }
+
+            @include breakpoint(tablet_landscape) {
+                width: 70%;
+            }
+
+            * {
+                fill: $color-white;
+            }
+        }
+    }
+
+    &__primary-items,
+    &__secondary-items {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 1rem;
+
+        a {
+            text-decoration: none;
+            color: $color-white;
+
+            &:hover {
+                color: rgba($color-white, 0.7);
+            }
+        }
+    }
+
+    &__primary-items {
+        @include font-regular;
+
+        @include breakpoint(tablet_landscape) {
+            display: flex;
+            flex-flow: row wrap;
+            gap: 3rem;
+        }
+    }
+
+    &__secondary-items {
+        @include font-small;
+
+        @include breakpoint(tablet_landscape) {
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            gap: 3rem;
+        }
+    }
+
+    &__secondary {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        gap: 3rem;
+
+        @include breakpoint(tablet_landscape) {
+            flex-flow: row nowrap;
+            align-items: end;
+            gap: 3rem;
+        }
+    }
+
+    &__secondary-item-social {
+        display: flex;
+        width: 3rem;
+        fill: $color-white;
+
+        svg {
+            height: 100%;
+        }
+    }
+
+    &__secondary-social {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 2.5rem;
+    }
+}

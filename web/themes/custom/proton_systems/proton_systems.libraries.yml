@@ -1,0 +1,9 @@
+global:
+  css:
+    theme:
+      assets/dist/app.style.css: {}
+  js:
+    assets/dist/app.bundle.js: { minified: true }
+  dependencies:
+    - core/drupal
+    - core/once

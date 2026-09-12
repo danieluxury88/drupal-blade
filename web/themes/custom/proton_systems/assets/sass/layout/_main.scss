@@ -1,0 +1,7 @@
+// Spacing between the header, the paragraph stream, and the footer. Kept
+// minimal for now since page.html.twig has no real regions wired in yet.
+
+.main {
+    display: block;
+    min-height: 50vh;
+}

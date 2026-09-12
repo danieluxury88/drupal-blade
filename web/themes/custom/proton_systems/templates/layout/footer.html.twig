@@ -1,0 +1,45 @@
+{# LINK: assets/sass/layout/_footer.scss
+
+   Static for now: same hardcoded links as header.html.twig, ported from
+   proton.systems' own footer (site/templates/parts/footer.html.twig).
+#}
+<div class="footer__wrapper">
+    <div class="u-generic-wrapper">
+        <div class="u-generic-wrapper-margin">
+            <footer class="footer">
+                <div class="footer__primary">
+                    <a href="/" aria-label="Home" class="footer__primary-logo">
+                        {% include '@proton_systems/assets/icons/logo-reverse.svg' %}
+                    </a>
+
+                    <div class="footer__primary-items">
+                        <a href="#leistungen" class="footer__primary-item">Services</a>
+                        <a href="#referenzen" class="footer__primary-item">References</a>
+                        <a href="#ueber-uns" class="footer__primary-item">About us</a>
+                        <a href="#kontakt" class="footer__primary-item">Contact</a>
+                    </div>
+                </div>
+                <div class="footer__secondary">
+                    <div class="footer__secondary-items">
+                        <div class="footer__secondary-item">
+                            &copy; {{ 'now'|date('Y') }} - proton.systems
+                        </div>
+                        <a href="/legal-notice" class="footer__secondary-item">Legal notice</a>
+                        <a href="/privacy-policy" class="footer__secondary-item">Privacy policy</a>
+                    </div>
+                    <div class="footer__secondary-items footer__secondary-social">
+                        <a href="https://www.facebook.com/proton.systems" class="footer__secondary-item-social" aria-label="proton.systems on Facebook (opens new tab)" target="_blank" rel="nofollow noopener noreferrer">
+                            {% include '@proton_systems/assets/icons/facebook.svg' %}
+                        </a>
+                        <a href="https://www.instagram.com/proton.systems/" class="footer__secondary-item-social" aria-label="proton.systems on Instagram (opens new tab)" target="_blank" rel="nofollow noopener noreferrer">
+                            {% include '@proton_systems/assets/icons/instagram.svg' %}
+                        </a>
+                        <a href="https://www.linkedin.com/company/proton-systems" class="footer__secondary-item-social" aria-label="proton.systems on LinkedIn (opens new tab)" target="_blank" rel="nofollow noopener noreferrer">
+                            {% include '@proton_systems/assets/icons/linkedin.svg' %}
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>

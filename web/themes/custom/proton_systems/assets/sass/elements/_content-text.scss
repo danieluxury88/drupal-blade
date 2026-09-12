@@ -1,0 +1,115 @@
+// Ported from proton.systems (public/assets/sass/elements/_content-text.scss).
+// Used for any field wired through a "Full HTML"/"Basic HTML" text format.
+
+@use "../vars" as *;
+
+.content-text {
+    h1,
+    h2,
+    h3,
+    h4 {
+        margin-bottom: 0.7em;
+    }
+
+    h1,
+    h2,
+    h3 {
+        @include heading-3;
+    }
+
+    h4 {
+        @include heading-4;
+    }
+
+    p {
+        @include font-regular;
+
+        &:not(:last-child) {
+            margin-bottom: 1em;
+        }
+    }
+
+    a {
+        color: var(--color-blue);
+        text-underline-offset: 0.5rem;
+
+        &:hover {
+            color: rgba(var(--color-blue), 0.8);
+        }
+    }
+
+    ul,
+    ol {
+        list-style: none;
+        margin: 0 0 1.5em;
+        padding: 0;
+
+        li {
+            @include font-regular;
+
+            display: flex;
+            align-items: flex-start;
+            gap: 0.7em;
+            margin-bottom: 0.5em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    ul li::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $color-blue;
+        flex-shrink: 0;
+        margin-top: 0.5em;
+    }
+
+    ol {
+        counter-reset: list-counter;
+
+        li {
+            counter-increment: list-counter;
+
+            &::before {
+                content: counter(list-counter) ".";
+                color: $color-blue;
+                font-weight: 600;
+                flex-shrink: 0;
+                min-width: 1.5em;
+            }
+        }
+    }
+}
+
+.big-content-text {
+    h1,
+    h2 {
+        @include hero-1;
+    }
+
+    h3 {
+        @include hero-2;
+    }
+
+    h4 {
+        @include hero-3;
+    }
+
+    p {
+        @include font-big;
+
+        &:not(:last-child) {
+            margin-bottom: 1em;
+        }
+    }
+}
+
+.small-content-text {
+    p {
+        @include font-small;
+    }
+}

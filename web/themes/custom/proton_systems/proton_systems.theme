@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Preprocess functions and other theme hooks for Proton Systems.
+ *
+ * Empty for now: this theme is being built front-end-first (see the
+ * component markup under templates/paragraphs, driven by static content).
+ * Preprocess logic — wiring real paragraph/field/menu data into that markup,
+ * plus the theme_suggestions_alter() hooks that go with it — lands in the
+ * follow-up Drupal integration step, once real paragraph types/fields exist
+ * for it to bind to.
+ */

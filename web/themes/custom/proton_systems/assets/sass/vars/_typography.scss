@@ -1,0 +1,182 @@
+// Ported from proton.systems (public/assets/sass/vars/_typography.scss).
+
+@use "breakpoints--min-width" as *;
+@use "variables" as *;
+
+@mixin hero-1 {
+    font-family: $font-ubuntu;
+    line-height: 1.5em;
+    font-weight: 500;
+    font-size: 3rem;
+
+    @include breakpoint(tablet_portrait) {
+        font-size: 4rem;
+    }
+
+    @include breakpoint(tablet_portrait, landscape) {
+        font-size: 3.5rem;
+    }
+
+    @include breakpoint(small_landscape) {
+        font-size: 3rem;
+    }
+
+    @include breakpoint(tablet_landscape) {
+        font-size: 5rem;
+    }
+
+    @include breakpoint(desktop) {
+        font-size: 6.5rem;
+    }
+}
+
+@mixin hero-2 {
+    font-family: $font-ubuntu;
+    line-height: 1.5em;
+    font-weight: 500;
+    font-size: 2.8rem;
+
+    @include breakpoint(tablet_portrait) {
+        font-size: 3.2rem;
+    }
+
+    @include breakpoint(tablet_landscape) {
+        font-size: 4rem;
+    }
+
+    @include breakpoint(desktop) {
+        font-size: 5rem;
+    }
+}
+
+@mixin hero-3 {
+    font-family: $font-ubuntu;
+    line-height: 1.5em;
+    font-weight: 500;
+    font-size: 2.5rem;
+
+    @include breakpoint(tablet_portrait) {
+        font-size: 3rem;
+    }
+
+    @include breakpoint(tablet_landscape) {
+        font-size: 3.5rem;
+    }
+
+    @include breakpoint(desktop) {
+        font-size: 4rem;
+    }
+}
+
+@mixin heading-1 {
+    font-family: $font-ubuntu;
+    font-size: 3.5rem;
+    line-height: 1.5em;
+    font-weight: 500;
+}
+
+@mixin heading-2 {
+    font-family: $font-ubuntu;
+    font-size: 3rem;
+    line-height: 1.5em;
+    font-weight: 500;
+}
+
+@mixin heading-3 {
+    font-family: $font-ubuntu;
+    font-size: 2.5rem;
+    line-height: 1.5em;
+    font-weight: 500;
+}
+
+@mixin heading-4 {
+    font-family: $font-ubuntu;
+    font-size: 2.2rem;
+    line-height: 1.5em;
+    font-weight: 500;
+}
+
+@mixin heading-5 {
+    font-family: $font-ubuntu;
+    font-size: 2rem;
+    line-height: 1.5em;
+    font-weight: 500;
+}
+
+@mixin font-big {
+    font-family: $font-source-sans-pro;
+    line-height: 1.3em;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+    font-size: 1.8rem;
+
+    @include breakpoint(phone) {
+        font-size: 2rem;
+    }
+
+    @include breakpoint(tablet_portrait) {
+        font-size: 2.4rem;
+    }
+
+    @include breakpoint(tablet_portrait, landscape) {
+        font-size: 2rem;
+    }
+
+    @include breakpoint(small_landscape) {
+        font-size: 1.7rem;
+    }
+
+    @include breakpoint(tablet_landscape) {
+        font-size: 2.6rem;
+    }
+
+    @include breakpoint(desktop) {
+        font-size: 3rem;
+    }
+}
+
+@mixin font-regular {
+    font-family: $font-source-sans-pro;
+    font-size: 1.6rem;
+    line-height: 1.4em;
+    font-weight: 300;
+
+    @include breakpoint(phone) {
+        font-size: 1.8rem;
+    }
+
+    @include breakpoint(tablet_portrait) {
+        font-size: 2rem;
+    }
+}
+
+@mixin font-small {
+    font-family: $font-source-sans-pro;
+    font-size: 1.6rem;
+    line-height: 1.3em;
+    font-weight: 300;
+}
+
+@mixin font-14 {
+    font-family: $font-source-sans-pro;
+    font-size: 1.4rem;
+    line-height: 1.3em;
+    font-weight: 300;
+}
+
+h1,
+h2 {
+    @include heading-1;
+}
+
+h3 {
+    @include heading-3;
+}
+
+h4 {
+    @include heading-4;
+}
+
+p {
+    @include font-regular;
+}

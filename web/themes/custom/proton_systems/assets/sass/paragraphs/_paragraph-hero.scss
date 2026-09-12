@@ -1,0 +1,75 @@
+// Adapted from proton.systems' home slider
+// (public/assets/sass/blocks/_block-full-page-slider{,-item}.scss), renamed
+// to the paragraph-* convention used by subdron/zaunprofi.
+// LINK: templates/paragraphs/paragraph--hero.html.twig
+
+@use "../vars" as *;
+
+.paragraph-hero {
+    &__wrapper {
+        max-width: 100vw;
+    }
+
+    .swiper {
+        height: 100%;
+    }
+}
+
+.paragraph-hero__slide {
+    display: grid;
+    grid-template-rows: minmax(5rem, auto) min-content;
+    overflow: hidden;
+    height: 100%;
+
+    @include breakpoint(tablet_portrait, landscape) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    @include breakpoint(desktop) {
+        grid-template-columns: none;
+        grid-template-rows: minmax(5rem, auto) min-content;
+    }
+
+    &__image {
+        padding: 1rem;
+
+        @include breakpoint(desktop) {
+            padding: 3.5rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__content-wrapper {
+        background: var(--color-blue);
+        padding: 2rem 0;
+
+        @include breakpoint(phone, landscape) {
+            padding: 2.3rem 0;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-flow: column nowrap;
+        color: $color-white;
+
+        h2 {
+            margin-bottom: 2rem;
+
+            @include breakpoint(tablet_landscape) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    &__button {
+        margin-top: 1rem;
+    }
+}

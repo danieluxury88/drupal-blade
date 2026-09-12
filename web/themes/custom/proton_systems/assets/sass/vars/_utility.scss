@@ -1,0 +1,79 @@
+// Layout utility classes ported from proton.systems (public/assets/sass/base/_utility.scss)
+// and public/assets/sass/vars/_block-wrapper-margin.scss. Kept in vars/ (rather
+// than base/) since every paragraph template below reaches for these.
+
+@use "variables" as *;
+@use "breakpoints--min-width" as *;
+
+.u-generic-wrapper {
+    margin: 0 auto;
+    max-width: 144rem;
+    width: 100%;
+}
+
+.u-generic-wrapper-margin {
+    margin: 0 1.6rem;
+
+    @include breakpoint(tablet_portrait) {
+        margin: 0 3rem;
+    }
+
+    @include breakpoint(tablet_landscape) {
+        margin: 0 6rem;
+    }
+
+    @include breakpoint(desktop) {
+        margin: 0 8rem;
+    }
+
+    @include breakpoint(desktop_big) {
+        margin: 0 11.6rem;
+    }
+}
+
+@mixin block-wrapper-margin {
+    margin-bottom: 4rem;
+
+    @include breakpoint(tablet_landscape) {
+        margin-bottom: 5rem;
+    }
+
+    @include breakpoint(desktop) {
+        margin-bottom: 6rem;
+    }
+}
+
+.u-center {
+    text-align: center;
+}
+
+.u-neutral-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.u-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.u-mobile-only {
+    @include breakpoint(desktop) {
+        display: none;
+    }
+}
+
+.u-desktop-only {
+    display: none;
+
+    @include breakpoint(desktop) {
+        display: block;
+    }
+}

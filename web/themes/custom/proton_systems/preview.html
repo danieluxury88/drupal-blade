@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proton Systems theme — component preview</title>
+    <meta name="theme-color" content="#0089c1">
+    <link rel="stylesheet" href="assets/dist/app.style.css">
+</head>
+<body>
+
+<!-- ================= HEADER =================
+     templates/layout/header.html.twig -->
+<div class="header__wrapper header__wrapper--default" id="site-header">
+    <div class="u-generic-wrapper">
+        <div class="u-generic-wrapper-margin">
+            <header class="header">
+                <a href="#" aria-label="Home" class="header__logo">
+                    <img src="assets/icons/logo.svg" alt="proton.systems" height="50">
+                </a>
+
+                <button id="main-nav-toggle" class="header__nav-icon nav-icon__wrapper" type="button" aria-expanded="false" aria-label="Open navigation" aria-controls="main-nav-wrapper">
+                    <span class="nav-icon"></span>
+                </button>
+
+                <div id="main-nav-wrapper" aria-expanded="false" class="header__nav">
+                    <nav class="nav-menu">
+                        <div class="nav-menu__item-wrapper">
+                            <a href="#leistungen" class="nav-menu__item">Services</a>
+                            <a href="#referenzen" class="nav-menu__item">References</a>
+                            <a href="#ueber-uns" class="nav-menu__item">About us</a>
+                            <a href="#kontakt" class="nav-menu__item">Contact</a>
+                        </div>
+
+                        <div class="nav-contact">
+                            <a class="nav-contact__item" href="tel:+43552356176">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                                <span>+43 552 356 176</span>
+                            </a>
+                            <a class="nav-contact__item" href="mailto:hello@proton.systems">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+                                <span>hello@proton.systems</span>
+                            </a>
+                        </div>
+
+                        <div class="nav-social">
+                            <a class="nav-social__item" href="#" aria-label="Facebook">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"/></svg>
+                            </a>
+                            <a class="nav-social__item" href="#" aria-label="Instagram">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                            </a>
+                            <a class="nav-social__item" href="#" aria-label="LinkedIn">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                            </a>
+                        </div>
+
+                        <div class="nav-legal">
+                            <a href="#" class="nav-legal__item">Legal notice</a>
+                            <a href="#" class="nav-legal__item">Privacy policy</a>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+        </div>
+    </div>
+</div>
+
+<main class="main">
+
+    <!-- ================= HERO =================
+         templates/paragraphs/paragraph--hero.html.twig -->
+    <div class="paragraph-hero__wrapper">
+        <div class="paragraph-hero swiper js-hero-slider">
+            <div class="swiper-wrapper">
+
+                <div class="paragraph-hero__slide swiper-slide" id="leistungen">
+                    <picture class="paragraph-hero__slide__image">
+                        <img src="assets/icons/hero-leistungen.svg" alt="">
+                    </picture>
+                    <div class="paragraph-hero__slide__content-wrapper">
+                        <div class="u-generic-wrapper">
+                            <div class="u-generic-wrapper-margin">
+                                <div class="paragraph-hero__slide__content big-content-text">
+                                    <h2>Our Services</h2>
+                                    <p>From websites to automation. What we build for you.</p>
+                                    <a href="#leistungen" class="button button--reverse button--big paragraph-hero__slide__button">View services</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paragraph-hero__slide swiper-slide" id="referenzen">
+                    <picture class="paragraph-hero__slide__image">
+                        <img src="assets/icons/hero-referenzen.svg" alt="">
+                    </picture>
+                    <div class="paragraph-hero__slide__content-wrapper">
+                        <div class="u-generic-wrapper">
+                            <div class="u-generic-wrapper-margin">
+                                <div class="paragraph-hero__slide__content big-content-text">
+                                    <h2>Our references</h2>
+                                    <p>Projects for universities, law firms and international companies.</p>
+                                    <a href="#referenzen" class="button button--reverse button--big paragraph-hero__slide__button">View references</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paragraph-hero__slide swiper-slide" id="ueber-uns">
+                    <picture class="paragraph-hero__slide__image">
+                        <img src="assets/icons/hero-ueberuns.svg" alt="">
+                    </picture>
+                    <div class="paragraph-hero__slide__content-wrapper">
+                        <div class="u-generic-wrapper">
+                            <div class="u-generic-wrapper-margin">
+                                <div class="paragraph-hero__slide__content big-content-text">
+                                    <h2>About us</h2>
+                                    <p>The team behind the projects. Three developers from Vorarlberg.</p>
+                                    <a href="#ueber-uns" class="button button--reverse button--big paragraph-hero__slide__button">Meet the team</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paragraph-hero__slide swiper-slide" id="kontakt">
+                    <picture class="paragraph-hero__slide__image">
+                        <img src="assets/icons/hero-kontakt.svg" alt="">
+                    </picture>
+                    <div class="paragraph-hero__slide__content-wrapper">
+                        <div class="u-generic-wrapper">
+                            <div class="u-generic-wrapper-margin">
+                                <div class="paragraph-hero__slide__content big-content-text">
+                                    <h2>Contact</h2>
+                                    <p>Start your project. We'll get back to you within 24 hours.</p>
+                                    <a href="#kontakt" class="button button--reverse button--big paragraph-hero__slide__button">Get in touch</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= TEAM =================
+         templates/paragraphs/paragraph--team.html.twig -->
+    <div class="paragraph-team__wrapper" id="ueber-uns">
+        <div class="u-generic-wrapper">
+            <div class="u-generic-wrapper-margin">
+                <h2 class="paragraph-team__title">Our team</h2>
+                <div class="paragraph-team__items">
+
+                    <div class="paragraph-team-item">
+                        <div class="paragraph-team-item__card">
+                            <figure class="paragraph-team-item__picture">
+                                <img src="assets/images/felipe.jpg" alt="Felipe - Founder &amp; Web Developer" width="600" height="800" loading="lazy">
+                            </figure>
+                            <div class="paragraph-team-item__content small-content-text">
+                                <h3 class="paragraph-team-item__name">Felipe - Founder &amp; Web Developer</h3>
+                                <p class="paragraph-team-item__description">Felipe has been building websites since 2008. In 2018, he founded proton.systems. Since then, he has delivered dozens of projects with a small team, including company websites and complex web applications. As a father of two, he knows what priorities look like. He speaks plainly and tells his clients what their project actually needs.</p>
+                            </div>
+                            <div class="paragraph-team-item__quote">
+                                &quot;The true magic of technology lies not only in its ability to solve problems, but also in its ability to create new opportunities and make our dreams come true.&quot;
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="paragraph-team-item">
+                        <div class="paragraph-team-item__card">
+                            <figure class="paragraph-team-item__picture">
+                                <img src="assets/images/milan.jpg" alt="Milan" width="600" height="800" loading="lazy">
+                            </figure>
+                            <div class="paragraph-team-item__content small-content-text">
+                                <h3 class="paragraph-team-item__name">Milan</h3>
+                                <p class="paragraph-team-item__description">Milan took an unusual path into web development. He started as a toolmaker, then became a CNC programmer. In 2022, he changed direction, completed a software development course at Digital Campus Vorarlberg, and joined proton.systems as an intern. Since 2023, he has been a permanent team member. He thinks like a craftsman: precise and solution-oriented.</p>
+                            </div>
+                            <div class="paragraph-team-item__quote">
+                                &quot;If your only tool is a hammer, everything starts to look like a nail.&quot;
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="paragraph-team-item">
+                        <div class="paragraph-team-item__card">
+                            <figure class="paragraph-team-item__picture">
+                                <img src="assets/images/daniel.jpg" alt="Daniel - Developer" width="600" height="800" loading="lazy">
+                            </figure>
+                            <div class="paragraph-team-item__content small-content-text">
+                                <h3 class="paragraph-team-item__name">Daniel - Developer</h3>
+                                <p class="paragraph-team-item__description">Daniel spent 10 years as an electronics engineer. He developed firmware for automotive systems. Software running in real vehicles. In 2022, he moved into web development. What he brings: an understanding of systems that goes far beyond HTML. When a project gets complex, Daniel is the right person.</p>
+                            </div>
+                            <div class="paragraph-team-item__quote">
+                                &quot;The highest wisdom is for a person to remain in grace, because at the end of the journey, those who live in truth understand—and those who don't, understand nothing.&quot;
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= ACCORDION =================
+         templates/paragraphs/paragraph--accordion.html.twig -->
+    <div class="paragraph-accordion__wrapper">
+        <div class="u-generic-wrapper">
+            <div class="u-generic-wrapper-margin">
+                <div class="paragraph-accordion">
+                    <div class="paragraph-accordion__item">
+                        <h3 class="paragraph-accordion__item-heading">
+                            <button type="button" id="accordion-1-button" class="paragraph-accordion__item-trigger" aria-expanded="false" aria-controls="accordion-1-panel">
+                                <span>Partners &amp; Friends</span>
+                                <span class="paragraph-accordion__sign" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div id="accordion-1-panel" class="paragraph-accordion__item-panel" role="region" aria-labelledby="accordion-1-button">
+                            <div class="paragraph-accordion__item-content content-text">
+                                <p><a href="#" target="_blank">Absolute Dynamics</a><br><a href="#" target="_blank">Drüber</a><br><a href="#" target="_blank">meusburger.systems</a><br><a href="#" target="_blank">Phuc Le</a><br><a href="#" target="_blank">Publique Informationsarchitektur und Mediendesign</a><br><a href="#" target="_blank">Quertrakt</a><br><a href="#" target="_blank">Sente</a><br><a href="#" target="_blank">Super BfG</a><br><a href="#" target="_blank">weitweit</a><br><a href="#" target="_blank">Zeughaus Design</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= PROJECT TEASER =================
+         templates/paragraphs/paragraph--project-teaser.html.twig -->
+    <div class="paragraph-project-teaser__wrapper" id="referenzen">
+        <div class="u-generic-wrapper">
+            <div class="u-generic-wrapper-margin">
+                <div class="paragraph-project-teaser">
+                    <div class="paragraph-project-teaser__content">
+                        <div class="paragraph-project-teaser__image">
+                            <img src="assets/images/zutritto-teaser.jpg" width="700" height="525" alt="Zutritto" loading="lazy">
+                        </div>
+                        <div class="paragraph-project-teaser__text-content">
+                            <h2 class="paragraph-project-teaser__title">Zutritto – Intelligent access to events and ticket sales</h2>
+                            <div class="content-tags">
+                                <span class="content-tag">Symfony</span>
+                                <span class="content-tag">Playwright</span>
+                            </div>
+                            <div class="paragraph-project-teaser__description content-text">
+                                Zutritto is an innovative event management system designed to optimize reservations, automate QR-based check-ins, and improve the experience for participants. Developed with Symfony 7!
+                            </div>
+                            <a href="#" class="paragraph-project-teaser__link">View project →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= QUOTE =================
+         templates/paragraphs/paragraph--quote.html.twig -->
+    <div class="paragraph-quote__wrapper">
+        <div class="u-generic-wrapper">
+            <div class="u-generic-wrapper-margin">
+                <div class="paragraph-quote">
+                    <div class="paragraph-quote__content">
+                        <div class="paragraph-quote__text-content">
+                            <blockquote class="paragraph-quote__quote">
+                                &ldquo;The new platform let us ship incoming products faster while keeping our heavy-duty specs crystal clear.&rdquo;
+                            </blockquote>
+                            <div class="paragraph-quote__attribution">
+                                <div class="paragraph-quote__person-name">Karl Rumbart</div>
+                                <div class="paragraph-quote__person-title">Product Manager, Fulterer</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= CTA =================
+         templates/paragraphs/paragraph--cta.html.twig -->
+    <div class="paragraph-cta__wrapper" id="kontakt">
+        <div class="u-generic-wrapper">
+            <div class="u-generic-wrapper-margin">
+                <div class="paragraph-cta paragraph-cta--default">
+                    <div class="paragraph-cta__content">
+                        <h2 class="paragraph-cta__title">Need enterprise-grade web engineering?</h2>
+                        <div class="paragraph-cta__text content-text">
+                            <p>We build accessible, high-performance web solutions. Designed for clarity, speed, and easy maintenance.</p>
+                        </div>
+                        <div class="paragraph-cta__buttons">
+                            <a href="#kontakt" class="button">Start a project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!-- ================= FOOTER =================
+     templates/layout/footer.html.twig -->
+<div class="footer__wrapper">
+    <div class="u-generic-wrapper">
+        <div class="u-generic-wrapper-margin">
+            <footer class="footer">
+                <div class="footer__primary">
+                    <a href="#" aria-label="Home" class="footer__primary-logo">
+                        <img src="assets/icons/logo-reverse.svg" alt="proton.systems">
+                    </a>
+                    <div class="footer__primary-items">
+                        <a href="#leistungen" class="footer__primary-item">Services</a>
+                        <a href="#referenzen" class="footer__primary-item">References</a>
+                        <a href="#ueber-uns" class="footer__primary-item">About us</a>
+                        <a href="#kontakt" class="footer__primary-item">Contact</a>
+                    </div>
+                </div>
+                <div class="footer__secondary">
+                    <div class="footer__secondary-items">
+                        <div class="footer__secondary-item">&copy; 2026 - proton.systems</div>
+                        <a href="#" class="footer__secondary-item">Legal notice</a>
+                        <a href="#" class="footer__secondary-item">Privacy policy</a>
+                    </div>
+                    <div class="footer__secondary-items footer__secondary-social">
+                        <a href="#" class="footer__secondary-item-social" aria-label="Facebook">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"/></svg>
+                        </a>
+                        <a href="#" class="footer__secondary-item-social" aria-label="Instagram">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                        </a>
+                        <a href="#" class="footer__secondary-item-social" aria-label="LinkedIn">
+                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<script src="assets/dist/app.bundle.js"></script>
+</body>
+</html>

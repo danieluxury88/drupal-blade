@@ -1,0 +1,100 @@
+// Ported from proton.systems (public/assets/sass/blocks/_block-project-teaser.scss),
+// renamed to the paragraph-* convention used by subdron/zaunprofi.
+// LINK: templates/paragraphs/paragraph--project-teaser.html.twig
+
+@use "../vars" as *;
+@use "sass:color";
+
+.paragraph-project-teaser {
+    &__wrapper {
+        @include block-wrapper-margin;
+
+        background: $color-white;
+    }
+
+    &__content {
+        display: flex;
+        gap: 2.5rem;
+        align-items: flex-start;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+    }
+
+    &__image {
+        flex-shrink: 0;
+        width: 300px;
+        height: 225px;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+        @include breakpoint(tablet_landscape) {
+            width: 350px;
+            height: 263px;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+            height: 200px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &__text-content {
+        flex: 1;
+        padding-top: 0.5rem;
+    }
+
+    &__title {
+        @include heading-1;
+
+        & {
+            margin: 0 0 1rem;
+            color: $color-black;
+        }
+
+        @include breakpoint(tablet_landscape) {
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    &__description {
+        margin-bottom: 1.5rem;
+
+        @include breakpoint(tablet_landscape) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__link {
+        @include font-regular;
+
+        & {
+            display: inline-block;
+            color: var(--color-blue);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        &:hover {
+            color: color.adjust($color-blue, $lightness: -15%);
+            border-bottom-color: var(--color-blue);
+        }
+    }
+}

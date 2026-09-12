@@ -1,0 +1,26 @@
+// Design tokens ported from proton.systems (public/assets/sass/vars/_variables.scss).
+
+$font-ubuntu: "Ubuntu", sans-serif;
+$font-source-sans-pro: "Source Sans Pro", sans-serif;
+
+$color-blue: #0089c1;
+$color-blue-accessible: #005476;
+$color-white: #fff;
+$color-black: #000;
+$color-gray: #6f6f6e;
+$color-gray-70: rgba($color-gray, 0.6);
+$color-gray-light-1: #ddd;
+$color-gray-light-2: #ccc;
+$color-gray-light-3: #f5faf8;
+$color-red: #f00;
+
+:root {
+    --color-blue: #{$color-blue};
+    --color-change-animation-time: 0.3s;
+}
+
+// Toggled by the header's contrast switch (assets/js/contrast.js) once that
+// lands in the Drupal integration step.
+.contrast-mode {
+    --color-blue: #{$color-blue-accessible};
+}

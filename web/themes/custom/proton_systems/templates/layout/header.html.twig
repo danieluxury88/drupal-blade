@@ -1,0 +1,61 @@
+{# LINK: assets/sass/layout/_header.scss
+
+   Static for now: the nav links, phone numbers and email below are
+   hardcoded from proton.systems' own header/nav (site/templates/parts/
+   header.html.twig and nav.html.twig). The Drupal integration step should
+   replace them with the site's real main menu and contact info.
+#}
+<div class="header__wrapper header__wrapper--default" id="site-header">
+    <div class="u-generic-wrapper">
+        <div class="u-generic-wrapper-margin">
+            <header class="header">
+                <a href="/" aria-label="Home" class="header__logo">
+                    {% include '@proton_systems/assets/icons/logo.svg' %}
+                </a>
+
+                <button id="main-nav-toggle" class="header__nav-icon nav-icon__wrapper" type="button" aria-expanded="false" aria-label="Open navigation" aria-controls="main-nav-wrapper">
+                    <span class="nav-icon"></span>
+                </button>
+
+                <div id="main-nav-wrapper" aria-expanded="false" class="header__nav">
+                    <nav class="nav-menu">
+                        <div class="nav-menu__item-wrapper">
+                            <a href="#leistungen" class="nav-menu__item">Services</a>
+                            <a href="#referenzen" class="nav-menu__item">References</a>
+                            <a href="#ueber-uns" class="nav-menu__item">About us</a>
+                            <a href="#kontakt" class="nav-menu__item">Contact</a>
+                        </div>
+
+                        <div class="nav-contact">
+                            <a class="nav-contact__item" href="tel:+43552356176">
+                                {% include '@proton_systems/assets/icons/phone.svg' %}
+                                <span>+43 552 356 176</span>
+                            </a>
+                            <a class="nav-contact__item" href="mailto:hello@proton.systems">
+                                {% include '@proton_systems/assets/icons/mail.svg' %}
+                                <span>hello@proton.systems</span>
+                            </a>
+                        </div>
+
+                        <div class="nav-social">
+                            <a class="nav-social__item" href="https://www.facebook.com/proton.systems" target="_blank" rel="noopener">
+                                {% include '@proton_systems/assets/icons/facebook.svg' %}
+                            </a>
+                            <a class="nav-social__item" href="https://www.instagram.com/proton.systems/" target="_blank" rel="noopener">
+                                {% include '@proton_systems/assets/icons/instagram.svg' %}
+                            </a>
+                            <a class="nav-social__item" href="https://www.linkedin.com/company/proton-systems/" target="_blank" rel="noopener">
+                                {% include '@proton_systems/assets/icons/linkedin.svg' %}
+                            </a>
+                        </div>
+
+                        <div class="nav-legal">
+                            <a href="/legal-notice" class="nav-legal__item">Legal notice</a>
+                            <a href="/privacy-policy" class="nav-legal__item">Privacy policy</a>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+        </div>
+    </div>
+</div>

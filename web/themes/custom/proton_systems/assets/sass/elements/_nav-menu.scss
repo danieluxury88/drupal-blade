@@ -1,0 +1,169 @@
+// Ported from proton.systems (public/assets/sass/elements/_nav-menu.scss).
+
+@use "../vars" as *;
+
+.nav-icon {
+    position: relative;
+    color: currentcolor;
+
+    &,
+    &::before,
+    &::after {
+        width: 2.85rem;
+        height: 0.3rem;
+        display: inline-block;
+        background-color: currentcolor;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        transition:
+            top 0.3s,
+            transform 0.3s;
+        background-color: currentcolor;
+    }
+
+    &::before {
+        top: -0.7rem;
+    }
+
+    &::after {
+        top: 0.7rem;
+    }
+
+    &__wrapper {
+        cursor: pointer;
+        z-index: 101;
+        transform: translateY(-4px);
+    }
+}
+
+.nav-menu {
+    @include hero-3;
+
+    & {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+        width: auto;
+    }
+
+    @include breakpoint(small_landscape) {
+        @include heading-3;
+    }
+
+    @include breakpoint(tablet_portrait, landscape) {
+        flex-flow: row nowrap;
+        gap: 4rem;
+        align-items: flex-end;
+    }
+
+    @include breakpoint(desktop) {
+        flex-flow: column nowrap;
+        gap: 1rem;
+    }
+
+    &__item {
+        text-decoration: none;
+        color: $color-white;
+
+        &:hover {
+            color: rgba($color-white, 0.7);
+        }
+
+        &--active {
+            text-decoration: underline;
+        }
+    }
+
+    &__item-wrapper {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+
+        @include breakpoint(tablet_portrait, landscape) {
+            order: 1;
+        }
+
+        @include breakpoint(desktop) {
+            order: -1;
+        }
+    }
+}
+
+.nav-legal {
+    @include font-small;
+
+    & {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 2rem;
+    }
+
+    &__item {
+        text-decoration: none;
+        color: $color-white;
+
+        &:hover {
+            color: rgba($color-white, 0.7);
+        }
+    }
+}
+
+.nav-social {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    &__item {
+        svg {
+            width: 3rem;
+            height: 3rem;
+            fill: $color-white;
+
+            &:hover {
+                fill: rgba($color-white, 0.7);
+            }
+        }
+    }
+}
+
+.nav-contact {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    margin: 2rem 0;
+
+    &__item {
+        @include font-regular;
+
+        & {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 1rem;
+            color: $color-white;
+            text-decoration: none;
+            align-items: center;
+        }
+
+        @include breakpoint(small_landscape) {
+            @include font-small;
+        }
+
+        svg {
+            fill: $color-white;
+        }
+
+        &:hover {
+            color: rgba($color-white, 0.7);
+
+            svg {
+                fill: rgba($color-white, 0.7);
+            }
+        }
+    }
+}

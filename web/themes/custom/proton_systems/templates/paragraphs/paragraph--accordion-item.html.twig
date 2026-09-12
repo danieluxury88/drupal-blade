@@ -1,0 +1,23 @@
+{# LINK: assets/sass/paragraphs/_paragraph-accordion.scss
+
+   One accordion item, included once per entry from
+   paragraph--accordion.html.twig. Expects `item` ({title, content}) and
+   `delta` (unique index, for the button/panel id pair).
+#}
+{% set button_id = 'paragraph-accordion-item-' ~ delta ~ '-button' %}
+{% set panel_id = 'paragraph-accordion-item-' ~ delta ~ '-panel' %}
+
+<div class="paragraph-accordion__item">
+    <h3 class="paragraph-accordion__item-heading">
+        <button type="button" id="{{ button_id }}" class="paragraph-accordion__item-trigger" aria-expanded="false" aria-controls="{{ panel_id }}">
+            <span>{{ item.title|raw }}</span>
+            <span class="paragraph-accordion__sign" aria-hidden="true"></span>
+        </button>
+    </h3>
+
+    <div id="{{ panel_id }}" class="paragraph-accordion__item-panel" role="region" aria-labelledby="{{ button_id }}">
+        <div class="paragraph-accordion__item-content content-text">
+            {{ item.content|raw }}
+        </div>
+    </div>
+</div>

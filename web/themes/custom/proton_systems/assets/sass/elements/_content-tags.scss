@@ -1,0 +1,31 @@
+// Ported from proton.systems (public/assets/sass/elements/_content-tags.scss).
+// Used by paragraph--project-teaser.html.twig for its technology tag list.
+
+@use "../vars" as *;
+
+.content-tags {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.content-tag {
+    @include font-14;
+
+    & {
+        display: inline-block;
+        padding: 0.5rem 0.8rem;
+        background: var(--color-blue);
+        color: $color-white;
+        font-weight: 500;
+        border-radius: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        white-space: nowrap;
+    }
+
+    @include breakpoint(tablet_landscape) {
+        padding: 0.5rem 1rem;
+    }
+}

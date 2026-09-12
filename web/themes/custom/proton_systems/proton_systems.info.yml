@@ -1,0 +1,24 @@
+name: Proton Systems
+type: theme
+description: "Drupal 11 theme styled after proton.systems"
+core_version_requirement: ^11
+version: "1.0.0"
+base theme: false
+
+libraries:
+  - proton_systems/global
+
+ckeditor5-stylesheets:
+  - assets/dist/ckeditor.style.css
+
+regions:
+  header: Header
+  primary_menu: "Primary menu"
+  secondary_menu: "Secondary menu"
+  highlighted: Highlighted
+  help: Help
+  breadcrumb: Breadcrumb
+  content: Content
+  sidebar_first: "Sidebar first"
+  sidebar_second: "Sidebar second"
+  footer: Footer
