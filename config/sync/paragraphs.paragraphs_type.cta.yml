@@ -1,7 +1,12 @@
 uuid: 531bf0f0-406b-40d1-8097-cbddd85df14f
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: cta
 label: 'Call to action'
 icon_uuid: null

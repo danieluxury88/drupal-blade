@@ -1,7 +1,12 @@
 uuid: ae29c9e5-2712-4bca-b0b9-1a42813a6768
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: team
 label: Team
 icon_uuid: null

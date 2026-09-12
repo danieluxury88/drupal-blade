@@ -1,7 +1,12 @@
 uuid: 93f1bf8b-e161-4084-b318-2acf00d1588b
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: hero
 label: Hero
 icon_uuid: null

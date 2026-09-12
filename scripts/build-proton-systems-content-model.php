@@ -16,6 +16,7 @@ use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
 use Drupal\node\Entity\NodeType;
 use Drupal\paragraphs\Entity\ParagraphsType;
+use Drupal\user\Entity\Role;
 
 // ---------------------------------------------------------------------------
 // 1. Content types: person (team members), project (project teaser target).
@@ -264,6 +265,72 @@ foreach ($field_instances as $i => $instance) {
   if (!$view_display->getComponent($field_name)) {
     $view_display->setComponent($field_name, ['weight' => $i, 'label' => 'hidden'] + $formatters[$type]);
     $view_display->save();
+  }
+}
+
+// ---------------------------------------------------------------------------
+// 6. Reusable paragraphs. Requires drupal/paragraphs' paragraphs_library
+//    submodule, which itself requires drupal/entity_usage (composer
+//    dependency, added alongside this section — not bundled with
+//    drupal/paragraphs despite that being the initial assumption).
+//
+//    Lets editors promote a hero/cta/accordion/team/project_teaser/quote
+//    paragraph on a page to a library item, then place that same item on
+//    other pages; editing the library item updates every placement.
+// ---------------------------------------------------------------------------
+
+if (!\Drupal::moduleHandler()->moduleExists('paragraphs_library')) {
+  \Drupal::service('module_installer')->install(['entity_usage', 'paragraphs_library']);
+  echo "Installed module: paragraphs_library\n";
+}
+
+$reusable_bundles = ['hero', 'cta', 'accordion', 'team', 'project_teaser', 'quote'];
+
+foreach ($reusable_bundles as $id) {
+  $paragraphs_type = ParagraphsType::load($id);
+  if ($paragraphs_type && !$paragraphs_type->getThirdPartySetting('paragraphs_library', 'allow_library_conversion', FALSE)) {
+    $paragraphs_type->setThirdPartySetting('paragraphs_library', 'allow_library_conversion', TRUE);
+    $paragraphs_type->save();
+    echo "Enabled library conversion: $id\n";
+  }
+}
+
+// Let field_paragraphs (node.page) accept existing library items alongside
+// the bundles it already allows.
+$field_paragraphs = FieldConfig::loadByName('node', 'page', 'field_paragraphs');
+if ($field_paragraphs) {
+  $settings = $field_paragraphs->getSettings();
+  if (empty($settings['handler_settings']['target_bundles']['from_library'])) {
+    $settings['handler_settings']['target_bundles']['from_library'] = 'from_library';
+    $max_weight = -1;
+    foreach ($settings['handler_settings']['target_bundles_drag_drop'] ?? [] as $drag_drop) {
+      $max_weight = max($max_weight, $drag_drop['weight']);
+    }
+    $settings['handler_settings']['target_bundles_drag_drop']['from_library'] = [
+      'weight' => $max_weight + 1,
+      'enabled' => 1,
+    ];
+    $field_paragraphs->set('settings', $settings);
+    $field_paragraphs->save();
+    echo "Allowed 'from_library' on node.page.field_paragraphs\n";
+  }
+}
+
+// Content editors need explicit permission to create/edit library items —
+// paragraphs_library_item is a full content entity, unlike paragraphs
+// themselves which inherit access from their parent.
+$content_editor_role = Role::load('content_editor');
+if ($content_editor_role) {
+  $granted = FALSE;
+  foreach (['create paragraph library item', 'edit paragraph library item'] as $permission) {
+    if (!$content_editor_role->hasPermission($permission)) {
+      $content_editor_role->grantPermission($permission);
+      $granted = TRUE;
+    }
+  }
+  if ($granted) {
+    $content_editor_role->save();
+    echo "Granted paragraph library permissions to content_editor\n";
   }
 }
 
