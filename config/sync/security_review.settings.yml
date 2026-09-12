@@ -3,12 +3,13 @@ _core:
 untrusted_roles:
   - anonymous
   - authenticated
+  - content_editor
 log: false
 skipped:
   account_creation:
     skipped: true
     skipped_by: '1'
-    skipped_on: 1789190339
+    skipped_on: 1789192502
 views_access:
   ignore_default: false
   hushed_views: {  }
