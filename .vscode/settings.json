@@ -1,0 +1,25 @@
+{
+    "files.associations": {
+        "*.module": "php",
+        "*.install": "php",
+        "*.inc": "php",
+        "*.theme": "php",
+        "*.profile": "php",
+        "*.twig": "twig",
+        "*.html.twig": "twig"
+    },
+    "emmet.includeLanguages": {
+        "twig": "html"
+    },
+    "php.validate.enable": false,
+    "intelephense.environment.phpVersion": "8.3",
+    "phpSniffer.executablesFolder": "vendor/bin",
+    "phpSniffer.standard": "${workspaceFolder}/phpcs.xml",
+    "[php]": {
+        "editor.defaultFormatter": "wongjn.php-sniffer",
+        "editor.formatOnSave": true
+    },
+    "[twig]": {
+        "editor.formatOnSave": false
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "bmewburn.vscode-intelephense-client",
+    "wongjn.php-sniffer",
+    "stanislav.vscode-drupal",
+    "tgosystems.ultimate-twig",
+    "redhat.vscode-yaml"
+  ]
+}
