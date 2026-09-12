@@ -1,5 +1,11 @@
 SHELL := /bin/bash
 
+# Optional personal targets. Keep this near the top for a clean separation
+# from shared configuration. Since it is included before the rest of this
+# file, later shared definitions can override local variables or rules.
+# -include also means Makefile.local may be absent without breaking Make.
+-include Makefile.local
+
 -include .env
 export
 
